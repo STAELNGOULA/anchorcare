@@ -1,18 +1,20 @@
 import type { LucideIcon } from "lucide-react";
 import {
+  BarChart3,
   FileText,
   Home,
   Layers,
-  Settings,
+  UserCog,
   Users,
 } from "lucide-react";
 
 export type DirectorNavKey =
   | "home"
   | "programs"
-  | "people"
+  | "families"
+  | "team"
   | "reports"
-  | "settings";
+  | "insights";
 
 export type DirectorNavItem = {
   key: DirectorNavKey;
@@ -20,12 +22,14 @@ export type DirectorNavItem = {
   icon: LucideIcon;
 };
 
+/** Option C — six primary director tabs; Settings + Shop live in org bar */
 export const DIRECTOR_NAV: DirectorNavItem[] = [
   { key: "home", href: "/business/dashboard", icon: Home },
   { key: "programs", href: "/business/programs", icon: Layers },
-  { key: "people", href: "/business/people", icon: Users },
+  { key: "families", href: "/business/families", icon: Users },
+  { key: "team", href: "/business/team", icon: UserCog },
   { key: "reports", href: "/business/reports", icon: FileText },
-  { key: "settings", href: "/business/settings", icon: Settings },
+  { key: "insights", href: "/business/insights", icon: BarChart3 },
 ];
 
 export function isDirectorNavActive(pathname: string, href: string): boolean {

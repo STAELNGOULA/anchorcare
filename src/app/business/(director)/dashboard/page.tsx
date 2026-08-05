@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { DashboardActions } from "@/components/business/dashboard-actions";
 import { DashboardChecklist } from "@/components/business/dashboard-checklist";
-import { DashboardKpis } from "@/components/business/dashboard-kpis";
 import { PageHeader } from "@/components/business/page-header";
 import { TrialBanner } from "@/components/business/trial-banner";
 import { getDirectorContext } from "@/lib/business/director-context";
@@ -26,16 +25,6 @@ export default async function BusinessDashboardPage() {
         items={context.checklist}
         complete={context.checklistComplete}
       />
-
-      <section aria-labelledby="dashboard-kpis-heading" className="space-y-4">
-        <h2
-          id="dashboard-kpis-heading"
-          className="font-display text-xl text-foreground md:text-2xl"
-        >
-          {t("kpiSectionTitle")}
-        </h2>
-        <DashboardKpis metrics={context.metrics} />
-      </section>
 
       <section aria-labelledby="dashboard-actions-heading" className="space-y-4">
         <h2

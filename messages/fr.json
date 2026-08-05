@@ -9,7 +9,12 @@
     "cancel": "Annuler",
     "continue": "Continuer",
     "themeLight": "Passer au mode clair",
-    "themeDark": "Passer au mode sombre"
+    "themeDark": "Passer au mode sombre",
+    "phaseMvp": "MVP",
+    "phaseP15": "Phase 1.5",
+    "phaseP2": "Phase 2",
+    "phaseP3": "Phase 3",
+    "backToHub": "Retour à l'aperçu"
   },
   "landing": {
     "metaTitle": "ANCHOR, Nouvelles quotidiennes. Sécurité de confiance.",
@@ -421,6 +426,8 @@
   },
   "business": {
     "coachMode": "Mode coach",
+    "shopLink": "Boutique",
+    "settingsLink": "Paramètres",
     "sidebarOrgLabel": "Organisation",
     "trialBadge": "{days} jours d'essai restants",
     "trialBannerTitle": "{days} jours restants sur votre essai Pro",
@@ -431,10 +438,13 @@
     "userMenuSignOut": "Se déconnecter",
     "nav": {
       "primary": "Navigation programme",
-      "home": "Accueil",
+      "home": "Tableau de bord",
       "programs": "Programmes",
+      "families": "Familles",
+      "team": "Équipe",
       "people": "Familles",
       "reports": "Rapports",
+      "insights": "Analyses",
       "settings": "Paramètres"
     },
     "dashboard": {
@@ -490,12 +500,71 @@
       "subtitle": "Classes, équipes et camps — chacun avec son effectif et ses invitations.",
       "emptyTitle": "Aucun programme",
       "emptyBody": "Créez votre premier programme pour inviter coachs et familles.",
-      "emptyCta": "Créer un programme"
+      "emptyCta": "Créer un programme",
+      "new": {
+        "metaTitle": "Créer un programme",
+        "emptyTitle": "Créer un programme",
+        "emptyBody": "Nom, type, dates, capacité et tarif affiché — puis invitez coachs et familles."
+      }
+    },
+    "families": {
+      "metaTitle": "Familles",
+      "title": "Familles",
+      "subtitle": "Enfants et parents pour tous vos programmes — activation, effectif et invitations.",
+      "tabs": {
+        "label": "Sections familles",
+        "children": "Enfants",
+        "parents": "Parents"
+      },
+      "children": {
+        "metaTitle": "Enfants",
+        "emptyTitle": "Aucun enfant à l'effectif",
+        "emptyBody": "Les enfants apparaissent ici lorsque les familles acceptent les invitations et que les inscriptions sont approuvées.",
+        "emptyCta": "Inviter des familles"
+      },
+      "parents": {
+        "metaTitle": "Parents",
+        "emptyTitle": "Aucun parent connecté",
+        "emptyBody": "Suivez l'activation, les coordonnées et les fils de discussion de chaque famille.",
+        "emptyCta": "Envoyer des invitations"
+      }
+    },
+    "team": {
+      "metaTitle": "Équipe",
+      "title": "Coachs et personnel",
+      "subtitle": "Invitez les coachs, assignez les programmes et gérez les accès terrain.",
+      "emptyTitle": "Aucun coach",
+      "emptyBody": "Invitez les coachs par courriel, puis assignez-les aux programmes pour publier les rapports quotidiens.",
+      "emptyCta": "Inviter des coachs"
     },
     "people": {
       "metaTitle": "Familles et équipe",
       "title": "Familles et équipe",
       "subtitle": "Enfants, parents et coachs pour tous vos programmes.",
+      "tabs": {
+        "label": "Sections personnes",
+        "children": "Enfants",
+        "parents": "Parents",
+        "coaches": "Coachs"
+      },
+      "children": {
+        "metaTitle": "Enfants",
+        "emptyTitle": "Aucun enfant à l'effectif",
+        "emptyBody": "Les enfants apparaissent ici lorsque les familles acceptent les invitations et que les inscriptions sont approuvées.",
+        "emptyCta": "Inviter des familles"
+      },
+      "parents": {
+        "metaTitle": "Parents",
+        "emptyTitle": "Aucun parent connecté",
+        "emptyBody": "Suivez l'activation, les coordonnées et les fils de discussion de chaque famille.",
+        "emptyCta": "Envoyer des invitations"
+      },
+      "coaches": {
+        "metaTitle": "Coachs",
+        "emptyTitle": "Aucun coach",
+        "emptyBody": "Invitez les coachs par courriel, puis assignez-les aux programmes pour publier les rapports quotidiens.",
+        "emptyCta": "Inviter des coachs"
+      },
       "emptyTitle": "Effectif vide",
       "emptyBody": "Après la création d'un programme, invitez les familles et assignez les coachs.",
       "emptyCta": "Inviter des familles"
@@ -507,11 +576,24 @@
       "emptyTitle": "Aucun incident",
       "emptyBody": "Les rapports d'incidents structurés apparaîtront ici avec une piste d'audit."
     },
+    "insights": {
+      "metaTitle": "Analyses",
+      "title": "Analyses",
+      "subtitle": "Adoption, ouvertures de rapports et santé du programme — les métriques hebdomadaires des directeurs.",
+      "kpiSectionTitle": "Adoption et engagement"
+    },
+    "shop": {
+      "metaTitle": "Boutique",
+      "emptyTitle": "Boutique du programme",
+      "emptyBody": "Listez équipement, uniformes et forfaits photo pour les familles inscrites — paiement marketplace en Phase 2."
+    },
     "settings": {
       "metaTitle": "Paramètres",
       "title": "Paramètres",
       "subtitle": "Profil organisation, facturation, invitations et accès du personnel.",
       "comingSoon": "Bientôt",
+      "badgeP15": "Phase 1.5",
+      "badgeP2": "Phase 2",
       "manage": "Gérer",
       "sections": {
         "profile": {
@@ -529,10 +611,451 @@
         "staff": {
           "title": "Coachs et personnel",
           "body": "Inviter les coachs et gérer les accès."
+        },
+        "analytics": {
+          "title": "Analytique d'adoption",
+          "body": "Taux d'activation, d'ouverture et incidents — sur votre tableau de bord."
+        },
+        "digest": {
+          "title": "Courriel hebdomadaire",
+          "body": "Résumé du lundi : activation, ouvertures et régularité des rapports."
+        },
+        "marketplace": {
+          "title": "Annonces marketplace",
+          "body": "Vendre équipement et uniformes aux familles inscrites."
+        },
+        "compliance": {
+          "title": "Compliance export",
+          "body": "Bulk PDF/CSV export of incidents, waivers, and staff actions by date range."
         }
       },
       "emptyTitle": "Paramètres",
-      "emptyBody": "Les contrôles organisation et facturation apparaîtront ici."
+      "emptyBody": "Les contrôles organisation et facturation apparaîtront ici.",
+      "profile": {
+        "metaTitle": "Organization profile",
+        "emptyTitle": "Organization profile",
+        "emptyBody": "Name, logo, address, program type, and jurisdiction for your programs."
+      },
+      "billing": {
+        "metaTitle": "Billing",
+        "emptyTitle": "ANCHOR Pro billing",
+        "emptyBody": "Trial status, payment method, invoices, and Stripe customer portal."
+      },
+      "invites": {
+        "metaTitle": "Family invites",
+        "emptyTitle": "Family invites",
+        "emptyBody": "Default invite messages, QR codes, and adoption tracking."
+      },
+      "staff": {
+        "metaTitle": "Coaches & staff",
+        "emptyTitle": "Coaches & staff",
+        "emptyBody": "Invite coaches by email and assign program access."
+      },
+      "digest": {
+        "metaTitle": "Weekly digest",
+        "emptyTitle": "Weekly digest email",
+        "emptyBody": "Monday email with activation %, open rates, incidents, and coach consistency."
+      },
+      "marketplaceSurface": {
+        "metaTitle": "Marketplace",
+        "emptyTitle": "Marketplace listings",
+        "emptyBody": "Add products for parents enrolled in your programs — equipment, uniforms, and packages."
+      },
+      "compliance": {
+        "metaTitle": "Compliance export",
+        "emptyTitle": "Compliance export",
+        "emptyBody": "Export incidents, notifications, waivers, and staff actions for insurers or boards."
+      }
+    }
+  },
+  "parent": {
+    "planFreeBadge": "Forfait gratuit",
+    "planFamilyBadge": "ANCHOR Famille",
+    "userMenuProfile": "Profil",
+    "userMenuSupport": "Support",
+    "userMenuSignOut": "Se déconnecter",
+    "nav": {
+      "primary": "Navigation parent",
+      "today": "Aujourd'hui",
+      "timeline": "Chronologie",
+      "family": "Famille",
+      "programs": "Programmes",
+      "care": "Soins",
+      "you": "Vous",
+      "profile": "Profil"
+    },
+    "today": {
+      "metaTitle": "Aujourd'hui",
+      "title": "Bonjour, {name}",
+      "subtitle": "Les mises à jour quotidiennes, alertes et actions pour vos enfants.",
+      "updatesSectionTitle": "Mises à jour du jour",
+      "planBannerTitle": "Débloquez la chronologie familiale complète",
+      "planBannerBody": "Le gratuit inclut 7 jours d'historique. Passez à ANCHOR Famille pour chaque rapport, photo et visite.",
+      "planBannerCta": "Voir les forfaits",
+      "noProgramTitle": "Connectez-vous à un programme",
+      "noProgramBody": "Quand une garderie, un camp ou un coach vous invite, liez votre enfant ici. Les rapports et alertes arrivent d'abord sur Aujourd'hui.",
+      "noProgramCta": "Entrer un code d'invitation",
+      "noReportsTitle": "Aucun rapport pour l'instant",
+      "noReportsBody": "Quand un programme publie un rapport quotidien, il apparaît ici et par SMS — même sans l'application."
+    },
+    "timeline": {
+      "metaTitle": "Chronologie",
+      "title": "Chronologie",
+      "subtitle": "Chaque rapport, photo, note et incident pour tous les programmes de vos enfants.",
+      "emptyTitle": "Votre chronologie est vide",
+      "emptyBody": "Après avoir rejoint un programme, rapports, notes et photos s'affichent ici par ordre chronologique. Le gratuit inclut 7 jours."
+    },
+    "family": {
+      "metaTitle": "Famille",
+      "title": "Famille",
+      "subtitle": "Enfants, fiches d'urgence, personnes autorisées et accès co-parent.",
+      "tabs": {
+        "label": "Sections famille",
+        "children": "Enfants",
+        "emergency": "Urgence",
+        "pickups": "Départs",
+        "coparent": "Co-parent"
+      },
+      "children": {
+        "metaTitle": "Enfants",
+        "emptyTitle": "Ajoutez vos enfants",
+        "emptyBody": "Gérez noms, photos, allergies et médicaments — les profils santé se copient lors de nouvelles inscriptions."
+      },
+      "emergency": {
+        "metaTitle": "Fiches d'urgence",
+        "emptyTitle": "Fiches d'urgence",
+        "emptyBody": "Allergies, médicaments, conditions et contacts — partagés avec les programmes que vous autorisez."
+      },
+      "pickups": {
+        "metaTitle": "Personnes autorisées",
+        "emptyTitle": "Personnes autorisées",
+        "emptyBody": "Définissez qui peut récupérer chaque enfant, avec dérogations du jour si besoin."
+      },
+      "forms": {
+        "metaTitle": "Coffre de formulaires",
+        "emptyTitle": "Coffre de formulaires",
+        "emptyBody": "Téléversez et conservez formulaires, décharges et documents médicaux par enfant."
+      },
+      "coparent": {
+        "metaTitle": "Co-parent",
+        "emptyTitle": "Accès co-parent",
+        "emptyBody": "Invitez un co-parent pour partager chronologie, soins et contacts d'urgence."
+      }
+    },
+    "you": {
+      "metaTitle": "Vous",
+      "title": "Vous",
+      "subtitle": "Abonnement, consentements, coffre de formulaires et marketplace — paramètres du compte.",
+      "comingSoon": "Bientôt",
+      "badgeP15": "Phase 1.5",
+      "badgeP2": "Phase 2",
+      "manage": "Gérer",
+      "sections": {
+        "subscription": {
+          "title": "Forfait ANCHOR Famille",
+          "body": "Passez au complet pour l'historique, les soins et les consultations d'incident."
+        },
+        "consents": {
+          "title": "Consentements et notifications",
+          "body": "Photos, médical et fiche d'urgence par programme ; heures calmes."
+        },
+        "forms": {
+          "title": "Coffre de formulaires",
+          "body": "Conservez décharges, formulaires médicaux et documents par enfant."
+        },
+        "marketplace": {
+          "title": "Marketplace",
+          "body": "Parcourez les produits des programmes inscrits — équipement, uniformes et photos."
+        }
+      },
+      "subscription": {
+        "metaTitle": "Abonnement",
+        "emptyTitle": "Forfait ANCHOR Famille",
+        "emptyBody": "Gérez la facturation, passez du gratuit au complet et accédez au portail Stripe."
+      },
+      "consents": {
+        "metaTitle": "Consentements",
+        "emptyTitle": "Consentements et notifications",
+        "emptyBody": "Consentements photo et médical par programme, plus préférences de notification et heures calmes."
+      },
+      "forms": {
+        "metaTitle": "Coffre de formulaires",
+        "emptyTitle": "Coffre de formulaires",
+        "emptyBody": "Téléversez et conservez formulaires, décharges et documents médicaux par enfant."
+      },
+      "marketplace": {
+        "metaTitle": "Marketplace",
+        "emptyTitle": "Marketplace du programme",
+        "emptyBody": "Achetez équipement, uniformes et forfaits photo auprès des programmes de vos enfants."
+      }
+    },
+    "programs": {
+      "metaTitle": "Programmes",
+      "title": "Programmes",
+      "subtitle": "Programmes où vos enfants sont inscrits et invitations en attente.",
+      "emptyTitle": "Aucun programme pour l'instant",
+      "emptyBody": "Acceptez une invitation du programme de votre enfant pour voir effectifs, décharges et inscriptions.",
+      "emptyCta": "Se connecter à un programme",
+      "tabs": {
+        "label": "Program sections",
+        "enrolled": "Enrolled",
+        "discover": "Discover"
+      },
+      "enrolled": {
+        "metaTitle": "Enrolled programs",
+        "emptyTitle": "No programs yet",
+        "emptyBody": "Accept an invite from your child's program to see rosters, waivers, and registration status here."
+      },
+      "discover": {
+        "metaTitle": "Discover programs",
+        "emptyTitle": "Browse programs near you",
+        "emptyBody": "Find daycares, camps, and sports programs — register and pay in-app when discovery launches in Phase 2."
+      }
+    },
+    "care": {
+      "metaTitle": "Soins",
+      "title": "Soins",
+      "subtitle": "Médecins, comptes rendus de visite et consultations après incident.",
+      "emptyTitle": "Espace soins bientôt disponible",
+      "emptyBody": "Prenez rendez-vous, conservez les résumés de visite et parlez à notre équipe clinique — avec ANCHOR Famille.",
+      "tabs": {
+        "label": "Care sections",
+        "doctors": "Doctors",
+        "visits": "Visits",
+        "consults": "Consults"
+      },
+      "doctors": {
+        "metaTitle": "Doctor directory",
+        "emptyTitle": "Doctor directory",
+        "emptyBody": "Browse practitioners with JANE or provider booking links. ANCHOR Family unlocks care booking and incident consults."
+      },
+      "visits": {
+        "metaTitle": "Visit history",
+        "emptyTitle": "Visit vault",
+        "emptyBody": "Visit summaries from appointments appear here and sync to your child's timeline."
+      },
+      "consults": {
+        "metaTitle": "Incident consults",
+        "emptyTitle": "Talk to our clinical team",
+        "emptyBody": "After an incident, Family-plan parents can request async guidance with full child context."
+      }
+    },
+    "profile": {
+      "metaTitle": "Profil",
+      "title": "Profil",
+      "subtitle": "Enfants, fiches d'urgence, personnes autorisées, abonnement et paramètres.",
+      "comingSoon": "Bientôt",
+      "badgeP15": "Phase 1.5",
+      "badgeP2": "Phase 2",
+      "manage": "Gérer",
+      "sections": {
+        "children": {
+          "title": "Enfants",
+          "body": "Ajouter et gérer les enfants, profils de santé et inscriptions."
+        },
+        "emergency": {
+          "title": "Fiches d'urgence",
+          "body": "Allergies, médicaments, conditions et contacts d'urgence par enfant."
+        },
+        "pickups": {
+          "title": "Personnes autorisées",
+          "body": "Qui peut récupérer chaque enfant — avec dérogations du jour si besoin."
+        },
+        "subscription": {
+          "title": "Forfait ANCHOR Famille",
+          "body": "Passez au complet pour l'historique, les soins et les consultations d'incident."
+        },
+        "consents": {
+          "title": "Consentements et notifications",
+          "body": "Photos, médical et fiche d'urgence par programme ; heures calmes."
+        },
+        "marketplace": {
+          "title": "Marketplace",
+          "body": "Parcourir les produits des programmes inscrits — équipement, uniformes et photos."
+        },
+        "forms": {
+          "title": "Forms vault",
+          "body": "Store waivers, medical forms, and program documents per child."
+        },
+        "coparent": {
+          "title": "Co-parent access",
+          "body": "Invite a partner to share timeline, care, and emergency card access."
+        }
+      },
+      "emptyTitle": "Configurez votre profil familial",
+      "emptyBody": "Ajoutez enfants, contacts d'urgence et préférences de notification. La fiche d'urgence suit chaque inscription.",
+      "children": {
+        "metaTitle": "Children",
+        "emptyTitle": "Add your children",
+        "emptyBody": "Manage names, photos, allergies, and medications — health profiles copy when joining new programs."
+      },
+      "emergency": {
+        "metaTitle": "Emergency cards",
+        "emptyTitle": "Emergency cards",
+        "emptyBody": "Allergies, medications, conditions, and contacts — shared with programs you authorize."
+      },
+      "pickups": {
+        "metaTitle": "Authorized pickups",
+        "emptyTitle": "Authorized pickups",
+        "emptyBody": "Define who can pick up each child, with today-only overrides when plans change."
+      },
+      "subscription": {
+        "metaTitle": "Subscription",
+        "emptyTitle": "ANCHOR Family plan",
+        "emptyBody": "Manage billing, upgrade from Free, and access the Stripe customer portal."
+      },
+      "consents": {
+        "metaTitle": "Consents",
+        "emptyTitle": "Consents & notifications",
+        "emptyBody": "Per-program photo and medical consents, plus notification preferences and quiet hours."
+      },
+      "forms": {
+        "metaTitle": "Forms vault",
+        "emptyTitle": "Forms vault",
+        "emptyBody": "Upload and store program forms, waivers, and medical documents per child."
+      },
+      "coparent": {
+        "metaTitle": "Co-parent",
+        "emptyTitle": "Co-parent access",
+        "emptyBody": "Invite a co-parent to share timeline access, care features, and emergency contacts."
+      },
+      "marketplace": {
+        "metaTitle": "Marketplace",
+        "emptyTitle": "Program marketplace",
+        "emptyBody": "Shop equipment, uniforms, and photo packages from businesses your children are enrolled in."
+      }
+    }
+  },
+  "coach": {
+    "directorMode": "Mode directeur",
+    "userMenuSupport": "Support",
+    "userMenuSignOut": "Se déconnecter",
+    "nav": {
+      "primary": "Navigation coach",
+      "programs": "Mes programmes",
+      "report": "Rapport",
+      "roster": "Effectif",
+      "incidents": "Incidents"
+    },
+    "programs": {
+      "metaTitle": "Mes programmes",
+      "title": "Prêt à publier, {name}",
+      "subtitle": "Vos programmes assignés — sélectionnez-en un pour enregistrer rapports vocaux, photos et notes.",
+      "emptyTitle": "Aucun programme assigné",
+      "emptyBody": "Votre directeur vous assignera des programmes après acceptation de l'invitation."
+    },
+    "report": {
+      "metaTitle": "Rapport",
+      "title": "Rapport quotidien",
+      "subtitle": "Enregistrez la voix, taguez les photos, ajoutez des notes — l'IA rédige les rapports par enfant.",
+      "emptyTitle": "Sélectionnez un programme",
+      "emptyBody": "Choisissez un programme assigné pour commencer l'enregistrement du jour.",
+      "emptyCta": "Voir les programmes"
+    },
+    "roster": {
+      "metaTitle": "Effectif",
+      "title": "Effectif",
+      "subtitle": "Enfants de vos programmes — allergies, autorisations et fiches d'urgence.",
+      "emptyTitle": "Aucun enfant",
+      "emptyBody": "Les profils et fiches d'urgence apparaîtront quand vous serez assigné à un programme.",
+      "tabs": {
+        "label": "Roster views",
+        "standard": "Standard",
+        "field": "Field mode"
+      },
+      "field": {
+        "metaTitle": "Field mode",
+        "emptyTitle": "Substitute / field mode",
+        "emptyBody": "Simplified sideline view: photo, name, allergies, clearance, and pickup ETA in two taps."
+      }
+    },
+    "incidents": {
+      "metaTitle": "Incidents",
+      "title": "Incidents",
+      "subtitle": "Signalez et documentez les incidents — les parents sont alertés immédiatement.",
+      "emptyTitle": "Aucun incident",
+      "emptyBody": "Les rapports d'incident que vous soumettez apparaissent ici avec une piste d'audit complète."
+    }
+  },
+  "admin": {
+    "platformLabel": "Plateforme ANCHOR",
+    "consultQueueBadge": "{count} consultations en attente",
+    "userMenuSupport": "Support",
+    "userMenuSignOut": "Se déconnecter",
+    "nav": {
+      "primary": "Navigation admin",
+      "dashboard": "Tableau de bord",
+      "doctors": "Médecins",
+      "consults": "Consultations",
+      "users": "Utilisateurs",
+      "businesses": "Entreprises",
+      "analytics": "Analytique",
+      "marketplace": "Marketplace"
+    },
+    "dashboard": {
+      "metaTitle": "Admin plateforme",
+      "title": "Vue d'ensemble",
+      "subtitle": "File de consultation, santé plateforme et métriques — {name}.",
+      "queueSectionTitle": "File consultations incidents",
+      "queueEmptyTitle": "Aucune consultation en attente",
+      "queueEmptyBody": "Les parents forfait Famille demandant une guidance clinique apparaissent ici.",
+      "kpiSectionTitle": "Métriques plateforme",
+      "kpi": {
+        "mrr": {
+          "label": "MRR",
+          "pending": "Mis à jour quand la facturation sera connectée."
+        },
+        "activations": {
+          "label": "Activations hebdo",
+          "pending": "Nouvelles familles et programmes cette semaine."
+        },
+        "wapor": {
+          "label": "WAPOR",
+          "pending": "Parents actifs ouvrant les rapports chaque semaine."
+        }
+      }
+    },
+    "doctors": {
+      "metaTitle": "Médecins",
+      "title": "Répertoire médecins",
+      "subtitle": "Praticiens, liens de réservation et téléversement de comptes rendus.",
+      "emptyTitle": "Répertoire non configuré",
+      "emptyBody": "Ajoutez des praticiens CA/US avec liens JANE ou fournisseurs."
+    },
+    "consults": {
+      "metaTitle": "Consultations",
+      "title": "Consultations incidents",
+      "subtitle": "File clinique asynchrone pour parents forfait Famille.",
+      "emptyTitle": "File vide",
+      "emptyBody": "Les demandes de consultation apparaissent ici avec le contexte enfant et incident."
+    },
+    "users": {
+      "metaTitle": "Utilisateurs",
+      "title": "Utilisateurs",
+      "subtitle": "Recherche, suspension et support parents, coachs et directeurs.",
+      "emptyTitle": "Recherche bientôt disponible",
+      "emptyBody": "Recherchez par courriel ou ID pour voir profils, rôles et abonnements."
+    },
+    "businesses": {
+      "metaTitle": "Entreprises",
+      "title": "Entreprises",
+      "subtitle": "Opérateurs de programmes, essais et badges de vérification.",
+      "emptyTitle": "Aucune entreprise",
+      "emptyBody": "Les abonnés ANCHOR Pro et essais apparaîtront ici pour support et modération."
+    },
+    "analytics": {
+      "metaTitle": "Analytique",
+      "title": "Analytique",
+      "subtitle": "MRR, activations, volume de consultations et tendances.",
+      "emptyTitle": "Pipeline analytique en attente",
+      "emptyBody": "Les métriques plateforme se rempliront avec l'activité des programmes et familles."
+    },
+    "marketplace": {
+      "metaTitle": "Marketplace",
+      "title": "Marketplace curation",
+      "subtitle": "Approve business listings, feature products, and remove violations.",
+      "emptyTitle": "Marketplace curation",
+      "emptyBody": "Review and moderate product listings from program operators before parents can browse and buy."
     }
   }
 }

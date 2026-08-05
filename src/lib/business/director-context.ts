@@ -81,9 +81,9 @@ export async function getDirectorContext(): Promise<DirectorContext> {
   const checklist: DashboardChecklistItem[] = [
     { id: "profile", done: hasProfile, href: "/business/settings" },
     { id: "program", done: false, href: "/business/programs" },
-    { id: "invite", done: false, href: "/business/people" },
+    { id: "invite", done: false, href: "/business/families" },
     { id: "report", done: false, href: "/coach/programs" },
-    { id: "activation", done: false, href: "/business/people" },
+    { id: "activation", done: false, href: "/business/families" },
   ];
 
   const checklistComplete = checklist.every((item) => item.done);
@@ -103,7 +103,7 @@ export async function getDirectorContext(): Promise<DirectorContext> {
     });
     actions.push({
       id: "invite-families",
-      href: "/business/people",
+      href: "/business/families",
       tone: "default",
     });
   }
