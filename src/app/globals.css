@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 97%;
+    --foreground: 205 62% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 205 62% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 205 62% 15%;
+    --primary: 180 61% 26%;
+    --primary-foreground: 40 33% 97%;
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 205 40% 25%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 205 15% 42%;
+    --accent: 12 48% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 6 58% 49%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 12% 88%;
+    --input: 40 12% 88%;
+    --ring: 180 61% 26%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 205 45% 7%;
+    --foreground: 40 20% 94%;
+    --card: 205 40% 10%;
+    --card-foreground: 40 20% 94%;
+    --popover: 205 40% 10%;
+    --popover-foreground: 40 20% 94%;
+    --primary: 174 45% 42%;
+    --primary-foreground: 205 45% 7%;
+    --secondary: 205 30% 14%;
+    --secondary-foreground: 40 15% 88%;
+    --muted: 205 25% 16%;
+    --muted-foreground: 40 10% 62%;
+    --accent: 12 42% 58%;
+    --accent-foreground: 205 45% 7%;
+    --destructive: 6 52% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 205 25% 18%;
+    --input: 205 25% 18%;
+    --ring: 174 45% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+    scroll-padding-top: 7rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100dvh;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .ease-premium {
+    transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+
+  .grain-overlay {
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe\:transition-\[transform\,opacity\,filter\] {
+    transition: none !important;
+  }
+
+  .motion-safe\:translate-y-8,
+  .motion-safe\:opacity-0,
+  .motion-safe\:blur-\[2px\] {
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
