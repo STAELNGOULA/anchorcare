@@ -6,6 +6,7 @@ import { HubSubnav } from "@/components/shared/hub-subnav";
 const FAMILIES_TABS = [
   { key: "children", href: "/business/families/children" },
   { key: "parents", href: "/business/families/parents" },
+  { key: "registrations", href: "/business/families/registrations" },
 ] as const;
 
 export function FamiliesSubnav() {

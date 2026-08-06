@@ -1,6 +1,6 @@
 # ANCHOR_CARE — Tech Stack
 
-**Version:** 1.0 | **Updated:** August 4, 2026
+**Version:** 1.1 | **Updated:** August 5, 2026
 
 Production Next.js stack for ANCHOR_CARE. Isolated from SGSuperFans — separate Supabase project required.
 
@@ -73,6 +73,8 @@ Production Next.js stack for ANCHOR_CARE. Isolated from SGSuperFans — separate
 ```
 /                     Landing
 /login, /sign-up      Auth
+/p/[slug]             Public business landing page (SSR/ISR)
+/p/[slug]/programs/[programSlug]  Deep link to program + register CTA
 /parent/*             Parent portal
 /business/*           Business admin
 /coach/*              Coach (RBAC subset)
@@ -80,6 +82,8 @@ Production Next.js stack for ANCHOR_CARE. Isolated from SGSuperFans — separate
 /r/[token]            SMS web report viewer (public)
 /api/health           Health check
 ```
+
+**Public page notes:** No auth cookies required to view. `generateMetadata` + JSON-LD for SEO. Revalidate on org/program public field updates. Rate limit `/api/public/*` registration endpoints.
 
 ## Local development
 

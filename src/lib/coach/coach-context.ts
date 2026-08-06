@@ -1,4 +1,5 @@
 import { createClient } from "@/lib/supabase/server";
+import { countCoachPrograms } from "@/lib/coach/program-service";
 import type { UserRole } from "@/lib/auth/roles";
 import { redirect } from "next/navigation";
 
@@ -44,6 +45,9 @@ export async function getCoachContext(): Promise<CoachContext> {
   const email = user.email ?? "";
   const displayName = deriveDisplayName(profile?.full_name ?? null, email);
 
+  const programsCount =
+    role === "coach" ? await countCoachPrograms(user.id) : 0;
+
   return {
     userId: user.id,
     email,
@@ -54,6 +58,6 @@ export async function getCoachContext(): Promise<CoachContext> {
         : `${displayName}'s programs`,
     role,
     isDirectorMode: role === "business_admin",
-    programsCount: 0,
+    programsCount,
   };
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/business/page-header";
-import { AdminSectionEmptyFromKey } from "@/components/admin/section-empty";
+import { AdminBusinessesWorkspace } from "@/components/admin/platform/admin-businesses-workspace";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("admin.businesses");
@@ -14,7 +14,7 @@ export default async function AdminBusinessesPage() {
   return (
     <div className="space-y-8">
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <AdminSectionEmptyFromKey namespace="businesses" />
+      <AdminBusinessesWorkspace />
     </div>
   );
 }

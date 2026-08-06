@@ -27,7 +27,7 @@ export function AppProviders({ children }: AppProvidersProps) {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <QueryClientProvider client={queryClient}>
         {children}
-        <Toaster position="top-center" richColors closeButton />
+        <Toaster position="top-center" richColors closeButton visibleToasts={3} />
       </QueryClientProvider>
     </ThemeProvider>
   );

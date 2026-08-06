@@ -1,0 +1,23 @@
+---
+description: After completing any DEVELOPMENT_PLAN phase, append an Implementation log to that phase section.
+alwaysApply: true
+---
+
+# Development Plan — Phase Implementation Log
+
+When you **complete a phase** from `docs/DEVELOPMENT_PLAN.md`:
+
+1. Add **`✅ Complete`** to the phase heading and **`✅`** in the phase index table row.
+2. Mark exit criteria checkboxes `[x]` for items verified.
+3. Append **`### Implementation log (completed <date>)`** under that phase with a table covering:
+   - Routes / pages shipped
+   - APIs and RPCs
+   - DB migrations and RLS
+   - Security decisions
+   - UX/i18n highlights
+   - Key file paths
+   - **Deferred** items explicitly moved to later phases
+4. If the phase spec changed during build (e.g. step count), note the delta in the log.
+5. Do not create separate summary markdown files unless the user asks — the dev plan is the single source of truth.
+
+This rule applies to Orchestrator and any full-phase implementation task.

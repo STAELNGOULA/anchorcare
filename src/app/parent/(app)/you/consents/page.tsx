@@ -1,19 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { ParentConsentsWorkspace } from "@/components/consents/parent-consents-workspace";
+import {
+  getParentNotificationPreferences,
+  listParentProgramConsents,
+} from "@/lib/consents/consent-service";
+import { getParentContext } from "@/lib/parent/parent-context";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("parent.you.consents");
   return { title: t("metaTitle") };
 }
 
-export default function Page() {
+export default async function ParentConsentsPage() {
+  const context = await getParentContext();
+  const [programs, notifications] = await Promise.all([
+    listParentProgramConsents(context.userId),
+    getParentNotificationPreferences(context.userId),
+  ]);
+
   return (
-    <SurfacePlaceholder
-      namespace="parent.you.consents"
-      phase="mvp"
-      specId="P-28"
-      backHref="/parent/you"
+    <ParentConsentsWorkspace
+      programs={programs}
+      notifications={notifications}
     />
   );
 }

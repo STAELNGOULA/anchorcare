@@ -1,10 +1,46 @@
-﻿import type { Metadata } from "next";
-import { FamilyTabPage, familyTabMetadata } from "@/components/parent/family-tab-page";
+import type { Metadata } from "next";
+
+import { getTranslations } from "next-intl/server";
+
+import { ChildrenListClient } from "@/components/parent/children/children-list-client";
+
+import { FamilyChildrenData } from "@/components/parent/family-children-data";
+
+import { listChildrenForParent } from "@/lib/parent/children-service";
+
+import { getParentContext } from "@/lib/parent/parent-context";
+
+
 
 export async function generateMetadata(): Promise<Metadata> {
-  return familyTabMetadata("children");
+
+  const t = await getTranslations("parent.family.children");
+
+  return { title: t("metaTitle") };
+
 }
 
-export default function Page() {
-  return <FamilyTabPage tab="children" />;
+
+
+export default async function ParentChildrenPage() {
+
+  const context = await getParentContext();
+
+  const children = await listChildrenForParent(context.userId);
+
+
+
+  return (
+
+    <>
+
+      <FamilyChildrenData children={children} />
+
+      <ChildrenListClient children={children} />
+
+    </>
+
+  );
+
 }
+

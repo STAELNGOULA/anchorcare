@@ -11,6 +11,7 @@ type AuthShellProps = {
   subtitle?: string;
   backHref?: string;
   backLabel?: string;
+  footer?: ReactNode;
   className?: string;
 };
 
@@ -20,6 +21,7 @@ export function AuthShell({
   subtitle,
   backHref = "/",
   backLabel,
+  footer,
   className,
 }: AuthShellProps) {
   return (
@@ -52,6 +54,8 @@ export function AuthShell({
           <div className="rounded-[1.25rem] bg-card p-6 ring-1 ring-border/50 shadow-soft md:p-8">
             {children}
           </div>
+
+          {footer}
 
           {backLabel ? (
             <p className="mt-6 text-center">

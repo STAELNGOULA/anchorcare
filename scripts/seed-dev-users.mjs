@@ -25,16 +25,32 @@ const supabase = createClient(url, serviceKey, {
 /** Dev-only credentials — rotate if exposed beyond local */
 const DEV_USERS = [
   {
+    email: "parent@anchor.dev",
+    password: "AnchorParent1!",
+    role: "parent",
+    fullName: "Demo Parent",
+    onboardingStatus: "active",
+  },
+  {
+    email: "business@anchor.dev",
+    password: "AnchorBusiness1!",
+    role: "business_admin",
+    fullName: "Demo Director",
+    onboardingStatus: "active",
+  },
+  {
     email: "coach@anchor.dev",
     password: "AnchorCoach1!",
     role: "coach",
     fullName: "Demo Coach",
+    onboardingStatus: "active",
   },
   {
     email: "admin@anchor.dev",
     password: "AnchorAdmin1!",
     role: "admin",
     fullName: "Platform Admin",
+    onboardingStatus: "active",
   },
 ];
 
@@ -56,13 +72,13 @@ async function findUserByEmail(email) {
   }
 }
 
-async function ensureProfile(userId, role, fullName) {
+async function ensureProfile(userId, role, fullName, onboardingStatus = "active") {
   const { error } = await supabase.from("profiles").upsert(
     {
       id: userId,
       role,
       full_name: fullName,
-      onboarding_status: "active",
+      onboarding_status: onboardingStatus,
       updated_at: new Date().toISOString(),
     },
     { onConflict: "id" },
@@ -85,7 +101,7 @@ async function ensureUser(user) {
     );
     if (updateError) throw updateError;
 
-    await ensureProfile(existing.id, user.role, user.fullName);
+    await ensureProfile(existing.id, user.role, user.fullName, user.onboardingStatus);
     console.log(`✓ Updated ${user.email} → role=${user.role}`);
     return;
   }
@@ -100,12 +116,12 @@ async function ensureUser(user) {
   if (error) throw error;
   if (!data.user) throw new Error(`No user returned for ${user.email}`);
 
-  await ensureProfile(data.user.id, user.role, user.fullName);
+  await ensureProfile(data.user.id, user.role, user.fullName, user.onboardingStatus);
   console.log(`✓ Created ${user.email} → role=${user.role}`);
 }
 
 async function main() {
-  console.log("Seeding dev coach + admin users…\n");
+  console.log("Seeding dev users (parent, business, coach, admin)…\n");
 
   for (const user of DEV_USERS) {
     await ensureUser(user);

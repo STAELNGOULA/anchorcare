@@ -3,6 +3,7 @@ import {
   needsOnboardingRedirect,
   type OnboardingStatus,
 } from "@/lib/auth/onboarding";
+import { signupSourceCookieOptions } from "@/lib/auth/signup-source";
 import { isUserRole, ROLE_HOME_PATH, type UserRole } from "@/lib/auth/roles";
 import { isValidRedirectPath } from "@/lib/auth/redirect-path";
 import { createServerClient } from "@supabase/ssr";
@@ -18,19 +19,25 @@ function withSupabaseCookies(target: NextResponse, source: NextResponse) {
 const PUBLIC_ROUTES = [
   "/",
   "/login",
+  "/admin/login",
   "/sign-up",
+  "/sign-up/parent",
+  "/sign-up/business",
   "/forgot-password",
   "/reset-password",
   "/invite/",
   "/auth/callback",
   "/r/",
+  "/p/",
   "/for-parents",
   "/for-programs",
   "/support",
   "/privacy",
   "/terms",
   "/api/health",
+  "/api/cron/",
   "/api/webhooks/",
+  "/dev/",
 ];
 
 function isPublicRoute(pathname: string): boolean {
@@ -86,17 +93,19 @@ export async function updateSession(request: NextRequest) {
 
   let userRole: UserRole | null = null;
   let onboardingStatus: OnboardingStatus = "active";
+  let orgId: string | null = null;
 
   if (user) {
     const { data: profile } = await supabase
       .from("profiles")
-      .select("role, onboarding_status")
+      .select("role, onboarding_status, org_id")
       .eq("id", user.id)
       .maybeSingle();
 
     if (profile?.role && isUserRole(profile.role)) {
       userRole = profile.role;
       onboardingStatus = profile.onboarding_status ?? "active";
+      orgId = profile.org_id ?? null;
     }
   }
 
@@ -108,25 +117,47 @@ export async function updateSession(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = pathname.startsWith("/admin") ? "/admin/login" : "/login";
     if (isValidRedirectPath(pathname)) {
-      url.searchParams.set("redirect", pathname);
+      url.searchParams.set("returnTo", pathname);
     }
     return withSupabaseCookies(NextResponse.redirect(url), supabaseResponse);
   }
 
-  if (user && isAuthRoute(pathname) && pathname !== "/admin/login") {
+  if (
+    user &&
+    isAuthRoute(pathname) &&
+    pathname !== "/admin/login" &&
+    pathname !== "/reset-password"
+  ) {
     const url = request.nextUrl.clone();
     url.pathname = userRole
-      ? needsOnboardingRedirect(userRole, onboardingStatus, "/") ??
+      ? needsOnboardingRedirect(userRole, onboardingStatus, "/", orgId) ??
         ROLE_HOME_PATH[userRole]
       : "/parent/today";
     return withSupabaseCookies(NextResponse.redirect(url), supabaseResponse);
   }
 
   if (user && userRole) {
+    const isAdminRoute =
+      (pathname.startsWith("/admin") && pathname !== "/admin/login") ||
+      pathname.startsWith("/api/admin");
+
+    if (isAdminRoute && userRole !== "admin") {
+      if (isApiRoute) {
+        return withSupabaseCookies(
+          NextResponse.json({ error: "forbidden" }, { status: 403 }),
+          supabaseResponse,
+        );
+      }
+      const url = request.nextUrl.clone();
+      url.pathname = ROLE_HOME_PATH[userRole];
+      return withSupabaseCookies(NextResponse.redirect(url), supabaseResponse);
+    }
+
     const onboardingRedirect = needsOnboardingRedirect(
       userRole,
       onboardingStatus,
       pathname,
+      orgId,
     );
     if (onboardingRedirect && pathname !== onboardingRedirect) {
       const url = request.nextUrl.clone();
@@ -158,6 +189,26 @@ export async function updateSession(request: NextRequest) {
       url.pathname = ROLE_HOME_PATH[userRole];
       return withSupabaseCookies(NextResponse.redirect(url), supabaseResponse);
     }
+  }
+
+  if (pathname === "/for-parents" || pathname === "/for-programs") {
+    supabaseResponse.cookies.set(
+      "ANCHOR_SIGNUP_SOURCE",
+      "public_page",
+      signupSourceCookieOptions(),
+    );
+  } else if (pathname.startsWith("/p/")) {
+    supabaseResponse.cookies.set(
+      "ANCHOR_SIGNUP_SOURCE",
+      "public_page",
+      signupSourceCookieOptions(),
+    );
+  } else if (pathname.startsWith("/invite/")) {
+    supabaseResponse.cookies.set(
+      "ANCHOR_SIGNUP_SOURCE",
+      "invite",
+      signupSourceCookieOptions(),
+    );
   }
 
   return supabaseResponse;

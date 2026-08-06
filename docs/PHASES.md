@@ -1,6 +1,6 @@
 # ANCHOR — Page & Phase Inventory
 
-**Version:** 1.0 | **Updated:** August 5, 2026  
+**Version:** 1.1 | **Updated:** August 5, 2026  
 **Sources:** [USER_JOURNEYS.md](./USER_JOURNEYS.md) §3, §11 · [DEVELOPMENT_SPEC.md](./DEVELOPMENT_SPEC.md) · [NAVIGATION.md](./NAVIGATION.md)
 
 Legend: **Sidebar** = primary shell nav · **Hub** = sub-nav under a tab · **Surface** = nested route (phase placeholder until feature ships)
@@ -60,7 +60,15 @@ Legend: **Sidebar** = primary shell nav · **Hub** = sub-nav under a tab · **Su
 
 ### Out of shell
 
-`/connect` · `/invite/[token]` · `/r/[token]` · auth routes
+`/connect` · `/invite/[token]` · `/r/[token]` · `/p/[slug]` · `/p/[slug]/programs/[programSlug]` · auth routes
+
+### Public business page `[MVP]`
+
+| Surface | Route | Phase | Spec |
+|---------|-------|-------|------|
+| Business landing | `/p/[slug]` | MVP (Phase 8) | PUB-01 |
+| Program deep link | `/p/[slug]/programs/[programSlug]` | MVP (Phase 8) | PUB-01 |
+| Register from public page | enroll handoff → auth → waiver | MVP (Phase 11) | PUB-02 |
 
 ---
 
@@ -88,7 +96,7 @@ Legend: **Sidebar** = primary shell nav · **Hub** = sub-nav under a tab · **Su
 
 | Surface | Route | Phase | Spec |
 |---------|-------|-------|------|
-| Org profile | `/business/settings/profile` | MVP | B-17 |
+| Org profile | `/business/settings/profile` | MVP | B-17 (+ public page tab) |
 | Billing | `/business/settings/billing` | MVP | B-20 |
 | Invites | `/business/settings/invites` | MVP | B-06 |
 | Staff | `/business/settings/staff` | MVP | B-19 |
@@ -101,8 +109,8 @@ Legend: **Sidebar** = primary shell nav · **Hub** = sub-nav under a tab · **Su
 
 | Surface | Route | Phase |
 |---------|-------|-------|
-| Create program | `/business/programs/new` | MVP |
-| Program detail | `/business/programs/[programId]` | MVP |
+| Create program | `/business/programs/new` | MVP | B-25 |
+| Program detail | `/business/programs/[programId]` | MVP | B-25 |
 | Season rollover | `/business/programs/[id]/rollover` | P2 |
 
 ### Out of shell

@@ -1,7 +1,7 @@
 # ANCHOR_CARE — Development Specification
 
-**Version:** 1.2  
-**Updated:** August 3, 2026  
+**Version:** 1.4  
+**Updated:** August 5, 2026  
 **Status:** Build source of truth  
 **Related:** [PRD.md](./PRD.md) | [USER_JOURNEYS.md](./USER_JOURNEYS.md) | [STRATEGY.md](./STRATEGY.md)
 
@@ -1000,34 +1000,30 @@ Same patterns as P-01.
 **Route:** `/business/onboarding`
 
 ### User flows
-1. Org profile: name, logo, type, address, website, jurisdiction (country + state/province)
-2. **Coexistence step:** select existing tools (Brightwheel, TeamSnap, HiMama, Other, None) — show positioning card: "ANCHOR works alongside your tools"
-3. Create first group (name, age range optional)
-4. Import roster CSV or skip
-5. Generate parent invite link + QR
-6. Send test invite SMS
-7. Start 14-day Pro trial
-8. Prompt: record first voice report within 48h
+1. **About you:** name, role title
+2. **Your program:** org name, logo optional, type, address, jurisdiction (country + state/province)
+3. **First win:** create program stub (name + start date) or skip → dashboard checklist
+4. Start 14-day Pro trial on complete
+5. Checklist on dashboard: set program **price**, Connect Stripe, publish public page, first booking
 
 ### User journey
-Reduce time-to-first-value; business sends invites same day as signup.
+Reduce time-to-first-value; business can publish a paid program same day as signup.
 
 ### Toasts
 1. "Trial started — 14 days free."
-2. CSV import errors per row
+2. "Almost there — add a price to accept bookings."
 
 ### Notifications
 1. Email: onboarding checklist day 1, 3, 7
 
 ### Edge cases
-1. Incomplete onboarding → banner on all tabs until step 5 done
-2. Invalid CSV → row-level error report download
+1. Incomplete onboarding → banner on all tabs until org name + type + jurisdiction done
+2. Skip program stub → dashboard checklist guides to P7 programs + pricing
 
 ### UI/UX
-1. Wizard with skip options except org name + type + jurisdiction
-2. Coexistence screen: checkbox multi-select + one-sentence value prop per tool (no integration required)
-3. QR code fullscreen for printing at front desk
-4. Checklist widget on Roster until first report published
+1. 3-step wizard with skip on step 3 only
+2. Suggested public slug preview on step 2
+3. Checklist widget on dashboard until first paid booking or first report
 
 ---
 
@@ -1496,19 +1492,74 @@ List layout; trial days remaining badge at top.
 **Route:** `/business/settings/profile`
 
 ### User flows
-Edit name, logo, type, address, website, description, jurisdiction
+1. **Internal tab:** Edit name, logo, type, address, website, description, jurisdiction
+2. **Public page tab:** Edit slug, headline, tagline, about, cover image, gallery (≤6), public phone/email, hours, accreditations, social links, SEO title/description, accent color
+3. Toggle **Publish public page** (`public_page_enabled`)
+4. **Share kit:** copy link, download QR PNG, open preview in new tab
+5. Live preview panel (desktop) showing `/p/[slug]` while editing
+
+### User journey
+Director finishes onboarding → fills public page copy → publishes → posts link on Instagram bio same day → parent registers without a separate website.
 
 ### Toasts
-Saved.
+1. Saved.
+2. Slug taken → "That URL is already in use."
+3. Published → "Your public page is live."
 
 ### Notifications
 None.
 
 ### Edge cases
-Jurisdiction change → warn may affect incident templates
+1. Jurisdiction change → warn may affect incident templates
+2. Unpublished page → preview works for director; public URL shows "Page not available"
+3. Slug change → old slug 301 redirect to new slug for 90 days `[P1.5]`
+4. Missing cover → fallback to sand gradient + logo (still premium, not broken)
+5. Invalid accent hex → reject save
 
 ### UI/UX
-Logo upload with crop.
+1. Logo upload with crop; cover 16:9 crop; gallery drag reorder
+2. Two-tab form: **Internal** | **Public page** — avoid overwhelming single form
+3. Character counters on headline (80) and tagline (160)
+4. Hours editor: Mon–Sun rows with open/closed toggle
+5. Accreditations as chip list + add field
+6. Preview uses same components as PUB-01 (WYSIWYG)
+7. Premium restraint: no purple gradients; serif headline in preview only
+
+---
+
+## B-25 · Programs Management `[MVP]`
+
+**Routes:** `/business/programs` · `/business/programs/new` · `/business/programs/[id]`
+
+### User flows
+1. List programs: active, draft, archived
+2. Create/edit: internal fields (name, type, dates, capacity, assigned coaches)
+3. **Pricing section (required):** price_amount_cents, currency, billing_interval (one_time/monthly/season/weekly), deposit optional, price_display, price_note, require_payment_before_approval
+4. **Stripe Connect:** inline onboarding when price &gt; 0; block public listing until connected
+5. **Public listing section:** enable listing, program slug, public headline/description, hero image, age range label, schedule summary, registration window, waitlist toggle, featured pin, cta_label (default "Book & pay")
+4. Archive program → hidden from public page and coach assignment pickers
+
+### User journey
+Director creates "Summer Soccer U10" → fills public card copy → enables listing → page shows program with Register CTA.
+
+### Toasts
+Created / updated / archived confirmations.
+
+### Notifications
+None on save.
+
+### Edge cases
+1. Program full + waitlist off → public CTA disabled with "Contact us"
+2. Program full + waitlist on → CTA "Join waitlist"
+3. Registration window closed → CTA "Registration closed"
+4. Duplicate program slug within org → block save
+5. Coach read-only: list assigned programs only (403 on mutate)
+
+### UI/UX
+1. Program list cards with public listing badge (Live / Hidden)
+2. Split form: **Operations** | **Public listing**
+3. Spots remaining computed live from roster (read-only on form)
+4. Empty state CTA ties to onboarding checklist
 
 ---
 
@@ -1694,13 +1745,106 @@ Soccer club ends spring → starts fall without rebuilding from scratch.
 
 ---
 
+# PART C — PUBLIC SURFACES `[MVP]`
+
+No auth required to view. Registration CTAs hand off to parent auth + Phase 11 enrollment.
+
+---
+
+## PUB-01 · Public Business Landing Page `[MVP]`
+
+**Routes:** `/p/[slug]` · `/p/[slug]/programs/[programSlug]`
+
+### User flows
+1. Visitor opens share link (social, QR, email signature)
+2. Scrolls hero → programs → about → gallery → location/hours
+3. Taps **Book & pay** on program card or program detail page → PUB-02
+4. Deep link `/programs/[programSlug]` scrolls to program + highlights card
+
+### User journey
+Affluent parent sees club Instagram link → lands on cinematic mobile page → trusts accreditations + photos → registers child in under 3 minutes.
+
+### Toasts
+None (public read-only page).
+
+### Notifications
+None on view.
+
+### Edge cases
+1. `public_page_enabled=false` → branded "Page not available" + support email if set
+2. Org not found / bad slug → 404 with ANCHOR marketing footer
+3. Zero public programs → hero CTA "Contact [business]" instead of scroll
+4. Program slug invalid → redirect to org page with anchor toast on client `[optional]`
+5. Rate limit aggressive scraping of `/p/*`
+6. XSS: sanitize all rich text server-side; no raw HTML from users in SSR
+
+### UI/UX — 2026 premium conversion (affluent parents)
+
+**Design intent:** Feels like a bespoke club website — not a SaaS template. Restrained luxury: confident typography, generous whitespace, photography-forward.
+
+1. **Hero:** Full-bleed cover (or sand fallback), centered logo, serif `public_headline`, sans tagline, verified badge if platform flag set, primary CTA "View programs" (smooth scroll)
+2. **Programs:** 1-col mobile / 2-col tablet+ cards — hero image, age label, schedule line, **price (required)**, spots left pill, **Book & pay** CTA with price on button
+3. **About:** Two-column desktop — copy left, pull quote or stat right (years operating, capacity)
+4. **Gallery:** Horizontal scroll mobile; masonry grid desktop; lightbox tap
+5. **Trust:** Accreditation chips + optional single testimonial (quote + attribution) `[P1.5 multi]`
+6. **Location:** Static map image or embed; hours table; click-to-call / mailto
+7. **Sticky mobile bar:** Business name + "Register" when programs section passed
+8. **Footer:** Minimal — Privacy · Terms · subtle "Enrollment & daily updates by ANCHOR"
+9. **States:** Skeleton shimmer on load; empty programs; error retry; offline banner
+10. **A11y:** WCAG 2.1 AA contrast; focus rings; 44px CTAs; reduced motion respect
+11. **SEO:** `generateMetadata` per org; OG image = cover or logo; JSON-LD `LocalBusiness` + `Offer` per listed program
+12. **Performance:** RSC-first; next/image; no client JS required to read content; ISR revalidate on profile/program save
+
+**Avoid:** Purple gradients, generic dashboard cards, stock illustration heroes, chatbot widgets, pop-up modals on entry.
+
+---
+
+## PUB-02 · Book & Pay from Public / Program Page `[MVP]`
+
+**Entry:** Program card on PUB-01 or program detail page `/p/[slug]/programs/[programSlug]`  
+**Handoff routes:** `/sign-up?role=parent&returnTo=...` · `/login?returnTo=...` · checkout resume URL
+
+### User flows
+1. Tap **Book & pay** (shows price on button, e.g. "Book & pay · $450/season")
+2. If logged out: sign up or login with return URL preserved
+3. If logged in, no children → add child flow (P-18)
+4. Select child → copy health profile → waiver scroll-to-sign
+5. **Stripe Checkout** (Connect destination charge) — stay on public-branded success page
+6. Confirmation: receipt email + "View in app" · registration active if auto-approve on pay
+7. Free programs (price 0): skip step 5, waiver only → pending or auto-approve per business setting
+
+### Toasts
+1. Payment successful — you're enrolled!
+2. Already registered in program → "You're already enrolled."
+3. Payment failed → retry Checkout
+
+### Notifications
+1. Business admin: new **paid** registration (push + email + amount)
+2. Parent: receipt + enrollment confirmation
+
+### Edge cases
+1. Registration closed → inline message, no checkout
+2. Program full + no waitlist → disable CTA
+3. Business Connect not configured → paid program hidden from public (director sees warning in admin)
+4. Checkout abandoned → resume link in email `[P1.5]`
+5. CSRF + rate limit on checkout session creation
+6. Attribution: `source=public`, `org_id`, `program_id`
+
+### UI/UX
+1. Stepper max 4 steps: Child → Waiver → Pay → Done
+2. Price summary sticky on pay step (line items, deposit if applicable)
+3. Mobile-first; public page chrome until success
+4. Program detail page: large price typography, trust row, single primary CTA
+
+---
+
 # PART B2 — COACH ROLE `[MVP]`
 
 Coach uses **same routes as Business** with permission gates. Page IDs reference Business pages unless noted.
 
 ### Coach permissions matrix
 1. **Can access:** B-07 Report, B-08–B-10 media/voice, B-03 Roster (assigned programs), B-03b Field mode, B-04 Child detail, B-05 Emergency view, B-11–B-13 Incidents, B-15 Threads, B-14 Broadcast (assigned programs only)
-2. **Cannot access:** B-16 Settings billing, B-17–B-19 org/groups/staff admin, B-23 Digest config, B-24 Seasons, B-06 bulk invites (view only), marketplace, revenue analytics
+2. **Cannot access:** B-16 Settings billing, B-17–B-19 org/groups/staff admin, B-25 program admin (read assigned only), B-23 Digest config, B-24 Seasons, B-06 bulk invites (view only), marketplace, revenue analytics, public page publish
 
 ### C-01 · Coach Login `[MVP]`
 **Route:** `/coach/login` → same auth as B-01; redirect to Coach shell if `role=coach`
@@ -2075,7 +2219,7 @@ P-30 SMS reply · B-21 bulk compliance export · B-24 season rollover · filters
 4. **Vague injury texts** → Incident flow (B-12, P-10) + insurance PDF (B-13)
 5. **Coach doesn't know allergies** → Allergy strip + emergency card (B-03, B-05)
 6. **Grandma pickup phone tag** → Authorized pickups + today override (P-20) + running late (P-29)
-7. **Brightwheel/TeamSnap already in use** → Coexistence onboarding (B-02) — no replacement
+7. **Brightwheel/TeamSnap import** → CSV roster import (B onboarding/settings P2) — optional coexistence messaging in marketing, not onboarding wizard
 8. **Director can't prove parent engagement** → Adoption dashboard (B-03) + weekly digest (B-23)
 9. **GroupMe liability** → Parent-always-in-thread messaging (P-23, B-15)
 10. **Verbal clearance** → Clearance share (P-16, B-07)

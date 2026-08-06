@@ -9,8 +9,8 @@ const FAMILY_TAB_PHASE: Record<FamilyTab, BuildPhase> = {
   children: "mvp",
   emergency: "mvp",
   pickups: "mvp",
-  forms: "p15",
-  coparent: "p15",
+  forms: "mvp",
+  coparent: "mvp",
 };
 
 const FAMILY_TAB_SPEC: Record<FamilyTab, string> = {
@@ -36,7 +36,7 @@ export async function FamilyTabPage({ tab }: FamilyTabPageProps) {
       namespace={`parent.family.${tab}`}
       phase={FAMILY_TAB_PHASE[tab]}
       specId={FAMILY_TAB_SPEC[tab]}
-      backHref="/parent/family"
+      backHref="/parent/family/children"
     />
   );
 }

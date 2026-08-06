@@ -27,7 +27,7 @@ export async function TrialBanner({ context }: TrialBannerProps) {
         </p>
       </div>
       <Link
-        href="/business/settings"
+        href="/business/settings/billing"
         className="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-[transform,background-color] duration-300 ease-premium hover:bg-primary/92 active:scale-[0.98]"
       >
         {t("trialBannerCta")}

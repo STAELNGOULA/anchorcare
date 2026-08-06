@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { DoctorDirectoryClient } from "@/components/doctors/doctor-directory-client";
+import { SkeletonList } from "@/components/shared/skeleton-list";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("parent.care.doctors");
@@ -9,11 +11,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function ParentCareDoctorsPage() {
   return (
-    <SurfacePlaceholder
-      namespace="parent.care.doctors"
-      phase="mvp"
-      specId="P-11"
-      backHref="/parent/care"
-    />
+    <Suspense fallback={<SkeletonList count={4} />}>
+      <DoctorDirectoryClient />
+    </Suspense>
   );
 }

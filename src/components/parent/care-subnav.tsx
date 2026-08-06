@@ -7,6 +7,7 @@ const CARE_TABS = [
   { key: "doctors", href: "/parent/care/doctors" },
   { key: "visits", href: "/parent/care/visits" },
   { key: "consults", href: "/parent/care/consults" },
+  { key: "clearance", href: "/parent/care/clearance" },
 ] as const;
 
 export function CareSubnav() {

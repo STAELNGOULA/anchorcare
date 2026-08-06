@@ -1,6 +1,6 @@
+import { resolveParentPlan } from "@/lib/billing/entitlements";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-
 export type ParentPlan = "free" | "family";
 
 export type ParentContext = {
@@ -48,13 +48,25 @@ export async function getParentContext(): Promise<ParentContext> {
   const email = user.email ?? "";
   const displayName = deriveDisplayName(profile?.full_name ?? null, email);
 
+  const { count: childrenCount } = await supabase
+    .from("children")
+    .select("id", { count: "exact", head: true })
+    .eq("parent_id", user.id);
+
+  const { count: registrationCount } = await supabase
+    .from("program_registrations")
+    .select("id", { count: "exact", head: true })
+    .eq("parent_id", user.id);
+
+  const plan = await resolveParentPlan(user.id);
+
   return {
     userId: user.id,
     email,
     displayName,
     familyLabel: `${displayName}'s family`,
-    plan: "free",
-    childrenCount: 0,
-    hasLinkedProgram: false,
+    plan,
+    childrenCount: childrenCount ?? 0,
+    hasLinkedProgram: (registrationCount ?? 0) > 0,
   };
 }

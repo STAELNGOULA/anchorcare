@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/business/page-header";
-import { SectionEmpty } from "@/components/coach/section-empty";
+import { CoachProgramList } from "@/components/coach/coach-program-list";
 import { getCoachContext } from "@/lib/coach/coach-context";
+import { listProgramsForCoach } from "@/lib/coach/program-service";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("coach.programs");
@@ -12,6 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function CoachProgramsPage() {
   const t = await getTranslations("coach.programs");
   const context = await getCoachContext();
+  const programs =
+    context.role === "coach" ? await listProgramsForCoach(context.userId) : [];
 
   return (
     <div className="space-y-8 md:space-y-10">
@@ -19,10 +22,7 @@ export default async function CoachProgramsPage() {
         title={t("title", { name: context.displayName })}
         subtitle={t("subtitle")}
       />
-      <SectionEmpty
-        title={t("emptyTitle")}
-        body={t("emptyBody")}
-      />
+      <CoachProgramList programs={programs} />
     </div>
   );
 }

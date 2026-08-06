@@ -1,6 +1,6 @@
 # ANCHOR_CARE — User Journeys
 
-**Version:** 3.1 | **Updated:** August 3, 2026  
+**Version:** 3.2 | **Updated:** August 5, 2026  
 **Related:** [PRD.md](./PRD.md) | [DEVELOPMENT_SPEC.md](./DEVELOPMENT_SPEC.md) | [STRATEGY.md](./STRATEGY.md)
 
 Where your child's day away from home lives — and where care starts when something goes wrong.
@@ -11,7 +11,7 @@ Where your child's day away from home lives — and where care starts when somet
 
 1. **Build order:** Follow sections 2 → 11 (MVP first). Coach uses the same screens as Business with fewer permissions — build once.
 2. **Phases:** `[MVP]` ship first · `[P1.5]` after pilot · `[P2]` scale · `[P3]` later
-3. **Growth loop:** Business creates program → invites parents → Coach posts daily → Parent timeline grows → Parent upgrades → Business renews ANCHOR Pro
+3. **Growth loop:** Business publishes public page → parent registers from link → Coach posts daily → Parent timeline grows → Parent upgrades → Business renews ANCHOR Pro
 
 **Positioning:** Works alongside Brightwheel, TeamSnap, etc. We own **daily story, safety, care, and enrollment** — not full accounting or game scheduling.
 
@@ -22,8 +22,8 @@ Where your child's day away from home lives — and where care starts when somet
 ### Parent
 1. Sign up (email + password, Google, Apple)
 2. Add and manage children
-3. Discover programs `[P2]` or join via invite `[MVP]`
-4. Register child in program; pay `[P2 in-app / MVP external link]`
+3. Discover programs `[MVP via public business page]` or in-app browse `[P2]` or join via direct invite `[MVP]`
+4. Register child in program; **book & pay on public/program page** `[MVP]` or via invite
 5. View child timeline: photos, videos, voice reports, notes, transcripts
 6. Emergency card and authorized pickups
 7. Incident alerts and response; care and clearance
@@ -33,16 +33,17 @@ Where your child's day away from home lives — and where care starts when somet
 11. ANCHOR Family subscription (timeline, care, multi-child)
 
 ### Business (Owner / Director)
-1. Sign up and manage org profile + ANCHOR Pro subscription
-2. Create and manage **programs** (teams, classrooms, camps)
-3. Manage roster: children, parents, registrations per program
-4. Invite and manage **Coaches** (employees)
-5. Approve registrations and waivers
-6. Analytics: parent adoption, report opens, incidents `[MVP]` · program revenue snapshot `[P2]`
-7. Finances: ANCHOR subscription + registration payments `[P2]` — not full business accounting
-8. Marketplace: list equipment/products for parents `[P2]`
-9. Broadcast messaging; compliance export `[P2]`
-10. Weekly digest email (business performance) `[P1.5]`
+1. Sign up and manage org profile + **public business landing page** + ANCHOR Pro subscription
+2. Create and manage **programs** (teams, classrooms, camps) with **public listing fields**
+3. Share public page link / QR (replaces need for separate website for enrollment)
+4. Manage roster: children, parents, registrations per program
+5. Invite and manage **Coaches** (employees)
+6. Approve registrations and waivers
+7. Analytics: parent adoption, report opens, incidents `[MVP]` · public page views `[P2]` · program revenue snapshot `[P2]`
+8. Finances: ANCHOR subscription + registration payments `[P2]` — not full business accounting
+9. Marketplace: list equipment/products for parents `[P2]`
+10. Broadcast messaging; compliance export `[P2]`
+11. Weekly digest email (business performance) `[P1.5]`
 
 ### Coach (Staff)
 1. Log in to **Coach app** (same codebase, restricted role)
@@ -142,17 +143,23 @@ Build **shared engines** once; expose by role permissions.
 4. Add child: name, DOB, photo, allergies, meds, emergency contacts
 5. Land on Today (empty until linked to a program)
 
-### 5.2 Join a Program `[MVP]` — Primary path
-1. Receive SMS/link: "[Business] invited you to [Program]"
-2. Activate in under 60 seconds; confirm child
-3. **Copy health profile** if child already on account (allergies, meds, contacts pre-filled)
-4. Sign waivers; set consents
-5. **Pay:** MVP = external link or admin marks paid · P2 = in-app Stripe checkout
-6. Registration pending → Business approves → child appears under **Programs** tab
+### 5.2 Join a Program `[MVP]` — Primary paths
 
-### 5.3 Discover Programs `[P2]` — Secondary path
+**Path A — Public business page (preferred for growth)**
+1. Parent opens `/p/[slug]` or `/p/[slug]/programs/[programSlug]` from social, QR, or email
+2. Sees **program price** on card or program detail page; taps **Book & pay**
+3. Creates account or logs in; confirms child; health profile pre-fill if existing child
+4. Signs waivers
+5. **Pays via Stripe Checkout** (Connect) — receipt emailed; auto-enrolled if business configured
+6. Child appears under **Programs** tab; business sees paid registration in queue
+
+**Path B — Direct invite**
+1. Receive SMS/link: "[Business] invited you to [Program]"
+2. Same steps 3–6 as Path A via `/invite/[token]` (price shown before checkout)
+
+### 5.3 Discover Programs `[P2]` — In-app secondary path
 1. Browse **Programs** tab: businesses near you, by type (sports, daycare, camp)
-2. View program details, price, dates
+2. Tap business → opens public page `/p/[slug]` for conversion (same as Path A)
 3. Register child → same waiver + payment flow
 
 ### 5.4 Today & Daily Report `[MVP]`
@@ -230,17 +237,29 @@ Build **shared engines** once; expose by role permissions.
 ### 6.1 Sign Up & Onboarding `[MVP]`
 1. Email + password; verify
 2. Org profile: name, logo, type, address, jurisdiction
-3. Coexistence: "Use Brightwheel/TeamSnap?" — we work alongside
+3. **Public page setup:** slug, headline, cover, about, hours — publish when ready
 4. Start 14-day Pro trial
-5. Create first **program** (name, dates, capacity, price display)
-6. Invite coaches; generate parent invite link/QR
-7. Goal: first coach report within 48 hours
+5. Create first **program** with **price** (amount, currency, billing interval) + Connect Stripe to get paid
+6. Share public page link + invite coaches; generate parent invite link/QR as alternate
+7. Goal: first **paid booking** or coach report within 48 hours
 
 ### 6.2 Programs `[MVP]`
 1. **Programs** tab → create/edit/archive program
-2. Fields: name, type, age range, start/end dates, capacity, description, price (display; payment P2)
-3. Per program: roster, registrations, assigned coaches
-4. Season rollover: archive program, clone for new season `[P2]`
+2. Fields: name, type, age range, start/end dates, capacity, description, **price (required)**: amount, currency, billing interval, deposit optional, price display/note
+3. **Stripe Connect** required before paid programs go live on public page
+4. **Public listing:** hero image, public headline/description, schedule summary, registration window, waitlist, featured pin
+5. Per program: roster, registrations, assigned coaches, **payment status** on registrations
+6. Season rollover: archive program, clone for new season `[P2]`
+
+### 6.2b Public Business Page `[MVP]`
+1. **Settings → Profile → Public page** tab — edit all public fields (see PRD §8.28)
+2. Preview live page before publish
+3. **Share kit:** copy URL, download QR, embed "Book & pay" button snippet
+4. Parent lands on premium mobile landing — browse programs with **prices visible**
+5. **Book & pay** on business page program cards OR **program detail page** `/p/[slug]/programs/[programSlug]`
+6. Flow: auth (if needed) → child → waiver → **Stripe Checkout** → enrolled (or pending if unpaid/free)
+7. Unpublish toggle for off-season or rebranding
+8. Page views + registration attribution `[P2 Phase 52]`
 
 ### 6.3 Registrations `[MVP]`
 1. View all registrations: pending, active, waitlist `[P2]`
@@ -409,16 +428,17 @@ Every role action writes to the same timeline (parent view):
 
 ### MVP — Weeks 1–12 (sell to first 10 businesses)
 1. Auth: Parent, Business admin, Coach, Admin (RBAC)
-2. Programs + roster + registrations + digital waivers (approve flow; pay = external link)
-3. Parent invite SMS + web report viewer
-4. Coach: voice AI report, photos, notes, tag children, publish
-5. Parent: Today, Timeline (7-day free), Programs enrolled view
-6. Emergency card + authorized pickups + health profile copy
-7. Incidents + parent alerts + clearance share
-8. Care: doctor directory + JANE links + visit upload + incident consult (Family)
-9. Parent↔business messaging + broadcast
-10. Business: dashboard adoption metrics, coach invites, program CRUD
-11. Stripe: Parent Family + Business Pro
+2. Programs + roster + registrations + digital waivers + **Stripe Connect book & pay** on public/program pages
+3. **Public business landing page** (`/p/[slug]`) + **program pages** with **book & pay** + program public listing fields + register from page
+4. Parent invite SMS + web report viewer
+5. Coach: voice AI report, photos, notes, tag children, publish
+6. Parent: Today, Timeline (7-day free), Programs enrolled view
+7. Emergency card + authorized pickups + health profile copy
+8. Incidents + parent alerts + clearance share
+9. Care: doctor directory + JANE links + visit upload + incident consult (Family)
+10. Parent↔business messaging + broadcast
+11. Business: dashboard adoption metrics, coach invites, program CRUD, public page share kit
+12. Stripe: Parent Family + Business Pro
 
 ### Phase 1.5 — Weeks 13–16 (retention + less resistance)
 1. Parent weekly child digest email
@@ -434,15 +454,16 @@ Every role action writes to the same timeline (parent view):
 11. Shift handoff notes (daycare)
 
 ### Phase 2 — Weeks 17–24 (growth + monetization)
-1. In-app program payment (Stripe Connect)
-2. Program discovery / browse for parents
-3. Marketplace (listings + checkout)
-4. Business revenue snapshot per program
-5. Season rollover
-6. SMS reply to report texts
-7. Bulk compliance export
-8. Referral program (parent + business)
-9. Brightwheel / TeamSnap roster import integrations
+1. Registration pay enhancements (promo codes, refunds, installments)
+2. In-app program discovery (deep links to public pages) + city SEO index
+3. Public page analytics (views, register CTR)
+4. Marketplace (listings + checkout)
+5. Business revenue snapshot per program
+6. Season rollover
+7. SMS reply to report texts
+8. Bulk compliance export
+9. Referral program (parent + business)
+10. Brightwheel / TeamSnap roster import integrations
 
 ### Phase 3 — Scale
 1. Camp/school templates, French (Quebec), Agora video, full expense tracking
@@ -455,12 +476,15 @@ Every role action writes to the same timeline (parent view):
 2. Parent in multiple programs → one timeline per child, filtered by program
 3. Coach assigned to multiple programs → program picker on Report tab
 4. Business on Brightwheel → ANCHOR for story + safety only; copy says coexist
-5. Payment external (MVP) → parent uploads receipt or admin marks paid `[MVP]`
+5. Payment external (MVP) → **removed**; all paid enrollments via Stripe Checkout on public/program pages
 6. AI wrong child in voice draft → coach must review before publish
 7. Incident amended within 24h → parent notified
 8. Coach tries to access billing → 403 + "Contact your director"
 9. Marketplace order dispute → business handles; ANCHOR not merchant of record until P2 Connect
 10. Weekly digest unsubscribed → incident SMS still sent
+11. Public page unpublished mid-campaign → link shows "not available"; business notified in dashboard
+12. Parent registers from public page while also holding invite token → dedupe to one pending registration
+13. Slug squatting → reserved slugs blocked; admin can release `[Admin]`
 
 ---
 
@@ -469,20 +493,21 @@ Every role action writes to the same timeline (parent view):
 **Kept and sharpened**
 1. Four roles — Coach split from Business for clarity and SafeSport compliance
 2. Programs as first-class entity (not just "groups")
-3. Timeline includes transcript + notes + media + reports (your daily story)
-4. Weekly digest for **parent and business** (emotional retention + B2B ROI)
-5. Marketplace and in-app pay — valued but **P2** so MVP ships in 12 weeks
+3. **Public business page** — shareable enrollment landing (website replacement)
+4. Timeline includes transcript + notes + media + reports (your daily story)
+5. Weekly digest for **parent and business** (emotional retention + B2B ROI)
+6. Marketplace and in-app pay — valued but **P2** so MVP ships in 12 weeks
 
 **Deferred to avoid build death (still on roadmap)**
 1. Full business accounting (profit/expenses) → P2 snapshot only; not QuickBooks
 2. Marketplace checkout → P2; MVP = external links if urgent
-3. Parent browse all businesses → P2; MVP = invite-led (higher activation)
+3. In-app browse all businesses → P2 city index linking to public pages; MVP = public page + invite
 4. AI face tagging → never; manual tag only
 
 **Why this wins in market**
 1. Coaches get one **Report** screen (voice + photos + notes) — faster than Brightwheel typing
 2. Parents get **one Timeline** across all programs — nobody else does this
-3. Businesses get **adoption analytics + incident PDF** — sells to insurance-conscious sports clubs
+3. Businesses get **public landing page + adoption analytics + incident PDF** — replaces website + sells to insurance-conscious sports clubs
 4. **Coach role** reduces director overwhelm — scalable staffing model
 
 ---

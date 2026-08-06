@@ -13,23 +13,16 @@ export type EnqueueJobInput = {
   idempotencyKey?: string;
 };
 
+export { RETRY_DELAYS_MS };
+
 export function getNextRetryAt(attempts: number): Date | null {
   const delay = RETRY_DELAYS_MS[attempts];
   if (delay == null) return null;
   return new Date(Date.now() + delay);
 }
 
-/**
- * Enqueue a background job. Implementation persists to `background_jobs` via
- * service client once Supabase project is provisioned.
- */
-export async function enqueueJob(input: EnqueueJobInput): Promise<{ id: string }> {
-  // Placeholder until DB migration is applied — returns synthetic id for dev.
-  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    console.warn("[jobs] enqueue (dev noop):", input.type, input.idempotencyKey);
-    return { id: crypto.randomUUID() };
-  }
-
-  // Full implementation: insert into background_jobs with ON CONFLICT on idempotency_key
-  throw new Error("Job queue persistence not yet wired — apply DB migration first");
-}
+export {
+  enqueueJob,
+  processBackgroundJobs,
+  registerJobHandler,
+} from "./processor";

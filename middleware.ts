@@ -1,4 +1,5 @@
 import { updateSession } from "@/lib/supabase/session";
+import { generateRequestId, REQUEST_ID_HEADER } from "@/lib/logging/request-id";
 import { NextResponse, type NextRequest } from "next/server";
 
 function checkCsrf(request: NextRequest): NextResponse | null {
@@ -29,7 +30,11 @@ export async function middleware(request: NextRequest) {
   const csrfError = checkCsrf(request);
   if (csrfError) return csrfError;
 
-  return updateSession(request);
+  const response = await updateSession(request);
+  const requestId =
+    request.headers.get(REQUEST_ID_HEADER) ?? generateRequestId();
+  response.headers.set(REQUEST_ID_HEADER, requestId);
+  return response;
 }
 
 export const config = {

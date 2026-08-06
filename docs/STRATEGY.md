@@ -1,6 +1,6 @@
 # ANCHOR_CARE — Strategy & Market Playbook
 
-**Version:** 1.0 | **Updated:** August 3, 2026  
+**Version:** 1.1 | **Updated:** August 5, 2026  
 **Related:** [PRD.md](./PRD.md) | [USER_JOURNEYS.md](./USER_JOURNEYS.md) | [DEVELOPMENT_SPEC.md](./DEVELOPMENT_SPEC.md)
 
 Business strategy, PMF validation, revenue model, GTM, and long-term scale path.
@@ -144,8 +144,8 @@ Requires **$80–100M+ ARR** or hyper-growth with network effects. Needs at leas
 
 **Outbound (highest conversion)**
 1. List daycares + sports clubs in 1–2 launch cities.
-2. Pitch: *"Cut 30 min of typing. Parents get daily story. Incidents documented."*
-3. 14-day trial + help record first voice report in week 1.
+2. Pitch: *"Your public page + daily parent updates + incident docs — no separate website needed."*
+3. 14-day trial + help publish public page and record first voice report in week 1.
 
 **Community**
 1. Daycare director Facebook groups, NAEYC local chapters, youth sports admin forums.
@@ -162,18 +162,20 @@ Requires **$80–100M+ ARR** or hyper-growth with network effects. Needs at leas
 
 1. Parent referral: 1 month free Family per referral.
 2. Timeline share cards (privacy-safe).
-3. Local SEO: "[City] daycare daily updates app."
+3. Local SEO: public pages indexed as `[Business name] + [city] + enrollment`.
+4. Businesses promote `/p/[slug]` on social — zero cold parent ads required.
 
 ### Phase 3 — Network (500+ businesses)
 
 1. B2B paid ads (LinkedIn, Facebook) to directors only.
-2. In-app program discovery (parents search → businesses must join).
+2. In-app program discovery (parents search → deep link to public pages).
+3. City aggregator pages linking to verified public pages `[P2]`.
 
 ### Conversion copy
 
-**Business:** *"Parents stop calling. Staff stops typing. Incidents are documented."*
+**Business:** *"One link for enrollment and daily updates — skip the $3k website."*
 
-**Parent:** *"See your child's day — even from a text link, no app required."*
+**Parent:** *"See programs, register, and get your child's day — from one trusted page."*
 
 **Coach:** *"Talk for 2 minutes instead of typing for 30."*
 
@@ -193,6 +195,7 @@ Requires **$80–100M+ ARR** or hyper-growth with network effects. Needs at leas
 3. SMS-first parent activation
 4. Incident → contextual care → clearance
 5. Dedicated Coach role (field-ready UX)
+6. **Shareable public business page** — enrollment + brand without separate website
 
 ---
 
@@ -201,22 +204,23 @@ Requires **$80–100M+ ARR** or hyper-growth with network effects. Needs at leas
 ### Complete in current doc set (build-ready)
 
 1. Four roles: Parent, Business, Coach, Admin
-2. Programs entity + registrations
+2. Programs entity + registrations + **public business landing page**
 3. Shared engines architecture
 4. MVP / P1.5 / P2 / P3 phasing
-5. Development spec per page (Parent, Business, Admin)
+5. Development spec per page (Parent, Business, Public, Admin)
 6. PMF metrics + GTM in this doc
 
 ### Missing for "complete product" (roadmap)
 
-1. In-app program payments (Stripe Connect) — P2
-2. Parent program discovery / marketplace browse — P2
-3. Marketplace checkout for business products — P2
-4. Business revenue snapshot (not full accounting) — P2
-5. Brightwheel / TeamSnap integrations — P2
-6. Parent weekly child digest email — P1.5
-7. French (Quebec) — P3
-8. Offline coach mode — P2
+1. In-app program payments (Stripe Connect) — **MVP on public/program pages; P2 enhancements (promos, refunds)**
+2. In-app program discovery index (links to public pages) — P2
+3. Public page analytics dashboard — P2
+4. Marketplace checkout for business products — P2
+5. Business revenue snapshot (not full accounting) — P2
+6. Brightwheel / TeamSnap integrations — P2
+7. Parent weekly child digest email — P1.5
+8. French (Quebec) — P3
+9. Offline coach mode — P2
 
 ### Missing for billion-dollar scale
 

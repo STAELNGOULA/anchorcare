@@ -1,28 +1,51 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from "next";
+import { headers } from "next/headers";
+import { getTranslations } from "next-intl/server";
+import { SmsReportErrorState } from "@/components/public/sms-report-error";
+import { SmsReportViewer } from "@/components/public/sms-report-viewer";
+import {
+  getViewerUserId,
+  loadSmsReportByToken,
+} from "@/lib/reports/sms-token-service";
+
+export const dynamic = "force-dynamic";
 
 type PageProps = {
   params: Promise<{ token: string }>;
 };
 
-export default async function SmsWebViewerPage({ params }: PageProps) {
-  const { token } = await params;
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("public.smsReport");
+  return {
+    title: t("metaTitle"),
+    robots: { index: false, follow: false },
+  };
+}
 
+function clientIpFromHeaders(headerStore: Headers): string {
   return (
-    <div className="min-h-dvh bg-background px-4 py-8">
-      <div className="mx-auto max-w-lg">
-        <Card>
-          <CardHeader>
-            <CardTitle>Daily report</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4 text-sm text-muted-foreground">
-            <p>
-              SMS web viewer for parents without the app installed. Token:{" "}
-              <span className="font-mono text-xs">{token.slice(0, 8)}…</span>
-            </p>
-            <p>Report content loads here after invite link validation.</p>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    headerStore.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    headerStore.get("x-real-ip") ??
+    "unknown"
   );
+}
+
+export default async function SmsReportPage({ params }: PageProps) {
+  const { token } = await params;
+  const decoded = decodeURIComponent(token);
+  const headerStore = await headers();
+  const clientIp = clientIpFromHeaders(headerStore);
+  const viewerUserId = await getViewerUserId();
+
+  const result = await loadSmsReportByToken(
+    decoded,
+    clientIp,
+    viewerUserId,
+  );
+
+  if (result.state !== "valid") {
+    return <SmsReportErrorState error={result} />;
+  }
+
+  return <SmsReportViewer payload={result} />;
 }

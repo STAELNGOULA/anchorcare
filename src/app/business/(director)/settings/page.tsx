@@ -1,33 +1,32 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/business/page-header";
-import { HubSectionGrid } from "@/components/shared/hub-section-grid";
+import { SettingsHub } from "@/components/settings/settings-hub";
+import { TrialBanner } from "@/components/business/trial-banner";
+import { getDirectorContext } from "@/lib/business/director-context";
+import {
+  BUSINESS_SETTINGS_GROUPS,
+  getBusinessSettingsHubHints,
+} from "@/lib/settings/business-settings-hub";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("business.settings");
   return { title: t("metaTitle") };
 }
 
-const SETTINGS_SECTIONS = [
-  { key: "profile", href: "/business/settings/profile" },
-  { key: "billing", href: "/business/settings/billing" },
-  { key: "invites", href: "/business/settings/invites" },
-  { key: "staff", href: "/business/settings/staff" },
-  { key: "analytics", href: "/business/insights" },
-  { key: "digest", href: "/business/settings/digest", badge: "p15" as const },
-  { key: "marketplace", href: "/business/settings/marketplace", badge: "p2" as const },
-  { key: "compliance", href: "/business/settings/compliance", badge: "p2" as const },
-] as const;
-
 export default async function BusinessSettingsPage() {
+  const context = await getDirectorContext();
+  const hints = await getBusinessSettingsHubHints(context.userId);
   const t = await getTranslations("business.settings");
 
   return (
     <div className="space-y-8">
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <HubSectionGrid
+      <TrialBanner context={context} />
+      <SettingsHub
         namespace="business.settings"
-        sections={SETTINGS_SECTIONS}
+        groups={BUSINESS_SETTINGS_GROUPS}
+        hints={hints}
       />
     </div>
   );

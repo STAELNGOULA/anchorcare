@@ -30,7 +30,7 @@ export async function SignUpIntentPicker({ className }: SignUpIntentPickerProps)
         <Link
           key={option.href}
           href={option.href}
-          className="group rounded-[1.25rem] bg-secondary/40 p-5 ring-1 ring-border/50 transition-[background-color,box-shadow] duration-300 ease-premium hover:bg-secondary/60 hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="group rounded-[1.25rem] bg-secondary/40 p-5 ring-1 ring-border/50 transition-[background-color,box-shadow,transform] duration-300 ease-premium hover:scale-[1.02] hover:bg-secondary/60 hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.99]"
         >
           <h2 className="font-display text-xl text-foreground">{option.title}</h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">

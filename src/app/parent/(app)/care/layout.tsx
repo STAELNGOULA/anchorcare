@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/business/page-header";
 import { CareSubnav } from "@/components/parent/care-subnav";
+import { CareFamilyGate } from "@/components/parent/care-family-gate";
 
 export default async function CareLayout({ children }: { children: ReactNode }) {
   const t = await getTranslations("parent.care");
@@ -10,7 +11,7 @@ export default async function CareLayout({ children }: { children: ReactNode }) 
     <div className="space-y-8">
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
       <CareSubnav />
-      {children}
+      <CareFamilyGate>{children}</CareFamilyGate>
     </div>
   );
 }

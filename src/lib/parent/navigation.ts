@@ -26,7 +26,7 @@ export type ParentNavItem = {
 export const PARENT_NAV: ParentNavItem[] = [
   { key: "today", href: "/parent/today", icon: CalendarDays },
   { key: "timeline", href: "/parent/timeline", icon: Clock3 },
-  { key: "family", href: "/parent/family", icon: Users },
+  { key: "family", href: "/parent/family/children", icon: Users },
   { key: "programs", href: "/parent/programs", icon: Layers },
   { key: "care", href: "/parent/care", icon: HeartPulse },
   { key: "you", href: "/parent/you", icon: UserCircle },

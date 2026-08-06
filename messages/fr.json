@@ -375,8 +375,27 @@
     "contactSupport": "Contacter l'assistance",
     "inviteCodeLabel": "Code d'invitation",
     "inviteCodePlaceholder": "Collez votre code d'invitation",
+    "inviteCodeHint": "Optionnel — fourni par le directeur de votre programme.",
+    "countryLabel": "Pays",
+    "countryPlaceholder": "Sélectionnez un pays",
+    "countryRequired": "Sélectionnez votre pays.",
+    "stateLabel": "État",
+    "statePlaceholder": "Sélectionnez un état",
+    "provinceLabel": "Province / territoire",
+    "provincePlaceholder": "Sélectionnez une province",
+    "regionRequired": "Sélectionnez votre état ou province.",
+    "regionInvalid": "Sélectionnez un état ou une province valide.",
+    "nameMin": "Le nom doit contenir au moins 2 caractères.",
+    "nameMax": "Le nom doit compter au plus 80 caractères.",
+    "signupStepAccount": "Compte",
+    "signupSuccessTitle": "Presque terminé",
+    "emailTakenTitle": "Courriel déjà enregistré",
+    "emailTakenBody": "Un compte existe déjà avec ce courriel. Connectez-vous ou réinitialisez votre mot de passe.",
+    "signInInstead": "Se connecter",
+    "signupRateLimited": "Trop de tentatives d'inscription. Réessayez dans {minutes} minutes.",
     "inviteTitle": "Vous êtes invité",
     "inviteSubtitle": "{program} vous a invité sur ANCHOR.",
+    "inviteCoachSubtitle": "Rejoignez {program} comme entraîneur sur ANCHOR.",
     "inviteChildLine": "Nouvelles pour {child}",
     "inviteEmailHint": "Utilisez {email} si vous créez un nouveau compte.",
     "inviteCreateAccount": "Créer un compte",
@@ -392,6 +411,17 @@
     "onboardingProgramCta": "Aller au tableau de bord",
     "checkEmail": "Vérifiez votre courriel pour confirmer votre compte, puis connectez-vous.",
     "resetEmailSent": "Lien envoyé. Vérifiez votre courriel.",
+    "resetSuccessTitle": "Vérifiez votre courriel",
+    "resetSuccessBody": "Si un compte existe pour cette adresse, nous avons envoyé un lien sécurisé pour réinitialiser votre mot de passe. Le lien expire dans une heure.",
+    "resetExpiredTitle": "Ce lien a expiré",
+    "resetExpiredSubtitle": "Les liens de réinitialisation sont valides pendant une heure. Demandez-en un nouveau pour continuer.",
+    "requestNewLink": "Demander un nouveau lien",
+    "resetRateLimited": "Trop de demandes de réinitialisation. Réessayez dans {minutes} minutes.",
+    "passwordWeak": "Choisissez un mot de passe plus fort — mélangez lettres, chiffres et symboles.",
+    "passwordStrengthWeak": "Faible",
+    "passwordStrengthFair": "Moyen",
+    "passwordStrengthGood": "Bon",
+    "passwordStrengthStrong": "Fort",
     "emailRequired": "Le courriel est requis.",
     "emailInvalid": "Entrez une adresse courriel valide.",
     "passwordRequired": "Le mot de passe est requis.",
@@ -403,6 +433,30 @@
     "termsRequired": "Vous devez accepter les conditions pour continuer.",
     "invalidCredentials": "Courriel ou mot de passe incorrect.",
     "emailNotVerified": "Veuillez vérifier votre courriel avant de vous connecter.",
+    "emailTooLong": "Le courriel doit compter au plus 254 caractères.",
+    "welcomeBack": "Bon retour.",
+    "rememberDevice": "Rester connecté pendant 30 jours",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe",
+    "continueWithGoogle": "Continuer avec Google",
+    "continueWithApple": "Continuer avec Apple",
+    "orContinueWithEmail": "ou continuer avec le courriel",
+    "loginSubtitleParent": "La journée de votre enfant, dans une chronologie sereine.",
+    "loginSubtitleProgram": "Connectez-vous pour publier des rapports et renforcer la confiance des parents.",
+    "adminLoginTitle": "Connexion administrateur",
+    "adminLoginSubtitle": "Personnel de la plateforme uniquement. Pas d'inscription publique.",
+    "unverifiedTitle": "Vérifiez votre courriel",
+    "unverifiedBody": "Nous avons envoyé un lien de confirmation lors de votre inscription. Vérifiez votre courriel pour accéder à votre compte.",
+    "resendVerification": "Renvoyer le courriel de vérification",
+    "verificationResent": "Courriel de vérification envoyé. Consultez votre boîte de réception.",
+    "suspendedTitle": "Compte suspendu",
+    "suspendedBody": "Ce compte a été suspendu. Contactez le support pour obtenir de l'aide.",
+    "oauthMergeTitle": "Utilisez votre courriel pour vous connecter",
+    "oauthMergeBody": "Un compte avec ce courriel existe déjà. Connectez-vous avec votre mot de passe ou réinitialisez-le si nécessaire.",
+    "signInWithEmail": "Se connecter avec le courriel",
+    "rateLimited": "Trop de tentatives. Réessayez dans {seconds} secondes.",
+    "languageToggle": "Langue",
+    "cancel": "Annuler",
     "emailTaken": "Un compte existe déjà avec ce courriel. Connectez-vous.",
     "signUpFailed": "Impossible de créer le compte. Réessayez.",
     "resetEmailFailed": "Impossible d'envoyer le courriel. Réessayez.",
@@ -414,6 +468,36 @@
     "inviteUsed": "Cette invitation a déjà été utilisée.",
     "inviteExpired": "Cette invitation a expiré.",
     "inviteAcceptFailed": "Impossible d'accepter l'invitation. Réessayez.",
+    "inviteFlow": {
+      "defaultOrg": "Votre programme",
+      "programStarts": "Début le {date}",
+      "childLine": "Inscription pour {child}",
+      "signedInAs": "Connecté en tant que {email}",
+      "selectChild": "Choisir un enfant",
+      "addChild": "Ajouter un enfant",
+      "childLabel": "Quel enfant s'inscrit ?",
+      "childFirstName": "Prénom de l'enfant",
+      "childLastName": "Nom de famille",
+      "childDob": "Date de naissance (optionnel)",
+      "healthPreviewTitle": "Aperçu du profil santé",
+      "healthPreviewEmpty": "Sélectionnez ou ajoutez un enfant pour prévisualiser allergies et médicaments.",
+      "healthPreviewNote": "Modifiable à tout moment sous Famille → Enfants.",
+      "allergies": "Allergies",
+      "medications": "Médicaments",
+      "conditions": "Conditions médicales",
+      "noneListed": "Aucune indiquée",
+      "copyHealthProfile": "Partager le profil santé avec ce programme",
+      "acceptCta": "Accepter l'invitation",
+      "accepting": "Liaison en cours…",
+      "acceptSuccess": "Vous êtes connecté — bienvenue sur ANCHOR.",
+      "editHealthProfile": "Modifier le profil santé",
+      "wrongAccountTitle": "Mauvais compte",
+      "wrongAccountBody": "Cette invitation a été envoyée à {inviteEmail}. Vous êtes connecté en tant que {currentEmail}.",
+      "switchAccount": "Changer de compte",
+      "coachSignedInAs": "Invitation entraîneur pour {email}",
+      "coachAcceptCta": "Rejoindre comme entraîneur",
+      "coachAcceptSuccess": "Bienvenue dans l'équipe."
+    },
     "profileUpdateFailed": "Impossible de mettre à jour le profil. Contactez l'assistance.",
     "notAuthenticated": "Connectez-vous pour continuer.",
     "unknownError": "Une erreur est survenue. Réessayez."
@@ -454,45 +538,169 @@
       "checklistTitle": "Préparez la première semaine",
       "checklistSubtitle": "Complétez ces étapes pour publier votre premier rapport et inviter les familles.",
       "checklist": {
-        "profile": "Ajoutez le profil de votre organisation",
+        "publicPage": "Publiez votre page publique",
         "program": "Créez votre premier programme",
-        "invite": "Invitez les familles à rejoindre",
-        "report": "Publiez votre premier rapport quotidien",
-        "activation": "Voyez un parent ouvrir une chronologie"
+        "invite": "Envoyez votre première invitation",
+        "report": "Publiez votre premier rapport quotidien"
       },
-      "kpiSectionTitle": "Cette semaine",
-      "actionsSectionTitle": "Prochaines étapes recommandées",
+      "kpiSectionTitle": "Santé du programme",
+      "todaySectionTitle": "Aujourd'hui",
+      "actionsSectionTitle": "Actions rapides",
+      "today": {
+        "reportsPublished": "Rapports publiés aujourd'hui",
+        "reportsPending": "Les coachs publient depuis l'onglet Rapport — Phase 15.",
+        "pendingRegistrations": "Inscriptions en attente"
+      },
+      "handoff": {
+        "title": "Passation de relève",
+        "viewAll": "Toutes les notes de passation"
+      },
       "kpi": {
-        "familiesActivated": {
-          "label": "Familles activées",
-          "pending": "Mis à jour lorsque les familles acceptent les invitations."
+        "activation": {
+          "label": "Activation familles",
+          "pending": "Envoyez des invitations pour voir le % d'activation.",
+          "benchmark": "Les meilleurs programmes atteignent 70 % d'activation en deux semaines."
         },
-        "reportsThisWeek": {
-          "label": "Rapports cette semaine",
-          "pending": "Mis à jour lorsque les coachs publient des rapports."
-        },
-        "openRate": {
-          "label": "Taux d'ouverture",
+        "wapor": {
+          "label": "Taux d'ouverture hebdo",
           "pending": "Mis à jour lorsque les parents ouvrent les rapports."
+        },
+        "incidents": {
+          "label": "Incidents (7 jours)"
+        },
+        "voiceDays": {
+          "label": "Jours de rapport vocal",
+          "pending": "Mis à jour lorsque les coachs publient des rapports vocaux."
         }
+      },
+      "trialEnding": {
+        "title": "{days, plural, one {# jour restant sur votre essai} other {# jours restants sur votre essai}}",
+        "body": "Passez à ANCHOR Pro pour continuer à publier des rapports et accepter des inscriptions.",
+        "dismiss": "Me rappeler plus tard",
+        "upgrade": "Voir les forfaits"
       },
       "action": {
-        "complete-profile": {
-          "title": "Complétez le profil de votre organisation",
-          "body": "Ajoutez le nom et les détails pour que les familles vous reconnaissent.",
-          "cta": "Ouvrir les paramètres"
-        },
-        "create-program": {
-          "title": "Créez votre premier programme",
-          "body": "Configurez une classe, une équipe ou un camp — puis assignez les coachs.",
-          "cta": "Ajouter un programme"
+        "share-public-page": {
+          "title": "Partager votre page publique",
+          "body": "Envoyez aux familles votre page — programmes et réservation en un lien.",
+          "cta": "Copier le lien",
+          "copied": "Lien de la page publique copié.",
+          "failed": "Impossible de copier le lien.",
+          "disabled": "Publiez d'abord votre page publique dans les paramètres."
         },
         "invite-families": {
-          "title": "Invitez les familles",
+          "title": "Inviter des familles",
           "body": "Envoyez des invitations sécurisées pour la chronologie de leur enfant.",
-          "cta": "Aller aux familles"
+          "cta": "Envoyer des invitations"
+        },
+        "view-roster": {
+          "title": "Voir l'effectif",
+          "body": "Enfants inscrits, statut d'activation et contacts familles.",
+          "cta": "Ouvrir l'effectif"
         }
       }
+    },
+    "handoff": {
+      "metaTitle": "Passation de relève",
+      "title": "Notes de passation",
+      "subtitle": "Contexte pour la relève — visible sur le tableau de bord et l'effectif ce matin.",
+      "composeTitle": "Nouvelle note",
+      "composeBody": "L'équipe du matin voit ces notes sur le tableau de bord ; l'équipe de l'après-midi sur l'effectif.",
+      "programLabel": "Programme",
+      "noteLabel": "Note pour la relève",
+      "notePlaceholder": "Emma a eu une matinée difficile — patience au ramassage…",
+      "save": "Enregistrer la note",
+      "saving": "Enregistrement…",
+      "saved": "Note de passation enregistrée.",
+      "todayTitle": "Notes du jour",
+      "refresh": "Actualiser",
+      "refreshing": "Actualisation…",
+      "emptyNotes": "Aucune note aujourd'hui. Ajoutez une note avant la fin de votre quart.",
+      "emptyProgramsTitle": "Créez un programme",
+      "emptyProgramsBody": "Les notes sont liées à un programme — créez un programme pour commencer.",
+      "emptyProgramsCta": "Créer un programme",
+      "errors": {
+        "saveFailed": "Impossible d'enregistrer la note."
+      }
+    },
+    "onboarding": {
+      "metaTitle": "Configurer votre programme",
+      "title": "Lançons votre programme",
+      "subtitle": "Deux étapes pour publier des rapports, inviter les familles et démarrer votre essai Pro de 14 jours.",
+      "sidebarNote": "Vous pourrez modifier votre page publique, vos tarifs et votre équipe dans les paramètres.",
+      "stepAbout": "À propos de vous",
+      "stepProgram": "Votre programme",
+      "directorName": "Votre nom",
+      "directorTitle": "Votre rôle",
+      "directorTitlePlaceholder": "Sélectionnez votre rôle",
+      "directorRole": {
+        "director": "Directeur / Directrice",
+        "executive_director": "Directeur général",
+        "owner": "Propriétaire",
+        "founder": "Fondateur / PDG",
+        "program_director": "Directeur de programme",
+        "site_supervisor": "Superviseur de site",
+        "administrator": "Administrateur",
+        "principal": "Directeur d'école",
+        "head_coach": "Entraîneur en chef",
+        "athletic_director": "Directeur sportif",
+        "camp_director": "Directeur de camp",
+        "lead_teacher": "Enseignant principal",
+        "coordinator": "Coordonnateur",
+        "manager": "Gestionnaire",
+        "other": "Autre"
+      },
+      "orgName": "Nom de l'organisation",
+      "locationSection": "Emplacement et juridiction",
+      "orgTypeLabel": "Type de programme",
+      "orgType": {
+        "daycare": "Garderie / centre de garde",
+        "preschool": "Préscolaire / petite enfance",
+        "sports": "Équipe / ligue / club sportif",
+        "camp": "Camp / programme d'été",
+        "after_school": "Service de garde avant / après l'école",
+        "enrichment": "Tutorat / enrichissement académique",
+        "arts": "Danse / musique / théâtre / arts",
+        "martial_arts": "Arts martiaux / gymnastique",
+        "swim": "École de natation / aquatique",
+        "community": "Centre communautaire / loisirs",
+        "faith": "Jeunesse confessionnelle / paroissiale",
+        "homeschool": "Coopérative homeschool / pod",
+        "therapy": "Thérapie / services développementaux",
+        "nanny": "Agence de nounous / garde à domicile",
+        "other": "Autre programme jeunesse"
+      },
+      "addressLine1": "Adresse",
+      "city": "Ville",
+      "postalCode": "Code postal",
+      "mapPreviewTitle": "Aperçu de l'emplacement",
+      "mapPreviewEmpty": "Entrez votre adresse pour voir l'emplacement sur la carte.",
+      "mapPreviewLoading": "Chargement de la carte…",
+      "mapPreviewError": "Impossible de charger l'aperçu de la carte.",
+      "mapPreviewOpenExternal": "Ouvrir dans OpenStreetMap",
+      "publicSlug": "URL de la page publique",
+      "publicSlugHint": "Les familles vous trouveront sur anchor.care/p/votre-slug",
+      "headlinePreview": "Titre public suggéré",
+      "benchmarkTitle": "Les programmes comme le vôtre économisent ~28 min/jour",
+      "benchmarkBody": "Les directeurs sur ANCHOR passent moins de temps sur les mises à jour parentales en fin de journée.",
+      "continue": "Continuer",
+      "back": "Retour",
+      "finish": "Terminer",
+      "finishing": "Configuration…",
+      "trialStarted": "Essai démarré — 14 jours gratuits.",
+      "titleRequired": "Sélectionnez votre rôle.",
+      "titleMax": "Le titre doit compter au plus 80 caractères.",
+      "orgNameRequired": "Le nom de l'organisation est requis.",
+      "orgNameMax": "Le nom doit compter au plus 120 caractères.",
+      "addressRequired": "Entrez une adresse valide.",
+      "cityRequired": "La ville est requise.",
+      "postalRequired": "Le code postal est requis.",
+      "slugMin": "L'URL doit contenir au moins 3 caractères.",
+      "slugMax": "L'URL doit compter au plus 40 caractères.",
+      "slugInvalid": "Utilisez uniquement des minuscules, chiffres et tirets.",
+      "slugTaken": "Cette URL est déjà prise. Essayez-en une autre.",
+      "orgExists": "Vous avez déjà une organisation.",
+      "unknownError": "Une erreur est survenue. Réessayez."
     },
     "programs": {
       "metaTitle": "Programmes",
@@ -501,10 +709,187 @@
       "emptyTitle": "Aucun programme",
       "emptyBody": "Créez votre premier programme pour inviter coachs et familles.",
       "emptyCta": "Créer un programme",
+      "loading": "Chargement des programmes…",
+      "noResults": "Aucun programme ne correspond à ce filtre.",
+      "filters": {
+        "all": "Tous",
+        "active": "Actifs",
+        "draft": "Brouillons",
+        "archived": "Archivés"
+      },
+      "card": {
+        "enrollment": "{count} / {capacity} inscrits",
+        "enrollmentOpen": "{count} inscrits",
+        "publicBadge": "Public",
+        "connectNeeded": "Paiements à connecter",
+        "status": {
+          "active": "Actif",
+          "draft": "Brouillon",
+          "archived": "Archivé"
+        }
+      },
+      "wizard": {
+        "title": "Créer un programme",
+        "subtitle": "Infos de base, horaire et tarif — publiez sur votre page publique plus tard depuis les paramètres du programme.",
+        "steps": {
+          "basics": "Base",
+          "schedule": "Horaire",
+          "pricing": "Tarification",
+          "listing": "Page publique"
+        },
+        "back": "Retour",
+        "continue": "Continuer",
+        "create": "Créer le programme",
+        "creating": "Création…",
+        "status": {
+          "draft": "Brouillon",
+          "active": "Actif"
+        },
+        "programType": {
+          "camp": "Camp",
+          "class": "Cours / session",
+          "team": "Équipe sportive",
+          "daycare_room": "Groupe garderie",
+          "after_school": "Après-école",
+          "other": "Autre"
+        },
+        "billingInterval": {
+          "one_time": "Unique",
+          "monthly": "Mensuel",
+          "season": "Par saison",
+          "weekly": "Hebdomadaire"
+        },
+        "fields": {
+          "name": "Nom du programme",
+          "type": "Type de programme",
+          "slug": "Identifiant URL",
+          "slugHint": "Utilisé sur votre page publique",
+          "internalDescription": "Notes internes (personnel seulement)",
+          "ageMin": "Âge minimum",
+          "ageMax": "Âge maximum",
+          "startDate": "Date de début",
+          "endDate": "Date de fin",
+          "capacity": "Capacité",
+          "price": "Prix",
+          "priceHint": "Entrez 0 pour un programme gratuit",
+          "currency": "Devise",
+          "billingInterval": "Fréquence de facturation",
+          "pricePreview": "Les familles verront : {price}",
+          "deposit": "Acompte (optionnel)",
+          "siblingDiscount": "Rabais fratrie %",
+          "priceNote": "Note sur le prix",
+          "requirePayment": "Exiger le paiement avant approbation",
+          "publicHeadline": "Titre public",
+          "scheduleSummary": "Résumé de l'horaire",
+          "ageRangeLabel": "Libellé tranche d'âge",
+          "publicDescription": "Description publique",
+          "ctaLabel": "Libellé du bouton",
+          "publicListing": "Afficher sur la page publique",
+          "status": "Statut"
+        },
+        "errors": {
+          "saveFailed": "Impossible de créer le programme.",
+          "connectRequired": "Connectez Stripe avant d'activer une annonce payante.",
+          "headlineRequired": "Ajoutez un titre public avant la publication.",
+          "scheduleRequired": "Ajoutez un résumé d'horaire avant la publication.",
+          "slugTaken": "Cet identifiant est déjà utilisé.",
+          "validationError": "Vérifiez vos entrées et réessayez."
+        }
+      },
+      "detail": {
+        "back": "← Programmes",
+        "saving": "Enregistrement…",
+        "saved": "Enregistré",
+        "archive": "Archiver",
+        "previewListing": "Aperçu de l'annonce",
+        "tabs": {
+          "operations": "Opérations",
+          "pricing": "Tarifs et versements",
+          "listing": "Page publique",
+          "roster": "Effectif",
+          "registrations": "Inscriptions",
+          "coaches": "Coachs"
+        },
+        "stubs": {
+          "roster": "Gestion de l'effectif en phase 12.",
+          "registrations": "File d'inscription en phase 11.",
+          "coaches": "Assignation des coachs en phase 26."
+        },
+        "fields": {
+          "name": "Nom du programme",
+          "type": "Type de programme",
+          "startDate": "Date de début",
+          "endDate": "Date de fin",
+          "capacity": "Capacité",
+          "internalDescription": "Description interne",
+          "status": "Statut",
+          "price": "Prix",
+          "currency": "Devise",
+          "billingInterval": "Fréquence de facturation",
+          "priceNote": "Note sur le prix",
+          "publicHeadline": "Titre public",
+          "scheduleSummary": "Résumé de l'horaire",
+          "publicDescription": "Description publique",
+          "publicListing": "Afficher sur la page publique"
+        },
+        "status": {
+          "draft": "Brouillon",
+          "active": "Actif",
+          "archived": "Archivé"
+        },
+        "programType": {
+          "camp": "Camp",
+          "class": "Cours",
+          "team": "Équipe",
+          "daycare_room": "Groupe garderie",
+          "after_school": "Après-école",
+          "other": "Autre"
+        },
+        "billingInterval": {
+          "one_time": "Unique",
+          "monthly": "Mensuel",
+          "season": "Par saison",
+          "weekly": "Hebdomadaire"
+        },
+        "errors": {
+          "saveFailed": "Impossible d'enregistrer les modifications.",
+          "connectRequired": "Connectez Stripe avant de publier un programme payant.",
+          "headlineRequired": "Ajoutez un titre public.",
+          "scheduleRequired": "Ajoutez un résumé d'horaire."
+        }
+      },
+      "archiveDialog": {
+        "title": "Archiver ce programme ?",
+        "body": "{name} sera retiré des listes actives. Les familles déjà inscrites conservent leur historique.",
+        "cancel": "Annuler",
+        "confirm": "Archiver"
+      },
+      "stripe": {
+        "title": "Connectez les versements pour accepter les paiements",
+        "body": "Les programmes payants nécessitent Stripe Connect avant que les familles puissent réserver sur votre page publique.",
+        "cta": "Connecter Stripe",
+        "connecting": "Ouverture de Stripe…",
+        "errors": {
+          "failed": "Impossible de démarrer Stripe Connect.",
+          "stripeNotConfigured": "Stripe n'est pas configuré dans cet environnement."
+        }
+      },
       "new": {
         "metaTitle": "Créer un programme",
         "emptyTitle": "Créer un programme",
         "emptyBody": "Nom, type, dates, capacité et tarif affiché — puis invitez coachs et familles."
+      },
+      "rollover": {
+        "title": "Reprise de saison",
+        "body": "Dupliquez ce programme pour la nouvelle saison et envoyez des invitations de réinscription aux familles actives.",
+        "newSeasonName": "Nom de la nouvelle saison",
+        "newSeasonPlaceholder": "Ex. : Soccer printemps 2027",
+        "submit": "Lancer la reprise",
+        "processing": "Reprise en cours…",
+        "success": "Nouveau programme créé et invitations envoyées.",
+        "errors": {
+          "failed": "La reprise de saison a échoué. Réessayez."
+        }
       }
     },
     "families": {
@@ -514,7 +899,8 @@
       "tabs": {
         "label": "Sections familles",
         "children": "Enfants",
-        "parents": "Parents"
+        "parents": "Parents",
+        "registrations": "Registrations"
       },
       "children": {
         "metaTitle": "Enfants",
@@ -527,15 +913,100 @@
         "emptyTitle": "Aucun parent connecté",
         "emptyBody": "Suivez l'activation, les coordonnées et les fils de discussion de chaque famille.",
         "emptyCta": "Envoyer des invitations"
+      },
+      "registrations": {
+        "metaTitle": "Registrations",
+        "adoptionLabel": "Adoption",
+        "adoptionCount": "{activeRegistrations} active · {invitesSent} invited",
+        "empty": "No registrations yet. Invites and public enrollments appear here.",
+        "approve": "Approve",
+        "reject": "Reject",
+        "approved": "Registration approved",
+        "rejected": "Registration rejected",
+        "approveTitle": "Approve registration",
+        "approveBody": "Confirm enrollment and review the health snapshot captured at signup.",
+        "rejectTitle": "Reject registration",
+        "rejectBody": "The family will not be added to your roster.",
+        "rejectReason": "Reason (optional)",
+        "confirmApprove": "Approve",
+        "confirmReject": "Reject",
+        "cancel": "Cancel",
+        "processing": "Processing…",
+        "noEmail": "No email",
+        "source": "via {source}",
+        "filters": {
+          "all": "All",
+          "pending": "Pending",
+          "active": "Active",
+          "withdrawn": "Withdrawn"
+        },
+        "status": {
+          "pending": "Pending",
+          "active": "Active",
+          "withdrawn": "Withdrawn"
+        },
+        "payment": {
+          "not_required": "No payment",
+          "pending": "Unpaid",
+          "paid": "Paid",
+          "failed": "Failed",
+          "refunded": "Refunded"
+        },
+        "errors": {
+          "actionFailed": "Could not update registration."
+        },
+        "healthDiff": {
+          "title": "Health at registration",
+          "allergies": "Allergies",
+          "medications": "Medications",
+          "conditions": "Conditions",
+          "emergency": "Emergency contacts",
+          "noSnapshot": "No health snapshot on file.",
+          "hint": "Compare with the child's current profile before approving."
+        }
       }
     },
     "team": {
       "metaTitle": "Équipe",
       "title": "Coachs et personnel",
       "subtitle": "Invitez les coachs, assignez les programmes et gérez les accès terrain.",
+      "noOrg": "Terminez l'intégration pour gérer votre équipe.",
+      "inviteCta": "Inviter un coach",
+      "inviteTitle": "Inviter un coach",
+      "inviteSubtitle": "Il rejoindra par courriel — le parent est toujours inclus dans les fils famille.",
+      "email": "Courriel",
+      "emailPlaceholder": "coach@exemple.com",
+      "programs": "Assigner aux programmes",
+      "assignAllPrograms": "Assigner à tous les programmes actuels",
+      "cancel": "Annuler",
+      "sendInvite": "Envoyer l'invitation",
+      "sending": "Envoi…",
+      "inviteSent": "Invitation envoyée.",
+      "linkCopied": "Lien d'invitation copié.",
+      "copyLink": "Copier le lien",
+      "pendingTitle": "Invitations en attente",
+      "activeTitle": "Coachs actifs",
+      "expires": "Expire le {date}",
       "emptyTitle": "Aucun coach",
       "emptyBody": "Invitez les coachs par courriel, puis assignez-les aux programmes pour publier les rapports quotidiens.",
-      "emptyCta": "Inviter des coachs"
+      "emptyCta": "Inviter des coachs",
+      "noPrograms": "Aucun programme assigné",
+      "deactivatedLabel": "Accès révoqué — les rapports passés restent archivés",
+      "editPrograms": "Modifier les programmes",
+      "deactivate": "Révoquer l'accès",
+      "reactivate": "Réactiver",
+      "savePrograms": "Enregistrer",
+      "saving": "Enregistrement…",
+      "memberUpdated": "Coach mis à jour.",
+      "memberDeactivated": "Accès coach révoqué.",
+      "errors": {
+        "invite_failed": "Impossible d'envoyer l'invitation.",
+        "email_required": "Le courriel est requis.",
+        "programs_required": "Sélectionnez au moins un programme ou assignez tous.",
+        "forbidden": "Permission refusée.",
+        "update_failed": "Impossible de mettre à jour le coach.",
+        "not_found": "Coach introuvable."
+      }
     },
     "people": {
       "metaTitle": "Familles et équipe",
@@ -574,18 +1045,82 @@
       "title": "Rapports et incidents",
       "subtitle": "Journal des incidents et historique de conformité.",
       "emptyTitle": "Aucun incident",
-      "emptyBody": "Les rapports d'incidents structurés apparaîtront ici avec une piste d'audit."
+      "emptyBody": "Les rapports d'incidents structurés apparaîtront ici avec une piste d'audit.",
+      "loading": "Chargement…",
+      "loadMore": "Voir plus",
+      "parentNotified": "Parent notifié",
+      "notifyPending": "Notification en file",
+      "exportPdf": "Exporter PDF",
+      "exportDisabledHint": "Générez un PDF pour l'assureur depuis le détail de l'incident",
+      "filters": {
+        "program": "Programme",
+        "allPrograms": "Tous les programmes",
+        "from": "Date de début",
+        "to": "Date de fin",
+        "severity": {
+          "all": "Tous",
+          "red": "Urgent",
+          "yellow": "Modéré",
+          "green": "Mineur"
+        }
+      }
     },
     "insights": {
       "metaTitle": "Analyses",
       "title": "Analyses",
       "subtitle": "Adoption, ouvertures de rapports et santé du programme — les métriques hebdomadaires des directeurs.",
-      "kpiSectionTitle": "Adoption et engagement"
+      "kpiSectionTitle": "Adoption et engagement",
+      "funnelTitle": "Entonnoir d'activation",
+      "funnelSubtitle": "Invité → inscrit → app ouverte → rapport lu",
+      "funnel": {
+        "invited": "Familles invitées",
+        "registered": "Inscrites",
+        "appOpened": "App ouverte",
+        "reportRead": "Rapport lu"
+      },
+      "trendsTitle": "Tendances",
+      "range": {
+        "7d": "7 jours",
+        "30d": "30 jours"
+      },
+      "allPrograms": "Tous les programmes",
+      "programFilter": "Filtrer par programme",
+      "programFilterNote": "Les tendances par programme arrivent avec les prochaines phases.",
+      "trend": {
+        "pageViews": "Vues page publique",
+        "registrations": "Nouvelles inscriptions",
+        "reportsPending": "Tendances d'ouverture des rapports — Phase 16."
+      },
+      "revenueSectionTitle": "Aperçu des revenus",
+      "revenue": {
+        "range": {
+          "7d": "7 jours",
+          "30d": "30 jours"
+        },
+        "exportCsv": "Exporter CSV",
+        "gross": "Brut",
+        "fees": "Frais",
+        "net": "Net",
+        "program": "Programme",
+        "empty": "Aucune donnée de revenus pour cette période."
+      }
     },
     "shop": {
       "metaTitle": "Boutique",
       "emptyTitle": "Boutique du programme",
-      "emptyBody": "Listez équipement, uniformes et forfaits photo pour les familles inscrites — paiement marketplace en Phase 2."
+      "emptyBody": "Listez équipement, uniformes et forfaits photo pour les familles inscrites — paiement marketplace en Phase 2.",
+      "title": "Boutique",
+      "subtitle": "Produits et uniformes pour les familles inscrites.",
+      "addProduct": "Ajouter un produit",
+      "productName": "Nom du produit",
+      "productDescription": "Description",
+      "productPrice": "Prix (USD)",
+      "createProduct": "Créer le produit",
+      "productCreated": "Produit créé",
+      "processing": "En cours…",
+      "errors": {
+        "saveFailed": "Impossible de sauvegarder le produit."
+      }
     },
     "settings": {
       "metaTitle": "Paramètres",
@@ -595,6 +1130,16 @@
       "badgeP15": "Phase 1.5",
       "badgeP2": "Phase 2",
       "manage": "Gérer",
+      "groups": {
+        "account": "Organisation",
+        "organization": "Équipe et invitations",
+        "billing": "Facturation et analytique",
+        "notifications": "Notifications",
+        "legal": "Conformité et marketplace"
+      },
+      "hints": {
+        "profileIncomplete": "Complétez votre profil public pour aider les familles à découvrir vos programmes."
+      },
       "sections": {
         "profile": {
           "title": "Profil organisation",
@@ -625,26 +1170,162 @@
           "body": "Vendre équipement et uniformes aux familles inscrites."
         },
         "compliance": {
-          "title": "Compliance export",
-          "body": "Bulk PDF/CSV export of incidents, waivers, and staff actions by date range."
+          "title": "Export de conformité",
+          "body": "Export PDF/CSV des incidents, décharges et actions du personnel par période."
         }
       },
       "emptyTitle": "Paramètres",
       "emptyBody": "Les contrôles organisation et facturation apparaîtront ici.",
       "profile": {
-        "metaTitle": "Organization profile",
-        "emptyTitle": "Organization profile",
-        "emptyBody": "Name, logo, address, program type, and jurisdiction for your programs."
+        "metaTitle": "Profil de l'organisation",
+        "emptyTitle": "Profil de l'organisation",
+        "emptyBody": "Nom, logo, adresse, type de programme et juridiction pour vos programmes."
+      },
+      "profileEditor": {
+        "title": "Profil de l'organisation",
+        "subtitle": "Détails du programme, coordonnées et adresse — à jour pour les familles et le personnel.",
+        "backToSettings": "← Paramètres",
+        "legalName": "Nom légal",
+        "programType": "Type de programme",
+        "aboutUs": "À propos de nous",
+        "phoneNumber": "Numéro de téléphone",
+        "email": "Courriel",
+        "website": "Site web",
+        "address": "Adresse",
+        "city": "Ville",
+        "region": "Province / État",
+        "postal": "Code postal",
+        "internalNotes": "Notes internes (personnel seulement)",
+        "publishToggle": "Publier la page publique",
+        "publicSlug": "URL publique (slug)",
+        "publicSlugHint": "anchor.care/p/votre-slug",
+        "headline": "Titre public",
+        "tagline": "Slogan",
+        "about": "À propos de votre programme",
+        "logo": "Logo",
+        "cover": "Image de couverture",
+        "publicPhone": "Téléphone public",
+        "publicEmail": "Courriel public",
+        "accentColor": "Couleur d'accent de marque",
+        "seoTitle": "Titre SEO",
+        "seoDescription": "Meta description",
+        "openPreview": "Ouvrir l'aperçu",
+        "saving": "Enregistrement…",
+        "saved": "Enregistré",
+        "saveFailed": "Impossible d'enregistrer les modifications.",
+        "validationError": "Certains champs sont invalides. Vérifiez vos saisies et réessayez.",
+        "publishRequirements": "Avant de publier, ajoutez un slug d'URL public, un titre, un logo et au moins un moyen de contact.",
+        "slugTaken": "Cette URL publique est déjà utilisée. Choisissez un autre slug.",
+        "slugInvalid": "L'URL publique doit comporter 3 à 40 caractères : lettres minuscules, chiffres et tirets uniquement.",
+        "regionInvalid": "Sélectionnez une province ou un État valide pour votre juridiction.",
+        "forbidden": "Vous n'avez pas la permission de modifier cette organisation.",
+        "notFound": "Organisation introuvable.",
+        "invalidBody": "Impossible de lire vos modifications. Actualisez la page et réessayez.",
+        "unauthorized": "Reconnectez-vous pour enregistrer les modifications.",
+        "uploadFailed": "Échec du téléversement. JPEG, PNG ou WebP, moins de 5 Mo.",
+        "livePreview": "Aperçu en direct",
+        "desktopPreview": "Aperçu bureau",
+        "mobilePreview": "Aperçu mobile",
+        "shareKit": "Kit de partage",
+        "copyLink": "Copier le lien",
+        "linkCopied": "Lien copié",
+        "completion": "Complétion du profil",
+        "completionValue": "{value} % complété",
+        "orgType": {
+          "daycare": "Garderie / centre de garde",
+          "preschool": "Préscolaire / petite enfance",
+          "sports": "Équipe / ligue sportive",
+          "camp": "Camp / programme d'été",
+          "after_school": "Service de garde après l'école",
+          "enrichment": "Tutorat / enrichissement",
+          "arts": "Danse / musique / arts",
+          "martial_arts": "Arts martiaux / gymnastique",
+          "swim": "École de natation",
+          "community": "Communauté / loisirs",
+          "faith": "Jeunesse confessionnelle",
+          "homeschool": "Coopérative d'enseignement à domicile",
+          "therapy": "Services thérapeutiques",
+          "nanny": "Nounou / garde à domicile",
+          "other": "Autre programme jeunesse"
+        },
+        "slugDialog": {
+          "title": "Changer l'URL publique ?",
+          "body": "La mise à jour du slug invalide les anciens liens jusqu'à configuration des redirections. Continuez seulement si vous avez partagé la nouvelle URL.",
+          "cancel": "Annuler",
+          "confirm": "Mettre à jour le slug"
+        },
+        "unpublishDialog": {
+          "title": "Dépublier la page publique ?",
+          "body": "Votre lien public sera indisponible jusqu'à republication.",
+          "cancel": "Garder publié",
+          "confirm": "Dépublier"
+        }
       },
       "billing": {
-        "metaTitle": "Billing",
-        "emptyTitle": "ANCHOR Pro billing",
-        "emptyBody": "Trial status, payment method, invoices, and Stripe customer portal."
+        "metaTitle": "Facturation",
+        "title": "Facturation et abonnement",
+        "subtitle": "ANCHOR Pro débloque l'IA vocale, la publication et les outils complets.",
+        "backToSettings": "← Paramètres",
+        "checkoutSuccess": "Bienvenue sur ANCHOR Pro.",
+        "trialTitle": "{days, plural, one {# jour d'essai restant} other {# jours d'essai restants}}",
+        "trialBody": "Abonnez-vous avant la fin de l'essai pour continuer à publier.",
+        "lapsedTitle": "Essai terminé",
+        "lapsedBody": "Les coachs peuvent consulter les rapports passés mais ne peuvent plus publier.",
+        "plans": {
+          "trial": "Essai",
+          "pro": "ANCHOR Pro"
+        },
+        "trialActive": "Actif",
+        "trialEnded": "Terminé",
+        "trialBullet1": "14 jours d'accès complet pour les nouvelles organisations",
+        "trialBullet2": "IA vocale et publication incluses",
+        "proPrice": "À partir de 49 $/mois",
+        "proBullet1": "Publication illimitée des coachs",
+        "proBullet2": "Rapports quotidiens IA vocale",
+        "proBullet3": "Support prioritaire",
+        "currentPlan": "Forfait actuel",
+        "subscribeCta": "S'abonner à Pro",
+        "manageBilling": "Gérer paiement et factures",
+        "invoicesTitle": "Factures",
+        "viewInvoice": "Voir",
+        "stripeNotConfigured": "La facturation Stripe n'est pas configurée dans cet environnement.",
+        "errors": {
+          "failed": "Impossible d'ouvrir la facturation. Réessayez.",
+          "stripeNotConfigured": "Facturation non disponible pour le moment.",
+          "noCustomer": "Abonnez-vous d'abord pour gérer la facturation.",
+          "checkoutFailed": "Le paiement n'a pas pu démarrer."
+        }
       },
       "invites": {
         "metaTitle": "Family invites",
         "emptyTitle": "Family invites",
-        "emptyBody": "Default invite messages, QR codes, and adoption tracking."
+        "emptyBody": "Default invite messages, QR codes, and adoption tracking.",
+        "adoptionLabel": "Adoption",
+        "adoptionCount": "{activeRegistrations} active · {invitesSent} invited",
+        "createTitle": "Invite a family",
+        "program": "Program",
+        "email": "Parent email",
+        "emailHint": "Optional — leave blank for an open invite link.",
+        "childFirstName": "Child first name (optional)",
+        "createCta": "Create invite",
+        "creating": "Creating…",
+        "created": "Invite created",
+        "tableTitle": "Recent invites",
+        "emptyTable": "No invites yet. Create one to get started.",
+        "openInvite": "Open invite",
+        "copyLink": "Copy link",
+        "copied": "Link copied",
+        "resend": "Resend",
+        "resent": "Invite extended",
+        "status": {
+          "pending": "Pending",
+          "used": "Accepted",
+          "expired": "Expired"
+        },
+        "errors": {
+          "createFailed": "Could not create invite.",
+          "resendFailed": "Could not resend invite."
+        }
       },
       "staff": {
         "metaTitle": "Coaches & staff",
@@ -652,9 +1333,39 @@
         "emptyBody": "Invite coaches by email and assign program access."
       },
       "digest": {
-        "metaTitle": "Weekly digest",
-        "emptyTitle": "Weekly digest email",
-        "emptyBody": "Monday email with activation %, open rates, incidents, and coach consistency."
+        "metaTitle": "Digest hebdomadaire",
+        "title": "E-mail digest hebdomadaire",
+        "subtitle": "ROI du lundi pour les directeurs, résumés coach optionnels et récap parents — tout est opt-in.",
+        "businessTitle": "Digest entreprise",
+        "businessBody": "Activation %, rapports, incidents et rappels d'essai — selon votre calendrier.",
+        "coachTitle": "Digest coach",
+        "coachBody": "Résumé hebdomadaire optionnel pour les coachs assignés.",
+        "enabled": "Activé",
+        "deliveryDay": "Jour de livraison",
+        "timezone": "fuseau horaire",
+        "recipients": "E-mails destinataires",
+        "recipientsHint": "Par défaut : votre connexion ({email}) si vide.",
+        "recipientsHintGeneric": "Ajoutez les e-mails du directeur ou de l'administration.",
+        "recipientsPlaceholder": "directeur@club.com, ops@club.com",
+        "save": "Enregistrer",
+        "saving": "Enregistrement…",
+        "saved": "Paramètres digest enregistrés.",
+        "preview": "Aperçu",
+        "hidePreview": "Masquer l'aperçu",
+        "previewBusiness": "Aperçu e-mail entreprise",
+        "previewCoach": "Aperçu e-mail coach",
+        "days": {
+          "sunday": "Dimanche",
+          "monday": "Lundi",
+          "tuesday": "Mardi",
+          "wednesday": "Mercredi",
+          "thursday": "Jeudi",
+          "friday": "Vendredi",
+          "saturday": "Samedi"
+        },
+        "errors": {
+          "saveFailed": "Impossible d'enregistrer les paramètres."
+        }
       },
       "marketplaceSurface": {
         "metaTitle": "Marketplace",
@@ -664,7 +1375,23 @@
       "compliance": {
         "metaTitle": "Compliance export",
         "emptyTitle": "Compliance export",
-        "emptyBody": "Export incidents, notifications, waivers, and staff actions for insurers or boards."
+        "emptyBody": "Export incidents, notifications, waivers, and staff actions for insurers or boards.",
+        "title": "Compliance export",
+        "subtitle": "Date-range export for insurers, boards, and audits.",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "format": {
+          "csv": "CSV",
+          "zip": "ZIP bundle"
+        },
+        "generate": "Generate export",
+        "processing": "Generating…",
+        "exportStarted": "Export started — we'll prepare your download.",
+        "exportReady": "Export ready",
+        "download": "Download export",
+        "errors": {
+          "failed": "Export failed. Try a shorter date range."
+        }
       }
     }
   },
@@ -696,14 +1423,134 @@
       "noProgramBody": "Quand une garderie, un camp ou un coach vous invite, liez votre enfant ici. Les rapports et alertes arrivent d'abord sur Aujourd'hui.",
       "noProgramCta": "Entrer un code d'invitation",
       "noReportsTitle": "Aucun rapport pour l'instant",
-      "noReportsBody": "Quand un programme publie un rapport quotidien, il apparaît ici et par SMS — même sans l'application."
+      "noReportsBody": "Quand un programme publie un rapport quotidien, il apparaît ici et par SMS — même sans l'application.",
+      "noChildrenTitle": "Ajoutez un enfant pour commencer",
+      "noChildrenBody": "Créez un profil enfant, puis connectez-vous à un programme pour recevoir les rapports ici.",
+      "noProgramOnChild": "Pas encore inscrit à un programme",
+      "waitingFirstReport": "En attente du rapport du jour — nous vous préviendrons.",
+      "newBadge": "Nouveau",
+      "photoCount": "{count, plural, one {# photo} other {# photos}}",
+      "pullToRefresh": "Tirez pour actualiser",
+      "refreshing": "Actualisation…",
+      "quickLinks": {
+        "care": "Soins",
+        "messages": "Messages",
+        "runningLate": "En retard",
+        "morningHealth": "Bilan matinal"
+      },
+      "pickupEta": {
+        "title": "Ramassage ~{time} — équipe prévenue"
+      },
+      "formExpiry": {
+        "title": "{count, plural, one {# formulaire expire bientôt} other {# formulaires expirent bientôt}}",
+        "body": "{title} expire dans {days, plural, one {# jour} other {# jours}}"
+      },
+      "runningLate": {
+        "title": "Retard au ramassage",
+        "childLabel": "Enfant",
+        "etaLabel": "Combien de retard ?",
+        "presetMinutes": "{minutes} min",
+        "custom": "Personnalisé",
+        "customMinutesLabel": "Minutes de retard",
+        "noteLabel": "Note (facultatif)",
+        "notePlaceholder": "Bloqué dans le trafic…",
+        "submit": "Prévenir l'équipe",
+        "dismiss": "Annuler",
+        "cancelEta": "Annuler l'heure",
+        "activeEta": "Heure active — arrivée ~{time}",
+        "noEnrollment": "Inscrivez l'enfant à un programme pour prévenir l'équipe.",
+        "success": "Équipe prévenue — ramassage ~{time}.",
+        "canceled": "Heure de ramassage annulée.",
+        "errors": {
+          "failed": "Mise à jour impossible.",
+          "noEnrollment": "Cet enfant n'est pas inscrit à un programme actif."
+        }
+      },
+      "morningHealth": {
+        "title": "Bilan de santé matinal",
+        "subtitle": "Un tap avant l'arrivée — l'équipe voit l'info sur l'effectif en temps réel.",
+        "childLabel": "Enfant",
+        "statusLabel": "Comment est-il aujourd'hui ?",
+        "options": {
+          "healthy": "En forme — prêt pour le programme",
+          "mild_symptoms": "Symptômes légers — un peu chaud ou fatigué",
+          "staying_home": "Reste à la maison aujourd'hui"
+        },
+        "noteLabel": "Note (facultatif)",
+        "notePlaceholder": "Petite toux cette nuit…",
+        "submit": "Envoyer à l'équipe",
+        "dismiss": "Annuler",
+        "noEnrollment": "Inscrivez l'enfant à un programme pour envoyer un bilan.",
+        "success": {
+          "healthy": "Équipe prévenue — marqué en forme pour aujourd'hui.",
+          "mild_symptoms": "Équipe prévenue — symptômes légers sur l'effectif.",
+          "staying_home": "Équipe prévenue — reste à la maison."
+        },
+        "errors": {
+          "failed": "Impossible d'envoyer le bilan.",
+          "noEnrollment": "Cet enfant n'est pas inscrit à un programme actif."
+        }
+      },
+      "incident": {
+        "defaultTitle": "Incident signalé"
+      },
+      "detail": {
+        "metaTitle": "Rapport quotidien",
+        "title": "Rapport de {name}",
+        "subtitle": "La mise à jour du jour de son programme.",
+        "unavailableTitle": "Rapport indisponible",
+        "unavailable": "Ce rapport n'est plus disponible.",
+        "backToToday": "Retour à Aujourd'hui",
+        "emptyBody": "Aucun texte n'a été publié pour cette journée.",
+        "coachNotesTitle": "Notes du coach",
+        "coachBy": "Rapporté par {name}",
+        "transcriptToggle": "Transcription vocale",
+        "photosTitle": "{count, plural, one {# photo} other {# photos}}",
+        "photosPending": "Les photos apparaîtront ici lorsque le coach les aura ajoutées.",
+        "messageProgram": "Contacter le programme",
+        "viewTimeline": "Voir la chronologie",
+        "share": "Partager",
+        "shareAria": "Ouvrir la vue partage sécurisée",
+        "shareBanner": "Vue partage sécurisée — détails de santé, notes du coach et transcriptions masqués.",
+        "amendedNotice": "Corrigé le {date}",
+        "paywall": {
+          "title": "Débloquer l'historique complet",
+          "body": "Le rapport de {name} du {date} à {program} dépasse votre fenêtre gratuite de 7 jours.",
+          "benefitHistory": "Tous les rapports et transcriptions vocales, pour toujours",
+          "benefitPhotos": "Galeries photos complètes sur tous les programmes",
+          "benefitPrograms": "Enfants et programmes illimités",
+          "upgradeCta": "Passer à ANCHOR Family",
+          "backToToday": "Retour à Aujourd'hui"
+        }
+      }
     },
     "timeline": {
       "metaTitle": "Chronologie",
       "title": "Chronologie",
       "subtitle": "Chaque rapport, photo, note et incident pour tous les programmes de vos enfants.",
       "emptyTitle": "Votre chronologie est vide",
-      "emptyBody": "Après avoir rejoint un programme, rapports, notes et photos s'affichent ici par ordre chronologique. Le gratuit inclut 7 jours."
+      "emptyBody": "Après avoir rejoint un programme, rapports, notes et photos s'affichent ici par ordre chronologique. Le gratuit inclut 7 jours.",
+      "emptyCta": "Ajouter un enfant",
+      "filterEmptyTitle": "Aucun événement pour ce filtre",
+      "filterEmptyBody": "Essayez un autre filtre ou revenez lorsque le programme publiera des mises à jour.",
+      "allChildren": "Tous les enfants",
+      "childSelectorLabel": "Filtrer par enfant",
+      "freeWindowHint": "Le plan gratuit inclut les 7 derniers jours. L'activité plus ancienne est verrouillée.",
+      "lockedTitle": "Activité antérieure",
+      "lockedBody": "Passez à ANCHOR Family pour débloquer tout l'historique multi-programmes.",
+      "lockedCta": "Voir les forfaits",
+      "loadingMore": "Chargement…",
+      "scrollForMore": "Faites défiler pour plus",
+      "errorLoad": "Impossible de charger la chronologie.",
+      "retry": "Réessayer",
+      "filters": {
+        "label": "Filtrer la chronologie",
+        "all": "Tout",
+        "reports": "Rapports",
+        "photos": "Photos",
+        "incidents": "Incidents",
+        "care": "Soins"
+      }
     },
     "family": {
       "metaTitle": "Famille",
@@ -712,34 +1559,303 @@
       "tabs": {
         "label": "Sections famille",
         "children": "Enfants",
+        "childrenDesc": "Profils, photos, allergies et médicaments.",
         "emergency": "Urgence",
+        "emergencyDesc": "Allergies, médicaments et contacts d'urgence.",
         "pickups": "Départs",
-        "coparent": "Co-parent"
+        "pickupsDesc": "Personnes autorisées à récupérer chaque enfant.",
+        "coparent": "Co-parent",
+        "coparentDesc": "Accès partagé pour un co-parent."
       },
       "children": {
         "metaTitle": "Enfants",
         "emptyTitle": "Ajoutez vos enfants",
-        "emptyBody": "Gérez noms, photos, allergies et médicaments — les profils santé se copient lors de nouvelles inscriptions."
+        "emptyBody": "Gérez noms, photos, allergies et médicaments — les profils santé se copient lors de nouvelles inscriptions.",
+        "addChild": "Ajouter un enfant",
+        "backToList": "Tous les enfants",
+        "age": "{age}",
+        "ageUnknown": "Âge non renseigné",
+        "programCount": "{count, plural, one {# programme} other {# programmes}}",
+        "noPrograms": "Aucun programme",
+        "cardEdit": "Modifier",
+        "cardDelete": "Supprimer",
+        "cardToolbarAria": "Actions pour {name}",
+        "cardEditAria": "Modifier le profil de {name}",
+        "cardDeleteAria": "Supprimer le profil de {name}",
+        "saved": "Profil enregistré",
+        "saveHealth": "Enregistrer le profil santé",
+        "saveEmergency": "Enregistrer les urgences",
+        "healthScore": {
+          "aria": "Profil santé complété à {score} %",
+          "low": "À compléter",
+          "medium": "Presque prêt",
+          "high": "Complet"
+        },
+        "photo": {
+          "change": "Changer la photo",
+          "hint": "Les photos carrées sont idéales. Stockage privé."
+        },
+        "tabs": {
+          "label": "Sections du profil",
+          "profile": "Profil",
+          "health": "Santé",
+          "programs": "Programmes",
+          "emergency": "Urgence"
+        },
+        "programs": {
+          "empty": "Aucune inscription. Acceptez une invitation ou inscrivez-vous via une page publique.",
+          "status": {
+            "pending": "En attente",
+            "active": "Actif",
+            "withdrawn": "Retiré"
+          }
+        },
+        "wizard": {
+          "title": "Ajouter un enfant",
+          "steps": {
+            "profile": "Étape 1 — Informations",
+            "health": "Étape 2 — Profil santé",
+            "emergency": "Étape 3 — Contacts d'urgence"
+          },
+          "copyFromSibling": "Copier le profil santé d'un frère/sœur",
+          "copyNone": "Commencer à zéro",
+          "firstName": "Prénom",
+          "lastName": "Nom",
+          "dateOfBirth": "Date de naissance",
+          "medicalConditions": "Conditions médicales",
+          "physicianName": "Nom du médecin",
+          "physicianPhone": "Téléphone du médecin",
+          "insurance": "Assurance",
+          "insuranceHint": "Optionnel — stocké de façon sécurisée.",
+          "continue": "Continuer",
+          "back": "Retour",
+          "save": "Enregistrer",
+          "saving": "Enregistrement…",
+          "success": "Enfant ajouté",
+          "errors": {
+            "createFailed": "Impossible d'ajouter l'enfant. Vérifiez les champs requis."
+          }
+        },
+        "allergies": {
+          "name": "Allergie",
+          "severity": "Gravité",
+          "severityOptions": {
+            "mild": "Légère",
+            "moderate": "Modérée",
+            "severe": "Sévère"
+          },
+          "add": "Ajouter",
+          "remove": "Retirer {name}",
+          "notes": "Notes supplémentaires",
+          "notesHint": "Emplacement EpiPen, réactions ou restrictions alimentaires."
+        },
+        "medications": {
+          "name": "Médicament",
+          "dose": "Dose",
+          "schedule": "Horaire",
+          "add": "Ajouter un médicament",
+          "remove": "Retirer"
+        },
+        "emergencyContacts": {
+          "name": "Nom du contact",
+          "phone": "Téléphone",
+          "relation": "Lien",
+          "add": "Ajouter un contact",
+          "remove": "Retirer"
+        },
+        "delete": {
+          "action": "Supprimer l'enfant",
+          "title": "Supprimer ce profil ?",
+          "body": "Cela supprime définitivement le profil de {name}. Les inscriptions actives bloquent la suppression.",
+          "cancel": "Annuler",
+          "confirm": "Supprimer",
+          "deleting": "Suppression…",
+          "success": "Enfant supprimé",
+          "errors": {
+            "deleteFailed": "Impossible de supprimer.",
+            "activeRegistration": "Retirez l'enfant des programmes actifs d'abord."
+          }
+        },
+        "errors": {
+          "saveFailed": "Enregistrement impossible. Vérifiez les champs de sécurité."
+        }
       },
       "emergency": {
         "metaTitle": "Fiches d'urgence",
+        "intro": "Gardez allergies, médicaments et contacts à jour. Choisissez ce que chaque programme peut voir sur la fiche d'urgence terrain.",
+        "childPicker": "Sélectionner un enfant",
+        "sectionsLabel": "Sections de la fiche",
+        "sections": {
+          "allergies": "Allergies",
+          "meds": "Médicaments",
+          "conditions": "Conditions",
+          "contacts": "Contacts",
+          "sharing": "Partage par programme"
+        },
+        "allergiesHint": "Les étiquettes structurées aident le personnel à repérer la gravité sur le terrain.",
+        "allergiesNotes": "Notes supplémentaires sur les allergies",
+        "conditionsLabel": "Conditions médicales",
+        "physicianName": "Nom du médecin",
+        "physicianPhone": "Téléphone du médecin",
+        "saveSection": "Enregistrer",
+        "saving": "Enregistrement…",
+        "saved": "Fiche d'urgence mise à jour",
+        "consentSaved": "Préférences de partage enregistrées",
+        "shareAllergies": "Partager allergies et conditions",
+        "shareMeds": "Partager les médicaments",
+        "shareContacts": "Partager les contacts d'urgence",
+        "noPrograms": "Aucune inscription active. Les options de partage apparaîtront quand votre enfant rejoindra un programme.",
         "emptyTitle": "Fiches d'urgence",
-        "emptyBody": "Allergies, médicaments, conditions et contacts — partagés avec les programmes que vous autorisez."
+        "emptyBody": "Ajoutez un enfant, puis gérez allergies, médicaments, contacts et partage par programme.",
+        "emptyCta": "Ajouter un enfant",
+        "errors": {
+          "saveFailed": "Enregistrement impossible. Vérifiez les champs requis.",
+          "consentFailed": "Impossible de mettre à jour le partage."
+        }
       },
       "pickups": {
         "metaTitle": "Personnes autorisées",
+        "intro": "Contacts permanents et dérogation du jour — visible instantanément sur l'effectif.",
+        "todayOverride": "Ramassage aujourd'hui",
+        "setTodayOverride": "Quelqu'un d'autre récupère aujourd'hui ?",
+        "overrideName": "Personne",
+        "overrideUntil": "Jusqu'à (optionnel)",
+        "overrideUntilHint": "Laisser vide pour expiration à minuit (heure locale).",
+        "overrideNote": "Note pour le personnel",
+        "saveOverride": "Définir pour aujourd'hui",
+        "clearOverride": "Effacer",
+        "expiresIn": "Expire dans {countdown}",
+        "midnight": "minuit",
+        "authorizedTitle": "Personnes autorisées",
+        "addPerson": "Ajouter",
+        "addPersonTitle": "Ajouter une personne",
+        "name": "Nom complet",
+        "relation": "Lien",
+        "phone": "Téléphone",
+        "savePerson": "Enregistrer",
+        "cancel": "Annuler",
+        "personAdded": "Personne ajoutée",
+        "personRemoved": "Personne retirée",
+        "overrideSet": "Ramassage du jour mis à jour",
+        "overrideCleared": "Dérogation effacée",
+        "useToday": "Utiliser aujourd'hui",
+        "removePerson": "Retirer",
+        "removeTitle": "Retirer cette personne ?",
+        "removeBody": "Elle ne figurera plus sur votre liste autorisée.",
+        "removeConfirm": "Retirer",
+        "noAuthorized": "Aucun contact autorisé pour l'instant.",
         "emptyTitle": "Personnes autorisées",
-        "emptyBody": "Définissez qui peut récupérer chaque enfant, avec dérogations du jour si besoin."
+        "emptyBody": "Ajoutez un enfant, puis définissez qui peut le récupérer.",
+        "emptyCta": "Ajouter un enfant",
+        "errors": {
+          "saveFailed": "Enregistrement impossible.",
+          "deleteFailed": "Suppression impossible.",
+          "overrideFailed": "Mise à jour impossible."
+        }
       },
       "forms": {
         "metaTitle": "Coffre de formulaires",
-        "emptyTitle": "Coffre de formulaires",
-        "emptyBody": "Téléversez et conservez formulaires, décharges et documents médicaux par enfant."
+        "title": "Coffre de formulaires",
+        "subtitle": "Vaccins, examens médicaux et autorisations — avec rappels d'expiration sur Aujourd'hui.",
+        "emptyTitle": "Aucun formulaire",
+        "emptyBody": "Téléversez des PDF ou photos une fois — retrouvez-les ici sans fouiller vos courriels.",
+        "uploadCta": "Téléverser",
+        "uploadTitle": "Téléverser un formulaire",
+        "uploadSuccess": "Formulaire enregistré.",
+        "deleteSuccess": "Formulaire supprimé.",
+        "view": "Voir",
+        "delete": "Supprimer",
+        "deleteTitle": "Supprimer ce formulaire ?",
+        "deleteBody": "Cette action est irréversible.",
+        "cancel": "Annuler",
+        "expiringTitle": "Expire bientôt",
+        "expiringItem": "{title} — {days, plural, one {# jour} other {# jours}} restants",
+        "expires": "Expire le {date}",
+        "expiresIn": "Expire dans {days, plural, one {# jour} other {# jours}}",
+        "fields": {
+          "title": "Titre",
+          "type": "Type",
+          "child": "Enfant",
+          "childOptional": "Aucun enfant spécifique",
+          "expiresAt": "Date d'expiration (facultatif)",
+          "file": "Fichier"
+        },
+        "types": {
+          "immunization": "Vaccination",
+          "physical": "Examen médical",
+          "permission": "Autorisation",
+          "custom": "Personnalisé"
+        },
+        "errors": {
+          "uploadFailed": "Téléversement impossible.",
+          "deleteFailed": "Suppression impossible."
+        }
       },
       "coparent": {
         "metaTitle": "Co-parent",
-        "emptyTitle": "Accès co-parent",
-        "emptyBody": "Invitez un co-parent pour partager chronologie, soins et contacts d'urgence."
+        "title": "Accès co-parent",
+        "subtitle": "Invitez un co-parent à voir la chronologie, les rapports et les incidents — sans partager votre compte.",
+        "emptyTitle": "Ajoutez d'abord un enfant",
+        "emptyBody": "Créez un profil enfant, puis invitez un co-parent.",
+        "emptyCta": "Ajouter un enfant",
+        "inviteCta": "Inviter un co-parent",
+        "inviteForChild": "Inviter",
+        "inviteTitle": "Inviter un co-parent",
+        "childLabel": "Enfant",
+        "emailLabel": "Courriel",
+        "emailPlaceholder": "partenaire@courriel.com",
+        "permissionLabel": "Niveau d'accès",
+        "permissionHint": {
+          "view": "Chronologie, rapports et incidents.",
+          "full": "Accès complet incluant la fiche d'urgence."
+        },
+        "permissions": {
+          "view": "Lecture",
+          "full": "Complet"
+        },
+        "sendInvite": "Envoyer l'invitation",
+        "cancel": "Annuler",
+        "cancelInvite": "Annuler",
+        "revoke": "Révoquer l'accès",
+        "inviteSent": "Invitation envoyée.",
+        "inviteRevoked": "Invitation annulée.",
+        "accessRevoked": "Accès co-parent retiré.",
+        "noAccessYet": "Aucun co-parent invité.",
+        "pendingInvites": "Invitations en attente",
+        "unknownGuardian": "Co-parent",
+        "linkCopied": "Lien copié.",
+        "copyLink": "Copier le lien",
+        "errors": {
+          "inviteFailed": "Envoi impossible.",
+          "alreadyInvited": "Une invitation est déjà en attente pour ce courriel.",
+          "selfInvite": "Vous ne pouvez pas vous inviter.",
+          "revokeFailed": "Mise à jour impossible."
+        },
+        "invite": {
+          "metaTitle": "Invitation co-parent",
+          "title": "Invitation co-parent",
+          "subtitle": "{parent} vous invite à co-parenter {child} avec un accès {permission}.",
+          "primaryParent": "Un parent",
+          "permission": {
+            "view": "lecture",
+            "full": "complet"
+          },
+          "signInHint": "Connectez-vous avec le courriel invité pour accepter.",
+          "noAccount": "Pas de compte ?",
+          "signUp": "S'inscrire",
+          "login": "Connexion",
+          "body": "Vous verrez la même chronologie, rapports quotidiens et alertes d'incident que le parent principal.",
+          "acceptCta": "Accepter l'invitation",
+          "usedTitle": "Invitation déjà utilisée",
+          "usedSubtitle": "Cette invitation co-parent a déjà été acceptée.",
+          "expiredTitle": "Invitation expirée",
+          "expiredSubtitle": "Demandez au parent principal d'envoyer une nouvelle invitation.",
+          "contactSupport": "Contacter le support",
+          "wrongEmailTitle": "Mauvais compte",
+          "wrongEmailSubtitle": "Connectez-vous en tant que {email} pour accepter.",
+          "signedInAs": "Connecté en tant que {email}",
+          "switchAccount": "Changer de compte"
+        }
       }
     },
     "you": {
@@ -750,7 +1866,47 @@
       "badgeP15": "Phase 1.5",
       "badgeP2": "Phase 2",
       "manage": "Gérer",
+      "planFree": "Gratuit",
+      "planFamily": "Famille",
+      "groups": {
+        "account": "Compte",
+        "family": "Famille",
+        "notifications": "Notifications",
+        "billing": "Facturation",
+        "legal": "Mentions légales"
+      },
+      "hints": {
+        "emergencyIncomplete": "Ajoutez des contacts d'urgence et les détails de santé pour les enfants inscrits."
+      },
       "sections": {
+        "account": {
+          "title": "Compte et connexion",
+          "body": "Courriel, mot de passe et déconnexion."
+        },
+        "children": {
+          "title": "Enfants",
+          "body": "Profils de santé, allergies, médicaments et photos."
+        },
+        "emergency": {
+          "title": "Fiche d'urgence",
+          "body": "Contacts et détails médicaux partagés avec le personnel en cas d'incident."
+        },
+        "programs": {
+          "title": "Programmes et entreprises",
+          "body": "Programmes inscrits, invitations et statut d'inscription."
+        },
+        "coparent": {
+          "title": "Accès co-parent",
+          "body": "Invitez un co-parent pour partager la chronologie et les soins."
+        },
+        "privacy": {
+          "title": "Politique de confidentialité",
+          "body": "Comment ANCHOR Care traite les données de votre famille."
+        },
+        "terms": {
+          "title": "Conditions d'utilisation",
+          "body": "Entente pour l'utilisation d'ANCHOR Care."
+        },
         "subscription": {
           "title": "Forfait ANCHOR Famille",
           "body": "Passez au complet pour l'historique, les soins et les consultations d'incident."
@@ -770,23 +1926,136 @@
       },
       "subscription": {
         "metaTitle": "Abonnement",
-        "emptyTitle": "Forfait ANCHOR Famille",
-        "emptyBody": "Gérez la facturation, passez du gratuit au complet et accédez au portail Stripe."
+        "title": "ANCHOR Famille",
+        "subtitle": "Historique complet, onglet Soins et enfants illimités.",
+        "backToYou": "← Vous",
+        "checkoutSuccess": "Bienvenue sur ANCHOR Famille.",
+        "plans": {
+          "free": "Gratuit",
+          "family": "Famille"
+        },
+        "freePrice": "0 $",
+        "familyPrice": "À partir de 9 $/mois",
+        "freeBullet1": "Historique de 7 jours",
+        "freeBullet2": "Un profil enfant",
+        "freeBullet3": "Messagerie de base",
+        "familyBullet1": "Historique chronologique complet",
+        "familyBullet2": "Onglet Soins — médecins et visites",
+        "familyBullet3": "Enfants illimités",
+        "currentPlan": "Forfait actuel",
+        "stayOnFree": "Gérer dans le portail",
+        "upgradeCta": "Passer à Famille",
+        "manageBilling": "Gérer paiement et factures",
+        "renewsOn": "Renouvellement le {date}",
+        "invoicesTitle": "Factures",
+        "viewInvoice": "Voir",
+        "stripeNotConfigured": "La facturation Stripe n'est pas configurée dans cet environnement.",
+        "errors": {
+          "failed": "Impossible d'ouvrir la facturation. Réessayez.",
+          "stripeNotConfigured": "Facturation non disponible pour le moment.",
+          "noCustomer": "Abonnez-vous d'abord pour gérer la facturation.",
+          "checkoutFailed": "Le paiement n'a pas pu démarrer."
+        }
       },
       "consents": {
-        "metaTitle": "Consentements",
-        "emptyTitle": "Consentements et notifications",
-        "emptyBody": "Consentements photo et médical par programme, plus préférences de notification et heures calmes."
+        "metaTitle": "Consentements et notifications",
+        "title": "Consentements et notifications",
+        "subtitle": "Contrôlez ce que chaque programme voit et comment nous vous joignons.",
+        "backToYou": "← Vous",
+        "saved": "Préférences enregistrées",
+        "programsIntro": "Les changements s'appliquent immédiatement sur la fiche d'urgence du personnel et le marquage photo.",
+        "emptyTitle": "Aucun programme inscrit",
+        "emptyBody": "Lorsque votre enfant rejoint un programme, gérez le partage et les consentements photo ici.",
+        "emptyCta": "Voir les programmes",
+        "sections": {
+          "programs": "Partage par programme",
+          "notifications": "Notifications",
+          "quietHours": "Heures calmes"
+        },
+        "sharePhotos": "Marquage photo",
+        "sharePhotosHint": "Permettre aux coachs de taguer votre enfant sur les photos des rapports.",
+        "shareMedical": "Informations médicales",
+        "shareMedicalHint": "Allergies, conditions et médicaments sur la fiche d'urgence du personnel.",
+        "shareEmergency": "Contacts d'urgence",
+        "shareEmergencyHint": "Contacts et médecin pendant les incidents.",
+        "pushEnabled": "Notifications push",
+        "pushEnabledHint": "Rapports quotidiens, messages et mises à jour non urgentes.",
+        "smsEnabled": "Notifications SMS",
+        "smsEnabledHint": "Alertes texte pour rapports et rappels. Les incidents envoient toujours un SMS.",
+        "emailDigest": "Résumé par courriel",
+        "emailDigestHint": "Résumé hebdomadaire d'activité dans vos programmes.",
+        "quietHoursEnabled": "Heures calmes",
+        "quietHoursEnabledHint": "Suspendre les push de rapports et photos pendant la plage choisie.",
+        "quietHoursStart": "Début",
+        "quietHoursEnd": "Fin",
+        "timezone": "fuseau horaire",
+        "timezoneHint": "Les heures calmes utilisent votre fuseau — par défaut 21h–7h.",
+        "incidentBypass": "Les alertes d'incident et de sécurité vous atteignent toujours immédiatement — elles ignorent les heures calmes.",
+        "errors": {
+          "saveFailed": "Impossible d'enregistrer vos préférences. Réessayez."
+        }
       },
       "forms": {
         "metaTitle": "Coffre de formulaires",
-        "emptyTitle": "Coffre de formulaires",
-        "emptyBody": "Téléversez et conservez formulaires, décharges et documents médicaux par enfant."
+        "title": "Coffre de formulaires",
+        "subtitle": "Vaccins, examens médicaux et autorisations — avec rappels d'expiration sur Aujourd'hui.",
+        "emptyTitle": "Aucun formulaire",
+        "emptyBody": "Téléversez des PDF ou photos une fois — retrouvez-les ici sans fouiller vos courriels.",
+        "uploadCta": "Téléverser",
+        "uploadTitle": "Téléverser un formulaire",
+        "uploadSuccess": "Formulaire enregistré.",
+        "deleteSuccess": "Formulaire supprimé.",
+        "view": "Voir",
+        "delete": "Supprimer",
+        "deleteTitle": "Supprimer ce formulaire ?",
+        "deleteBody": "Cette action est irréversible.",
+        "cancel": "Annuler",
+        "expiringTitle": "Expire bientôt",
+        "expiringItem": "{title} — {days, plural, one {# jour} other {# jours}} restants",
+        "expires": "Expire le {date}",
+        "expiresIn": "Expire dans {days, plural, one {# jour} other {# jours}}",
+        "fields": {
+          "title": "Titre",
+          "type": "Type",
+          "child": "Enfant",
+          "childOptional": "Aucun enfant spécifique",
+          "expiresAt": "Date d'expiration (facultatif)",
+          "file": "Fichier"
+        },
+        "types": {
+          "immunization": "Vaccination",
+          "physical": "Examen médical",
+          "permission": "Autorisation",
+          "custom": "Personnalisé"
+        },
+        "errors": {
+          "uploadFailed": "Téléversement impossible.",
+          "deleteFailed": "Suppression impossible."
+        }
       },
       "marketplace": {
         "metaTitle": "Marketplace",
         "emptyTitle": "Marketplace du programme",
-        "emptyBody": "Achetez équipement, uniformes et forfaits photo auprès des programmes de vos enfants."
+        "emptyBody": "Achetez équipement, uniformes et forfaits photo auprès des programmes de vos enfants.",
+        "title": "Marketplace",
+        "subtitle": "Shop equipment, uniforms, and packages from programs your children attend.",
+        "buy": "Buy now",
+        "processing": "Processing…",
+        "errors": {
+          "checkoutFailed": "Checkout could not start."
+        }
+      },
+      "account": {
+        "metaTitle": "Compte",
+        "title": "Compte",
+        "subtitle": "Détails de connexion et contrôle de session.",
+        "signedInAs": "Connecté en tant que",
+        "passwordTitle": "Mot de passe",
+        "passwordBody": "Envoyez un lien de réinitialisation sécurisé à votre courriel.",
+        "signOutTitle": "Déconnexion",
+        "signOutBody": "Terminez votre session sur cet appareil.",
+        "signOutCta": "Se déconnecter",
+        "backToYou": "← Vous"
       }
     },
     "programs": {
@@ -804,40 +2073,258 @@
       "enrolled": {
         "metaTitle": "Enrolled programs",
         "emptyTitle": "No programs yet",
-        "emptyBody": "Accept an invite from your child's program to see rosters, waivers, and registration status here."
+        "emptyBody": "Accept an invite from your child's program to see rosters, waivers, and registration status here.",
+        "completeWaiver": "Sign waiver",
+        "completePayment": "Complete payment",
+        "allSet": "Enrollment complete",
+        "status": {
+          "pending": "Pending approval",
+          "active": "Active",
+          "withdrawn": "Withdrawn"
+        },
+        "payment": {
+          "not_required": "No payment due",
+          "pending": "Payment due",
+          "paid": "Paid",
+          "failed": "Payment failed",
+          "refunded": "Refunded"
+        },
+        "receipt": {
+          "title": "Payment received",
+          "body": "Your registration payment was successful. Save this reference for your records.",
+          "close": "Done"
+        }
       },
       "discover": {
-        "metaTitle": "Discover programs",
-        "emptyTitle": "Browse programs near you",
-        "emptyBody": "Find daycares, camps, and sports programs — register and pay in-app when discovery launches in Phase 2."
+        "metaTitle": "Découvrir les programmes",
+        "emptyTitle": "Aucun programme dans cette zone",
+        "emptyBody": "Essayez une autre ville ou revenez lorsque d'autres organisations publient leur page.",
+        "title": "Découvrir les programmes",
+        "subtitle": "Parcourez des programmes de confiance près de chez vous — ouvrez une fiche pour voir la page publique et inscrire votre enfant.",
+        "searchLabel": "Rechercher des programmes",
+        "searchPlaceholder": "Ville, programme ou club",
+        "citiesTitle": "Parcourir par ville",
+        "programsTitle": "Programmes",
+        "programCount": "{count, plural, one {# programme} other {# programmes}}"
+      },
+      "enroll": {
+        "metaTitle": "Complete enrollment",
+        "stepperLabel": "Enrollment steps",
+        "steps": {
+          "waiver": "Waiver",
+          "payment": "Payment"
+        },
+        "waiverBody": "Review and sign the program waiver. Your child's health profile will be shared with the program.",
+        "guardianName": "Guardian full name",
+        "signature": "Signature",
+        "signatureHint": "Sign with your finger or mouse.",
+        "signAndContinue": "Sign and continue",
+        "paymentBody": "Secure checkout via Stripe. Your card is charged by the program directly.",
+        "amountDue": "Amount due",
+        "payNow": "Pay now",
+        "promoCode": "Promo code",
+        "applyPromo": "Apply",
+        "promoApplied": "Promo applied",
+        "promoSavings": "You save ${amount}",
+        "paymentPlan": {
+          "full": "Pay in full",
+          "installment": "Installments"
+        },
+        "processing": "Processing…",
+        "waiverSigned": "Waiver signed",
+        "doneTitle": "You're all set",
+        "doneBody": "We'll notify you when the program approves your registration.",
+        "viewEnrolled": "View enrolled programs",
+        "errors": {
+          "waiverFailed": "Could not sign waiver.",
+          "waiverImmutable": "Waiver already signed.",
+          "checkoutFailed": "Could not start checkout.",
+          "invalidPromo": "Code promo invalide ou expiré."
+        }
       }
     },
     "care": {
       "metaTitle": "Soins",
       "title": "Soins",
       "subtitle": "Médecins, comptes rendus de visite et consultations après incident.",
+      "upgrade": {
+        "title": "Les soins font partie d'ANCHOR Famille",
+        "body": "Passez au complet pour le répertoire médical, les visites et les consultations d'incident.",
+        "cta": "Voir les forfaits"
+      },
       "emptyTitle": "Espace soins bientôt disponible",
       "emptyBody": "Prenez rendez-vous, conservez les résumés de visite et parlez à notre équipe clinique — avec ANCHOR Famille.",
       "tabs": {
-        "label": "Care sections",
-        "doctors": "Doctors",
-        "visits": "Visits",
-        "consults": "Consults"
+        "label": "Sections soins",
+        "doctors": "Médecins",
+        "visits": "Visites",
+        "consults": "Consultations",
+        "clearance": "Autorisation"
       },
       "doctors": {
-        "metaTitle": "Doctor directory",
-        "emptyTitle": "Doctor directory",
-        "emptyBody": "Browse practitioners with JANE or provider booking links. ANCHOR Family unlocks care booking and incident consults."
+        "metaTitle": "Répertoire médecins",
+        "emptyTitle": "Aucun praticien pour l'instant",
+        "emptyBody": "Nos partenaires de soins apparaîtront ici lorsque votre région sera couverte.",
+        "searchPlaceholder": "Rechercher par nom ou bio",
+        "filterSpecialty": "Filtrer par spécialité",
+        "allSpecialties": "Toutes les spécialités",
+        "featured": "Partenaire vedette",
+        "errorTitle": "Impossible de charger le répertoire",
+        "regionEmptyTitle": "Aucun médecin dans votre région",
+        "regionEmptyBody": "Nous élargissons notre réseau. Contactez le support pour obtenir de l'aide.",
+        "regionEmptyCta": "Contacter le support",
+        "visitHistoryLink": "Voir l'historique des visites",
+        "incidentBanner": {
+          "title": "Réservation avec contexte d'incident",
+          "body": "Les notes pour l'incident de {child} ({type}) seront préremplies à la réservation."
+        },
+        "specialty": {
+          "pediatrics": "Pédiatrie",
+          "sports_medicine": "Médecine du sport",
+          "family_medicine": "Médecine familiale",
+          "orthopedics": "Orthopédie",
+          "physiotherapy": "Physiothérapie",
+          "concussion": "Clinique commotion"
+        },
+        "language": {
+          "en": "Anglais",
+          "fr": "Français",
+          "es": "Espagnol"
+        },
+        "detail": {
+          "metaTitle": "Profil du médecin",
+          "back": "Retour au répertoire",
+          "bookCta": "Prendre rendez-vous",
+          "bookingPending": "Ouverture de la réservation…",
+          "bookingNote": "Vous terminerez la réservation sur le site partenaire dans un nouvel onglet.",
+          "incidentPrefillNote": "Les détails de l'incident seront inclus dans vos notes de réservation.",
+          "bookingError": "Impossible d'ouvrir le lien. Contactez le support.",
+          "errorTitle": "Médecin non disponible"
+        }
       },
       "visits": {
-        "metaTitle": "Visit history",
-        "emptyTitle": "Visit vault",
-        "emptyBody": "Visit summaries from appointments appear here and sync to your child's timeline."
+        "metaTitle": "Historique des visites",
+        "emptyTitle": "Aucune visite pour l'instant",
+        "emptyBody": "Les comptes rendus apparaîtront ici après téléversement par l'équipe soins.",
+        "browseDoctors": "Voir les médecins",
+        "errorTitle": "Impossible de charger les visites",
+        "childLabel": "Visite de {name}",
+        "pdfBadge": "PDF disponible",
+        "detail": {
+          "metaTitle": "Compte rendu de visite",
+          "back": "Retour aux visites",
+          "eyebrow": "Compte rendu",
+          "summaryTitle": "Résumé clinique",
+          "pdfTitle": "Rapport de visite",
+          "downloadPdf": "Télécharger le PDF",
+          "noPdfTitle": "Résumé seulement",
+          "noPdfBody": "Un résumé structuré est enregistré. Contactez l'équipe soins pour le PDF complet.",
+          "shareTitle": "Partager avec le programme",
+          "shareBody": "Envoyez un statut de retour aux activités — jamais vos notes cliniques complètes.",
+          "shareCta": "Partager l'autorisation",
+          "errorTitle": "Visite introuvable"
+        }
       },
       "consults": {
-        "metaTitle": "Incident consults",
-        "emptyTitle": "Talk to our clinical team",
-        "emptyBody": "After an incident, Family-plan parents can request async guidance with full child context."
+        "metaTitle": "Consultations incident",
+        "emptyTitle": "Parlez à notre équipe clinique",
+        "emptyBody": "Après un incident, les parents forfait Famille peuvent demander des conseils asynchrones avec le contexte complet de l'enfant.",
+        "errorTitle": "Impossible de charger les consultations",
+        "requestCta": "Demander une consultation",
+        "incidentBanner": {
+          "title": "Contexte incident joint",
+          "body": "Notre équipe clinique verra cet incident et la chronologie récente de votre enfant."
+        },
+        "form": {
+          "title": "Demander une consultation clinique",
+          "child": "Enfant",
+          "childPlaceholder": "Sélectionner un enfant",
+          "message": "Que s'est-il passé ?",
+          "messagePlaceholder": "Décrivez les symptômes, ce que vous avez essayé et vos préoccupations…",
+          "submit": "Envoyer la demande",
+          "submitting": "Envoi…"
+        },
+        "priority": {
+          "high": "Urgent"
+        },
+        "status": {
+          "pending": "En attente",
+          "assigned": "Assigné",
+          "open": "En cours",
+          "closed": "Fermé"
+        },
+        "errors": {
+          "required": "Sélectionnez un enfant et décrivez votre préoccupation.",
+          "failed": "Impossible de créer la consultation. Réessayez.",
+          "family_plan_required": "Forfait ANCHOR Famille requis pour les consultations incident.",
+          "child_not_found": "Enfant introuvable.",
+          "child_not_linked": "Connectez une inscription programme avant de demander une consultation.",
+          "incident_not_found": "Incident introuvable.",
+          "invalid_message": "Le message est requis (max. 2 000 caractères).",
+          "create_failed": "Impossible de créer la consultation."
+        },
+        "detail": {
+          "metaTitle": "Consultation",
+          "title": "Consultation pour {child}",
+          "back": "Toutes les consultations",
+          "errorTitle": "Consultation introuvable",
+          "incidentContext": "Incident lié",
+          "carePlanTitle": "Résumé du plan de soins",
+          "shareClearance": "Partager l'autorisation avec le programme",
+          "status": {
+            "pending": "En attente du clinicien",
+            "assigned": "Clinicien assigné",
+            "open": "En cours",
+            "closed": "Fermé"
+          }
+        }
+      },
+      "clearance": {
+        "metaTitle": "Partager l'autorisation",
+        "form": {
+          "title": "Partager l'autorisation de reprise",
+          "subtitle": "Envoyez un bref résumé au programme — jamais vos notes cliniques complètes.",
+          "program": "Programme",
+          "status": "Statut d'autorisation",
+          "summary": "Résumé pour le programme",
+          "summaryPlaceholder": "p. ex. Autorisé par le pédiatre pour participation complète. Aucune restriction.",
+          "conditions": "Conditions (facultatif)",
+          "expires": "Date d'expiration (facultatif)",
+          "submit": "Partager avec le programme",
+          "submitting": "Partage en cours…"
+        },
+        "status": {
+          "cleared": "Autorisé",
+          "restricted": "Restreint — non autorisé",
+          "cleared_with_conditions": "Autorisé avec conditions"
+        },
+        "preview": {
+          "label": "Ce que verra votre programme",
+          "conditions": "Conditions",
+          "expires": "Valide jusqu'au {date}",
+          "disclaimer": "Les notes de visite et transcriptions de consultation ne sont jamais partagées.",
+          "placeholder": "Votre résumé apparaîtra ici…",
+          "programFallback": "votre programme"
+        },
+        "history": {
+          "title": "Historique des partages",
+          "active": "Actif",
+          "expired": "Expiré",
+          "inactive": "Remplacé"
+        },
+        "empty": {
+          "title": "Connectez d'abord un programme",
+          "body": "Lorsque votre enfant est inscrit à un programme actif, vous pouvez partager des résumés d'autorisation ici."
+        },
+        "success": "Autorisation partagée avec {program}.",
+        "errors": {
+          "required": "Sélectionnez un programme et saisissez un résumé.",
+          "invalid_summary": "Le résumé est requis et doit faire moins de 500 caractères.",
+          "invalid_conditions": "Les conditions doivent faire moins de 300 caractères.",
+          "expiry_in_past": "La date d'expiration doit être dans le futur.",
+          "registration_not_found": "Inscription au programme introuvable.",
+          "create_failed": "Impossible de partager l'autorisation. Réessayez."
+        }
       }
     },
     "profile": {
@@ -942,7 +2429,8 @@
       "title": "Prêt à publier, {name}",
       "subtitle": "Vos programmes assignés — sélectionnez-en un pour enregistrer rapports vocaux, photos et notes.",
       "emptyTitle": "Aucun programme assigné",
-      "emptyBody": "Votre directeur vous assignera des programmes après acceptation de l'invitation."
+      "emptyBody": "Votre directeur vous assignera des programmes après acceptation de l'invitation.",
+      "enrollment": "{count} enfants inscrits"
     },
     "report": {
       "metaTitle": "Rapport",
@@ -950,7 +2438,129 @@
       "subtitle": "Enregistrez la voix, taguez les photos, ajoutez des notes — l'IA rédige les rapports par enfant.",
       "emptyTitle": "Sélectionnez un programme",
       "emptyBody": "Choisissez un programme assigné pour commencer l'enregistrement du jour.",
-      "emptyCta": "Voir les programmes"
+      "emptyCta": "Voir les programmes",
+      "hub": {
+        "enrollment": "{count} enfants inscrits",
+        "recordCta": "Appuyez pour enregistrer le mémo vocal du jour",
+        "reviewCta": "Puis révisez les brouillons IA avant publication",
+        "mediaCta": "Taguer les photos pour les familles"
+      },
+      "nav": {
+        "label": "Étapes du rapport",
+        "voice": "Voix",
+        "media": "Photos",
+        "review": "Révision"
+      },
+      "voice": {
+        "metaTitle": "Enregistrement vocal",
+        "title": "Enregistrement vocal",
+        "pageSubtitle": "Deux minutes de voix valent trente minutes de frappe — transcription en arrière-plan.",
+        "subtitle": "Parlez naturellement. Mettez en pause si besoin. Envoyez quand vous avez fini.",
+        "todayLabel": "Aujourd'hui",
+        "programPicker": "Programme",
+        "scopeLabel": "Portée du rapport",
+        "scope": {
+          "group": "Groupe entier",
+          "per_child": "Lot par enfant"
+        },
+        "record": "Commencer l'enregistrement",
+        "pause": "Pause",
+        "resume": "Reprendre",
+        "stop": "Arrêter",
+        "upload": "Envoyer l'enregistrement",
+        "discard": "Supprimer",
+        "uploading": "Envoi sécurisé…",
+        "uploadBackground": "Restez sur cette page — l'envoi continue en arrière-plan.",
+        "successTitle": "Enregistrement enregistré",
+        "successBody": "La transcription tourne en arrière-plan. Révisez les brouillons IA quand vous voulez.",
+        "reviewCta": "Réviser les brouillons",
+        "errorTitle": "Échec de l'envoi",
+        "retry": "Réessayer l'envoi",
+        "existingDraft": "Enregistrement du jour ({duration}) — réenregistrez pour remplacer.",
+        "timer": {
+          "hint": "Visez ~2 min · 10 min max",
+          "nearLimit": "Limite de 10 minutes bientôt atteinte"
+        },
+        "errors": {
+          "micDenied": "L'accès au micro est requis pour enregistrer.",
+          "noPending": "Aucun enregistrement sauvegardé à renvoyer.",
+          "pendingFound": "Un enregistrement n'a pas pu être envoyé — appuyez sur réessayer."
+        }
+      },
+      "review": {
+        "metaTitle": "Réviser les brouillons",
+        "title": "Réviser et publier",
+        "pageSubtitle": "Modifiez les brouillons IA avant que les parents ne voient quoi que ce soit.",
+        "audioLabel": "Enregistrement source",
+        "audioTitle": "Mémo vocal du jour",
+        "audioDuration": "{duration} enregistré",
+        "playAudio": "Écouter",
+        "noAudio": "Aucun audio joint",
+        "showTranscript": "Afficher la transcription",
+        "hideTranscript": "Masquer la transcription",
+        "draftsLabel": "Brouillons par enfant",
+        "draftsTitle": "{count, plural, one {# enfant} other {# enfants}}",
+        "draftPlaceholder": "Rédigez ou modifiez le rapport du jour…",
+        "misassignedBadge": "Hors groupe",
+        "misassignedHint": "Ce nom est mentionné mais n'est pas inscrit à ce programme.",
+        "misassignedBanner": "{count, plural, one {# mention à vérifier} other {# mentions à vérifier}} avant publication.",
+        "skippedBadge": "Ignoré",
+        "skip": "Ignorer",
+        "unskip": "Inclure",
+        "flagMisassigned": "Pas dans mon groupe",
+        "photosTagged": "{count, plural, one {# photo} other {# photos}}",
+        "footerSummary": "{count, plural, one {# rapport prêt} other {# rapports prêts}}",
+        "saveDrafts": "Enregistrer",
+        "saving": "Enregistrement…",
+        "discard": "Tout supprimer",
+        "publishAll": "Publier {count}",
+        "publishedBadge": "Publié",
+        "publishConfirmTitle": "Publier les rapports du jour ?",
+        "publishConfirmBody": "Envoi de {count} rapports. {skipped} ignorés. Les parents seront notifiés.",
+        "publishConfirmCta": "Publier",
+        "discardConfirmTitle": "Supprimer tous les brouillons ?",
+        "discardConfirmBody": "Les brouillons par enfant seront effacés. L'enregistrement vocal reste sauvegardé.",
+        "discardConfirmCta": "Supprimer",
+        "cancel": "Annuler",
+        "successTitle": "Rapports publiés",
+        "successBody": "Les familles sont notifiées. Vous pourrez enregistrer demain.",
+        "doneCta": "Retour aux programmes",
+        "errors": {
+          "saveFailed": "Impossible d'enregistrer les brouillons.",
+          "publishFailed": "Échec de la publication.",
+          "untaggedMedia": "Taguez toutes les photos avant de publier les rapports.",
+          "discardFailed": "Impossible de supprimer les brouillons."
+        }
+      },
+      "media": {
+        "metaTitle": "Taguer les photos",
+        "title": "Photos",
+        "pageSubtitle": "Taguez les enfants manuellement — pas de détection de visages. Les parents ne voient que ce que vous publiez.",
+        "pickerTitle": "Appareil photo ou galerie",
+        "pickerBody": "Ajoutez des moments du terrain, puis taguez chaque enfant sur chaque photo.",
+        "manualTagOnly": "Tags manuels uniquement — jamais de reconnaissance faciale IA.",
+        "addPhotos": "Ajouter des photos",
+        "emptyQueue": "Aucune photo dans la file du jour.",
+        "noRoster": "Aucun enfant inscrit sur la liste de ce programme.",
+        "draftBadge": "Prêt à taguer",
+        "publishedBadge": "Publié",
+        "tagRequired": "Taguez au moins un enfant",
+        "removePhoto": "Supprimer la photo",
+        "captionPlaceholder": "Légende optionnelle",
+        "taggedCount": "Envoyé à {count, plural, one {# famille} other {# familles}}",
+        "untaggedWarning": "{count, plural, one {# photo sans tags} other {# photos sans tags}} avant publication.",
+        "footerSummary": "{count, plural, one {# photo prête} other {# photos prêtes}} à envoyer",
+        "publishCta": "Publier les photos",
+        "publishing": "Publication…",
+        "publishSuccess": "Photos envoyées à {count, plural, one {# famille} other {# familles}}.",
+        "reviewCta": "Réviser les brouillons",
+        "errors": {
+          "uploadFailed": "Échec de l'envoi — réessayez.",
+          "fileInvalid": "JPEG, PNG ou WebP de moins de 10 Mo.",
+          "publishFailed": "Impossible de publier les photos.",
+          "untaggedBlocked": "Chaque photo doit avoir au moins un enfant tagué."
+        }
+      }
     },
     "roster": {
       "metaTitle": "Effectif",
@@ -974,7 +2584,435 @@
       "title": "Incidents",
       "subtitle": "Signalez et documentez les incidents — les parents sont alertés immédiatement.",
       "emptyTitle": "Aucun incident",
-      "emptyBody": "Les rapports d'incident que vous soumettez apparaissent ici avec une piste d'audit complète."
+      "emptyBody": "Les rapports d'incident que vous soumettez apparaissent ici avec une piste d'audit complète.",
+      "list": {
+        "emptyTitle": "Aucun incident signalé",
+        "emptyBody": "Lorsque vous déposez un rapport structuré, il apparaît ici avec le statut de notification.",
+        "emptyCta": "Signaler un incident",
+        "reportCta": "Signaler un incident",
+        "parentNotified": "Parent notifié",
+        "notifyPending": "Notification en file",
+        "loading": "Chargement…",
+        "loadMore": "Voir plus",
+        "severity": {
+          "green": "Mineur",
+          "yellow": "Modéré",
+          "red": "Urgent"
+        }
+      },
+      "form": {
+        "metaTitle": "Signaler un incident",
+        "title": "Signaler un incident",
+        "subtitle": "Documentation structurée avec alerte parent instantanée.",
+        "cancel": "Annuler",
+        "back": "Retour",
+        "next": "Continuer",
+        "submit": "Soumettre le rapport",
+        "submitting": "Envoi…",
+        "success": "Incident signalé. Les parents ont été notifiés.",
+        "successRed": "Incident urgent soumis. Alerte prioritaire envoyée aux parents.",
+        "steps": {
+          "type": "Type",
+          "details": "Détails",
+          "witnesses": "Témoins",
+          "actions": "Mesures prises",
+          "photos": "Photos",
+          "review": "Révision"
+        },
+        "redBanner": {
+          "title": "Protocole incident urgent",
+          "body": "Les parents reçoivent une alerte prioritaire. Complétez tous les champs obligatoires."
+        },
+        "type": {
+          "title": "Que s'est-il passé ?",
+          "subtitle": "Sélectionnez le type d'incident correspondant à la situation.",
+          "redFlag": "Alerte prioritaire"
+        },
+        "types": {
+          "minorBump": "Petit choc ou contusion",
+          "scrape": "Éraflure ou coupure",
+          "behavioral": "Incident comportemental",
+          "illness": "Début de maladie",
+          "allergicMild": "Réaction allergique légère",
+          "fall": "Chute",
+          "headInjury": "Blessure à la tête",
+          "concussion": "Commotion / suspicion de commotion",
+          "unconsciousness": "Perte de conscience",
+          "severeBleeding": "Saignement important",
+          "allergicSevere": "Réaction allergique grave",
+          "seizure": "Crise convulsive",
+          "difficultyBreathing": "Difficulté respiratoire",
+          "collision": "Collision / contact",
+          "sprain": "Entorse ou foulure",
+          "bite": "Morsure",
+          "chokingScare": "Fausses routes"
+        },
+        "details": {
+          "title": "Détails de l'incident",
+          "subtitle": "Quand et où, et qui était impliqué.",
+          "program": "Programme",
+          "child": "Enfant concerné",
+          "noChildren": "Aucune inscription active sur ce programme.",
+          "allergies": "Allergies",
+          "occurredAt": "Date et heure",
+          "location": "Lieu",
+          "locationPlaceholder": "ex. Gymnase, cour de récréation",
+          "mechanism": "Comment c'est arrivé",
+          "mechanismPlaceholder": "Brève description de l'événement",
+          "bodyArea": "Zone du corps",
+          "bodyAreaPlaceholder": "Sélectionner",
+          "symptoms": "Symptômes et observations",
+          "symptomsPlaceholder": "Ce que vous avez observé — comportement, blessure visible",
+          "painLevel": "Niveau de douleur (1–10, optionnel)"
+        },
+        "bodyAreas": {
+          "head": "Tête",
+          "neck": "Cou",
+          "chest": "Poitrine",
+          "back": "Dos",
+          "left_arm": "Bras gauche",
+          "right_arm": "Bras droit",
+          "left_leg": "Jambe gauche",
+          "right_leg": "Jambe droite",
+          "abdomen": "Abdomen"
+        },
+        "witnesses": {
+          "title": "Témoins",
+          "subtitle": "Optionnel — personnel ou autres témoins.",
+          "name": "Nom",
+          "role": "Rôle",
+          "add": "Ajouter un témoin",
+          "remove": "Retirer le témoin"
+        },
+        "actions": {
+          "title": "Mesures prises",
+          "subtitle": "Premiers soins, supervision et contacts.",
+          "label": "Mesures prises",
+          "placeholder": "Glace appliquée, parent appelé, urgences contactées, etc."
+        },
+        "photos": {
+          "title": "Photos",
+          "subtitle": "Documentation optionnelle — jusqu'à 6 images.",
+          "add": "Ajouter des photos"
+        },
+        "review": {
+          "title": "Révision et envoi",
+          "subtitle": "Confirmez les détails avant de déposer le rapport.",
+          "type": "Type",
+          "child": "Enfant",
+          "when": "Quand",
+          "location": "Lieu",
+          "redNotify": "Une notification prioritaire sera envoyée aux parents"
+        },
+        "validation": {
+          "required": "Complétez tous les champs obligatoires avant de continuer."
+        },
+        "errors": {
+          "required_fields": "Des champs obligatoires sont manquants.",
+          "body_area_required": "La zone du corps est requise pour ce type d'incident.",
+          "create_failed": "Impossible de soumettre le rapport. Réessayez.",
+          "invalid_type": "Type d'incident invalide.",
+          "child_not_on_roster": "L'enfant n'est pas inscrit à ce programme."
+        }
+      }
+    }
+  },
+  "emergency": {
+    "staff": {
+      "label": "Urgence",
+      "close": "Fermer",
+      "loading": "Chargement de la fiche…",
+      "allergies": "Allergies",
+      "conditions": "Conditions",
+      "medications": "Médicaments",
+      "contacts": "Contacts d'urgence",
+      "physician": "Médecin",
+      "notShared": "Non partagé par la famille pour ce programme",
+      "noneListed": "Aucun renseignement",
+      "prevChild": "Enfant précédent",
+      "nextChild": "Enfant suivant",
+      "childOf": "Enfant {current} sur {total}",
+      "updated": "Mis à jour {time}"
+    }
+  },
+  "roster": {
+    "emptyTitle": "Aucun enfant à l'effectif",
+    "emptyBody": "Les enfants apparaissent ici lorsque les familles terminent l'inscription et que les demandes sont approuvées.",
+    "emptyCta": "Inviter des familles",
+    "searchLabel": "Rechercher l'effectif",
+    "searchPlaceholder": "Rechercher par nom…",
+    "filterProgram": "Programme",
+    "filterClearance": "Autorisation",
+    "allPrograms": "Tous les programmes",
+    "allClearance": "Toutes les autorisations",
+    "filters": "Filtres",
+    "applyFilters": "Appliquer",
+    "viewTable": "Vue tableau",
+    "viewCards": "Vue cartes",
+    "fieldMode": "Mode terrain",
+    "handoff": "Passation",
+    "loading": "Chargement…",
+    "noResults": "Aucun enfant ne correspond aux filtres.",
+    "viewProfile": "Voir le profil",
+    "expand": "Développer",
+    "collapse": "Réduire",
+    "age": "{age} ans",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "pagination": "{from}–{to} sur {total}",
+    "allergies": {
+      "none": "Aucune allergie indiquée",
+      "severityStrip": "Gravité des allergies : {severity}",
+      "severity": {
+        "mild": "légère",
+        "moderate": "modérée",
+        "severe": "sévère"
+      }
+    },
+    "clearance": {
+      "cleared": "Autorisé",
+      "pending": "En attente",
+      "hold": "Bloqué"
+    },
+    "clearanceSummary": {
+      "title": "Autorisation parent",
+      "hint": "Résumé partagé par la famille — les notes cliniques ne sont pas incluses.",
+      "empty": "Aucun résumé d'autorisation partagé pour l'instant.",
+      "sharedAt": "Partagé le {date}"
+    },
+    "pickup": {
+      "overrideToday": "Modification de ramassage pour aujourd'hui",
+      "overrideShort": "Ramassage",
+      "overridePerson": "{name}",
+      "overrideExpires": "Expire dans {countdown}",
+      "etaShort": "Retard ~{time}",
+      "etaArrival": "Ramassage ~{time}",
+      "etaNote": "{note}"
+    },
+    "health": {
+      "note": "{note}",
+      "status": {
+        "healthy": "En forme aujourd'hui",
+        "mild": "Symptômes légers",
+        "stayingHome": "Reste à la maison"
+      },
+      "short": {
+        "healthy": "En forme",
+        "mild": "Symptômes légers",
+        "stayingHome": "À la maison"
+      }
+    },
+    "field": {
+      "metaTitle": "Mode terrain",
+      "bannerTitle": "Mode terrain activé",
+      "bannerBody": "Essentiels sécurité seulement — photo, allergies, autorisation et ramassage. Carte d'urgence en un tap.",
+      "programFilter": "Programme",
+      "allPrograms": "Tous les programmes",
+      "loading": "Chargement…",
+      "noResults": "Aucun enfant dans ce programme.",
+      "emptyTitle": "Aucun enfant à l'effectif",
+      "emptyBody": "Quand les familles s'inscrivent, les essentiels sécurité apparaissent ici.",
+      "emptyCta": "Inviter des familles",
+      "emergencyCta": "Carte d'urgence",
+      "tipTitle": "Astuce mode terrain",
+      "tipBody": "Touchez Carte d'urgence pour allergies, médicaments et contacts en deux taps.",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "pagination": "{from}–{to} sur {total}"
+    },
+    "emergency": {
+      "label": "Urgence",
+      "open": "Fiche d'urgence de {name}",
+      "close": "Fermer",
+      "allergies": "Allergies",
+      "conditions": "Conditions",
+      "medications": "Médicaments",
+      "contacts": "Contacts d'urgence",
+      "physician": "Médecin"
+    },
+    "detail": {
+      "metaTitle": "Profil enfant",
+      "back": "Retour à l'effectif",
+      "tabsLabel": "Sections enfant",
+      "emergencyCta": "Ouvrir la fiche d'urgence",
+      "emergencyHint": "Vue sécurité plein écran avec allergies, médicaments et appels en un toucher.",
+      "allergies": "Allergies",
+      "enrollment": "Inscription",
+      "status": "Statut",
+      "group": "Groupe",
+      "parent": "Parent",
+      "staffNotes": "Notes internes",
+      "staffNotesHint": "Usage interne uniquement — invisible aux familles.",
+      "noStaffNotes": "Aucune note pour l'instant.",
+      "tabs": {
+        "overview": "Aperçu",
+        "emergency": "Urgence",
+        "reports": "Rapports",
+        "incidents": "Incidents",
+        "messages": "Messages"
+      },
+      "placeholders": {
+        "reports": {
+          "title": "Rapports bientôt disponibles",
+          "body": "Les rapports quotidiens apparaîtront ici en phase 15."
+        },
+        "incidents": {
+          "title": "Aucun incident",
+          "body": "Les rapports d'incident pour cet enfant apparaîtront ici."
+        },
+        "messages": {
+          "title": "Pas encore de fil",
+          "body": "Un fil famille est créé lors de l'inscription.",
+          "openBody": "Cette conversation inclut tous les tuteurs pour la sécurité de l'enfant.",
+          "openCta": "Ouvrir le fil famille"
+        }
+      }
+    }
+  },
+  "public": {
+    "previewBanner": "Aperçu — invisible au public tant que vous n'avez pas publié",
+    "paymentsPreviewWarning": "Les paiements ne sont pas configurés — les familles ne peuvent pas payer tant que Stripe Connect n'est pas terminé.",
+    "verified": "Vérifié sur ANCHOR",
+    "verifiedOnAnchor": "Programme vérifié sur ANCHOR Care",
+    "viewPrograms": "Voir les programmes",
+    "programs": "Programmes",
+    "programsEmpty": "Les nouveaux programmes apparaîtront ici une fois publiés.",
+    "about": "À propos",
+    "gallery": "Galerie",
+    "trust": "Confiance et accréditations",
+    "visit": "Nous rendre visite",
+    "contact": "Contact",
+    "closed": "Fermé",
+    "byAppointment": "Sur rendez-vous",
+    "schedule": "Horaire",
+    "ages": "Âges",
+    "description": "À propos de ce programme",
+    "ageRange": "Âges {min}–{max}",
+    "backToPrograms": "Retour à {org}",
+    "enrollSuccess": "Inscription confirmée ! Consultez votre fil ANCHOR pour les mises à jour.",
+    "days": {
+      "mon": "Lundi",
+      "tue": "Mardi",
+      "wed": "Mercredi",
+      "thu": "Jeudi",
+      "fri": "Vendredi",
+      "sat": "Samedi",
+      "sun": "Dimanche"
+    },
+    "spots": {
+      "spotsLeft": "{count, plural, one {# place restante} other {# places restantes}}",
+      "waitlistOpen": "Liste d'attente ouverte",
+      "full": "Complet"
+    },
+    "cta": {
+      "book_pay": "Réserver et payer",
+      "free_enroll": "Inscription gratuite",
+      "waitlist": "Rejoindre la liste d'attente",
+      "closed": "Inscriptions fermées",
+      "payments_unavailable": "Paiements indisponibles"
+    },
+    "billing": {
+      "one_time": "Unique",
+      "monthly": "Par mois",
+      "season": "Par saison",
+      "weekly": "Par semaine"
+    },
+    "bookPay": {
+      "steps": {
+        "auth": "Connexion",
+        "child": "Votre enfant",
+        "waiver": "Décharge",
+        "payment": "Paiement"
+      },
+      "authPrompt": "Connectez-vous ou créez un compte parent pour vous inscrire.",
+      "signedInAs": "Connecté en tant que {email}",
+      "existingChild": "Enfant existant",
+      "newChild": "Ajouter un enfant",
+      "selectChild": "Choisir un enfant",
+      "childFirstName": "Prénom de l'enfant",
+      "childLastName": "Nom de famille",
+      "childDob": "Date de naissance",
+      "continue": "Continuer",
+      "waiverBody": "En vous inscrivant, vous acceptez la décharge du programme et autorisez les soins d'urgence si nécessaire.",
+      "guardianName": "Nom complet du tuteur (signature)",
+      "waiverAccept": "J'accepte la décharge d'inscription",
+      "continueToPayment": "Continuer vers le paiement",
+      "completeEnrollment": "Finaliser l'inscription",
+      "paymentBody": "Vous terminerez le paiement en toute sécurité avec Stripe.",
+      "payNow": "Payer {price}",
+      "processing": "Traitement…",
+      "enrollSuccess": "Inscription terminée !",
+      "healthProfile": {
+        "title": "Profil santé incomplet",
+        "body": "Les programmes utilisent ces informations pour la sécurité — allergies, médicaments et contacts d'urgence.",
+        "allergies": "Allergies",
+        "medications": "Médicaments",
+        "completeLink": "Compléter le profil santé"
+      },
+      "errors": {
+        "enrollFailed": "Impossible de finaliser l'inscription.",
+        "checkoutFailed": "Impossible de démarrer le paiement.",
+        "unauthorized": "Veuillez vous connecter pour continuer.",
+        "waiverRequired": "La signature de la décharge est requise.",
+        "programNotAvailable": "Ce programme n'est pas disponible.",
+        "registrationClosed": "Les inscriptions sont fermées.",
+        "programFull": "Ce programme est complet.",
+        "childNotFound": "Enfant introuvable.",
+        "childRequired": "Sélectionnez ou ajoutez un enfant.",
+        "connectRequired": "Les paiements ne sont pas encore configurés.",
+        "stripeNotConfigured": "Paiements temporairement indisponibles.",
+        "rateLimited": "Trop de tentatives. Réessayez dans un moment."
+      }
+    },
+    "smsReport": {
+      "metaTitle": "Rapport du jour",
+      "headline": "La journée de {name}",
+      "noReportBody": "Le rapport du jour apparaîtra ici sous peu.",
+      "transcriptToggle": "Voir la transcription vocale",
+      "photosTitle": "{count, plural, one {# photo} other {# photos}}",
+      "photosHint": "Ouvrez l'application pour les photos en pleine résolution.",
+      "privacyFooter": "Ce lien est privé. Le contenu du rapport n'est pas indexé ni partagé publiquement.",
+      "privacyLink": "Politique de confidentialité",
+      "cta": {
+        "openApp": "Ouvrir dans ANCHOR",
+        "signIn": "Se connecter pour voir la chronologie",
+        "createAccount": "Créer un compte gratuit"
+      },
+      "errors": {
+        "invalid": {
+          "title": "Lien introuvable",
+          "body": "Ce lien de rapport est invalide. Vérifiez le SMS ou ouvrez l'application ANCHOR."
+        },
+        "expired": {
+          "title": "Lien expiré",
+          "body": "Les liens expirent après 7 jours. Connectez-vous à l'application pour votre chronologie complète."
+        },
+        "maxViews": {
+          "title": "Limite atteinte",
+          "body": "Ce lien a été consulté trop souvent. Connectez-vous à l'application pour lire le rapport."
+        },
+        "revoked": {
+          "title": "Lien indisponible",
+          "body": "Ce lien a été désactivé pour des raisons de sécurité. Connectez-vous ou demandez un nouveau lien au programme."
+        },
+        "notPublished": {
+          "title": "Rapport à venir",
+          "body": "L'entraîneur finalise encore le rapport du jour. Revenez bientôt."
+        },
+        "rateLimited": {
+          "title": "Ralentissez",
+          "body": "Trop de requêtes. Attendez un moment et réessayez.",
+          "retry": "Réessayez dans {seconds} s"
+        },
+        "actions": {
+          "signIn": "Se connecter",
+          "createAccount": "Créer un compte"
+        }
+      }
+    },
+    "unavailable": {
+      "title": "Page indisponible",
+      "body": "Cette page n'est pas encore publiée. Si vous avez été invité, utilisez votre lien direct du directeur."
     }
   },
   "admin": {
@@ -989,6 +3027,7 @@
       "consults": "Consultations",
       "users": "Utilisateurs",
       "businesses": "Entreprises",
+      "moderation": "Modération",
       "analytics": "Analytique",
       "marketplace": "Marketplace"
     },
@@ -996,22 +3035,42 @@
       "metaTitle": "Admin plateforme",
       "title": "Vue d'ensemble",
       "subtitle": "File de consultation, santé plateforme et métriques — {name}.",
+      "healthTitle": "Santé plateforme",
+      "health": {
+        "pendingJobs": "Tâches en file",
+        "failedJobs": "Échecs (7 j)",
+        "smsFailure": "Taux échec SMS (7 j)"
+      },
       "queueSectionTitle": "File consultations incidents",
+      "queueActive": "{count} consultations à traiter",
+      "queueActiveBody": "Les cas urgents et FIFO attendent dans la file clinique.",
       "queueEmptyTitle": "Aucune consultation en attente",
       "queueEmptyBody": "Les parents forfait Famille demandant une guidance clinique apparaissent ici.",
+      "linksTitle": "Raccourcis",
+      "links": {
+        "consults": "File consultations",
+        "moderation": "Modération",
+        "businesses": "Entreprises actives"
+      },
       "kpiSectionTitle": "Métriques plateforme",
       "kpi": {
         "mrr": {
           "label": "MRR",
-          "pending": "Mis à jour quand la facturation sera connectée."
+          "pending": "Abonnements actifs au tarif catalogue."
         },
         "activations": {
           "label": "Activations hebdo",
+          "hint": "Nouveaux parents + entreprises cette semaine",
           "pending": "Nouvelles familles et programmes cette semaine."
         },
         "wapor": {
           "label": "WAPOR",
+          "hint": "Parents ouvrant des rapports (7 j)",
           "pending": "Parents actifs ouvrant les rapports chaque semaine."
+        },
+        "parents": {
+          "label": "Parents actifs",
+          "hint": "Comptes parent non suspendus"
         }
       }
     },
@@ -1020,35 +3079,288 @@
       "title": "Répertoire médecins",
       "subtitle": "Praticiens, liens de réservation et téléversement de comptes rendus.",
       "emptyTitle": "Répertoire non configuré",
-      "emptyBody": "Ajoutez des praticiens CA/US avec liens JANE ou fournisseurs."
+      "emptyBody": "Ajoutez des praticiens CA/US avec liens JANE ou fournisseurs.",
+      "addDoctor": "Ajouter un médecin",
+      "uploadVisit": "Téléverser une visite",
+      "searchPlaceholder": "Rechercher des médecins",
+      "showInactive": "Afficher les inactifs",
+      "errorTitle": "Impossible de charger les médecins",
+      "edit": "Modifier",
+      "yes": "Oui",
+      "no": "Non",
+      "table": {
+        "name": "Nom",
+        "specialty": "Spécialité",
+        "country": "Pays",
+        "featured": "Vedette",
+        "active": "Actif",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Actif",
+        "inactive": "Inactif"
+      },
+      "toast": {
+        "deactivated": "Médecin masqué dans l'app parent",
+        "reactivated": "Médecin visible dans l'app parent",
+        "error": "Action échouée"
+      },
+      "specialty": {
+        "pediatrics": "Pédiatrie",
+        "sports_medicine": "Médecine du sport",
+        "family_medicine": "Médecine familiale",
+        "orthopedics": "Orthopédie",
+        "physiotherapy": "Physiothérapie",
+        "concussion": "Clinique commotion"
+      },
+      "form": {
+        "createTitle": "Ajouter un médecin",
+        "createMetaTitle": "Ajouter un médecin",
+        "editTitle": "Modifier le médecin",
+        "editMetaTitle": "Modifier le médecin",
+        "subtitle": "Les parents voient un aperçu en direct pendant l'édition.",
+        "displayName": "Nom affiché",
+        "photo": "Photo",
+        "photoUrlPlaceholder": "URL de la photo",
+        "bio": "Bio",
+        "specialty": "Spécialité",
+        "languages": "Langues",
+        "bookingUrl": "URL de réservation",
+        "bookingUrlHint": "Lien JANE ou fournisseur (https)",
+        "featured": "Partenaire vedette",
+        "sortOrder": "Ordre d'affichage",
+        "save": "Enregistrer",
+        "saving": "Enregistrement…",
+        "cancel": "Annuler",
+        "preview": "Aperçu parent",
+        "previewPlaceholder": "Nom du médecin",
+        "loading": "Chargement…",
+        "saved": "Médecin enregistré",
+        "saveError": "Enregistrement impossible",
+        "loadError": "Chargement impossible",
+        "photoUploaded": "Photo téléversée",
+        "photoUploadError": "Échec du téléversement",
+        "errors": {
+          "invalid_name": "Entrez un nom valide",
+          "invalid_specialty": "Sélectionnez une spécialité",
+          "invalid_languages": "Sélectionnez au moins une langue",
+          "invalid_country": "Sélectionnez un pays",
+          "invalid_region": "Sélectionnez une région valide",
+          "invalid_booking_url": "Entrez une URL https valide",
+          "invalid_bio": "Bio trop longue"
+        }
+      }
+    },
+    "visits": {
+      "metaTitle": "Téléverser un compte rendu",
+      "title": "Téléverser un compte rendu",
+      "subtitle": "Après un rendez-vous JANE ou partenaire — les parents voient le résumé dans leur coffre et la chronologie.",
+      "childSearch": "Trouver l'enfant",
+      "childSearchPlaceholder": "Nom de l'enfant ou courriel du parent",
+      "selectedChild": "Sélectionné : {name}",
+      "doctor": "Médecin du répertoire",
+      "doctorCustom": "Nom personnalisé",
+      "doctorName": "Nom affiché du médecin",
+      "appointmentDate": "Date du rendez-vous",
+      "summary": "Résumé structuré",
+      "summaryPlaceholder": "Constats, restrictions, suivi…",
+      "pdf": "Rapport PDF (optionnel)",
+      "pdfHint": "PDF jusqu'à 10 Mo",
+      "submit": "Téléverser dans le coffre parent",
+      "submitting": "Téléversement…",
+      "checklistTitle": "Avant d'envoyer",
+      "checklist1": "Vérifiez que l'enfant et le courriel parent correspondent.",
+      "checklist2": "Utilisez le médecin du répertoire lorsque possible.",
+      "checklist3": "Le parent reçoit une notification et un événement chronologie.",
+      "confirm": {
+        "title": "Confirmer le téléversement",
+        "body": "Téléverser la visite pour {child} au parent {parent} ?",
+        "confirm": "Téléverser",
+        "cancel": "Annuler"
+      },
+      "duplicate": {
+        "title": "Visite déjà existante",
+        "body": "Cet enfant a déjà une visite à cette date. Téléverser quand même ?",
+        "confirm": "Téléverser quand même",
+        "cancel": "Annuler"
+      },
+      "toast": {
+        "uploaded": "Visite téléversée — parent notifié"
+      },
+      "errors": {
+        "selectChild": "Sélectionnez d'abord un enfant",
+        "required": "Remplissez tous les champs requis",
+        "saveFailed": "Échec du téléversement",
+        "invalid_child": "Enfant invalide",
+        "invalid_doctor_name": "Entrez un nom de médecin",
+        "invalid_date": "Date invalide",
+        "invalid_summary": "Entrez un résumé",
+        "child_not_linked": "Aucune inscription programme — liez un programme d'abord",
+        "duplicate_date": "Date en double",
+        "timeline_failed": "Impossible de créer l'événement chronologie",
+        "create_failed": "Impossible d'enregistrer la visite"
+      }
     },
     "consults": {
       "metaTitle": "Consultations",
       "title": "Consultations incidents",
       "subtitle": "File clinique asynchrone pour parents forfait Famille.",
       "emptyTitle": "File vide",
-      "emptyBody": "Les demandes de consultation apparaissent ici avec le contexte enfant et incident."
+      "emptyBody": "Les demandes de consultation apparaissent ici avec le contexte enfant et incident.",
+      "empty": "Aucune consultation pour ce filtre.",
+      "errorTitle": "Impossible de charger la file",
+      "priority": {
+        "high": "Priorité haute"
+      },
+      "filters": {
+        "active": "Actives",
+        "pending": "En attente",
+        "assigned": "Assignées",
+        "open": "Ouvertes",
+        "closed": "Fermées",
+        "all": "Toutes"
+      },
+      "columns": {
+        "pending": "En attente",
+        "assigned": "Assignées",
+        "open": "Ouvertes",
+        "closed": "Fermées"
+      },
+      "workspace": {
+        "metaTitle": "Espace consultation",
+        "back": "Retour à la file",
+        "errorTitle": "Consultation introuvable",
+        "noOrg": "Aucune organisation",
+        "priorityHigh": "Priorité haute",
+        "status": {
+          "pending": "En attente",
+          "assigned": "Assignée",
+          "open": "Ouverte",
+          "closed": "Fermée"
+        },
+        "incidentTitle": "Contexte incident",
+        "incidentType": "Type",
+        "severity": "Gravité",
+        "mechanism": "Mécanisme",
+        "symptoms": "Symptômes",
+        "timelineTitle": "7 derniers jours",
+        "timelineEmpty": "Aucun événement récent.",
+        "initialRequest": "Demande parent",
+        "assignCta": "Prendre le dossier",
+        "assigning": "Assignation…",
+        "assigned": "Vous êtes assigné à cette consultation.",
+        "closeTitle": "Clôturer la consultation",
+        "closeSubtitle": "Enregistrez un plan de soins et une autorisation recommandée pour le parent.",
+        "carePlan": "Résumé du plan de soins",
+        "clearanceStatus": "Autorisation recommandée",
+        "conditions": "Conditions",
+        "expires": "Expiration suggérée",
+        "closeCta": "Clôturer",
+        "closing": "Clôture…",
+        "closed": "Consultation clôturée.",
+        "clearance": {
+          "cleared": "Autorisé",
+          "restricted": "Restreint",
+          "cleared_with_conditions": "Autorisé avec conditions"
+        },
+        "errors": {
+          "assign_failed": "Impossible d'assigner la consultation.",
+          "summary_required": "Le résumé du plan de soins est requis.",
+          "close_failed": "Impossible de clôturer la consultation.",
+          "invalid_summary": "Le résumé est requis."
+        }
+      }
     },
     "users": {
       "metaTitle": "Utilisateurs",
       "title": "Utilisateurs",
       "subtitle": "Recherche, suspension et support parents, coachs et directeurs.",
-      "emptyTitle": "Recherche bientôt disponible",
-      "emptyBody": "Recherchez par courriel ou ID pour voir profils, rôles et abonnements."
+      "searchPlaceholder": "Courriel, nom ou enfant",
+      "errorTitle": "Recherche impossible",
+      "noResults": "Aucun utilisateur",
+      "noResultsBody": "Essayez un autre courriel, nom ou enfant.",
+      "detailTitle": "Détail du compte",
+      "meta": "{role} · {children, plural, =0 {aucun enfant} one {# enfant} other {# enfants}}",
+      "fields": {
+        "email": "Courriel",
+        "role": "Rôle",
+        "status": "Statut"
+      },
+      "suspendReason": "Motif de suspension (envoyé à l'utilisateur)",
+      "suspendCta": "Suspendre le compte",
+      "unsuspendCta": "Réactiver le compte",
+      "impersonateCta": "Journaliser une vue support (audit)",
+      "toast": {
+        "suspend": "Compte suspendu",
+        "unsuspend": "Compte réactivé",
+        "impersonate_view": "Vue support journalisée"
+      },
+      "errors": {
+        "failed": "Action échouée",
+        "reason_required": "Un motif est requis pour suspendre."
+      }
     },
     "businesses": {
       "metaTitle": "Entreprises",
       "title": "Entreprises",
       "subtitle": "Opérateurs de programmes, essais et badges de vérification.",
-      "emptyTitle": "Aucune entreprise",
-      "emptyBody": "Les abonnés ANCHOR Pro et essais apparaîtront ici pour support et modération."
+      "searchPlaceholder": "Nom ou slug public",
+      "errorTitle": "Recherche impossible",
+      "noResults": "Aucune entreprise",
+      "noResultsBody": "Essayez un autre nom ou slug.",
+      "verified": "Vérifié",
+      "trial": "Essai / gratuit",
+      "meta": "{programs, plural, one {# programme} other {# programmes}} · {type}",
+      "viewPublic": "Voir la page publique"
     },
     "analytics": {
       "metaTitle": "Analytique",
       "title": "Analytique",
       "subtitle": "MRR, activations, volume de consultations et tendances.",
-      "emptyTitle": "Pipeline analytique en attente",
-      "emptyBody": "Les métriques plateforme se rempliront avec l'activité des programmes et familles."
+      "errorTitle": "Impossible de charger l'analytique",
+      "rangeDays": "{days} jours",
+      "exportCsv": "Exporter CSV",
+      "metrics": {
+        "newParents": "Nouveaux parents",
+        "newBusinesses": "Nouvelles entreprises",
+        "consultVolume": "Volume consultations",
+        "reportOpenRate": "Taux de lecture",
+        "familyConversions": "Conversions Famille",
+        "proConversions": "Conversions Pro"
+      },
+      "trends": {
+        "activations": "Inscriptions parents / jour",
+        "consults": "Consultations / jour"
+      }
+    },
+    "moderation": {
+      "metaTitle": "Modération",
+      "title": "Support et modération",
+      "subtitle": "Contenu signalé et litiges de slug public pour P8.",
+      "errorTitle": "Impossible de charger la file",
+      "flagsTitle": "Rapports signalés",
+      "flagsEmpty": "Aucun contenu signalé.",
+      "slugTitle": "Litiges de slug public",
+      "slugEmpty": "Aucun litige ouvert.",
+      "heldBy": "Détenu par {name}",
+      "grantedSlug": "Slug à attribuer",
+      "resolutionNotes": "Notes de résolution",
+      "dismiss": "Rejeter le signalement",
+      "confirmRemove": "Retirer du rapport",
+      "grantSlug": "Accorder le slug",
+      "reassignSlug": "Attribuer un slug alternatif",
+      "reject": "Rejeter le litige",
+      "toast": {
+        "flag_dismiss": "Signalement rejeté",
+        "flag_confirm": "Contenu retiré",
+        "dispute_resolved": "Litige résolu"
+      },
+      "errors": {
+        "flag_failed": "Mise à jour impossible",
+        "dispute_failed": "Résolution impossible",
+        "slug_taken": "Slug toujours pris",
+        "invalid_slug": "Format de slug invalide"
+      }
     },
     "marketplace": {
       "metaTitle": "Marketplace",
@@ -1057,5 +3369,189 @@
       "emptyTitle": "Marketplace curation",
       "emptyBody": "Review and moderate product listings from program operators before parents can browse and buy."
     }
+  },
+  "incidents": {
+    "detail": {
+      "metaTitle": "Rapport d'incident",
+      "parentMetaTitle": "Détails de l'incident",
+      "coachMetaTitle": "Rapport d'incident",
+      "businessTitle": "Détail de l'incident",
+      "businessSubtitle": "Dossier complet, piste d'audit et amendements sous 24 h.",
+      "coachTitle": "Rapport d'incident",
+      "coachSubtitle": "Vue lecture seule avec historique d'audit complet.",
+      "back": "Retour",
+      "amendedBadge": "Modifié",
+      "coachReadOnly": "Les coachs peuvent consulter ce dossier mais ne peuvent pas le modifier. Contactez votre directeur pour des corrections.",
+      "photos": "Photos",
+      "auditTitle": "Piste d'audit",
+      "parentNotified": "Parent notifié {time}",
+      "severity": {
+        "green": "Mineur",
+        "yellow": "Modéré",
+        "red": "Urgent"
+      },
+      "fields": {
+        "location": "Lieu",
+        "mechanism": "Comment c'est arrivé",
+        "bodyArea": "Zone du corps",
+        "symptoms": "Symptômes et observations",
+        "actionTaken": "Mesures prises",
+        "witnesses": "Témoins",
+        "painLevel": "Niveau de douleur"
+      },
+      "audit": {
+        "empty": "Aucune entrée d'audit pour l'instant.",
+        "by": "Par {name}",
+        "changes": "Modifications",
+        "actions": {
+          "created": "Rapport déposé",
+          "amended": "Rapport modifié",
+          "parent_notified": "Parent notifié",
+          "parent_amend_notified": "Modification envoyée au parent",
+          "parent_book_doctor": "Parent a réservé un médecin",
+          "parent_talk_to_team": "Parent a contacté l'équipe",
+          "parent_handling": "Parent gère à la maison",
+          "parent_call_911": "Parent a appelé les urgences"
+        },
+        "fields": {
+          "location": "Lieu",
+          "mechanism": "Mécanisme",
+          "bodyArea": "Zone du corps",
+          "symptoms": "Symptômes",
+          "painLevel": "Douleur",
+          "actionTaken": "Mesures prises",
+          "witnesses": "Témoins"
+        }
+      },
+      "amend": {
+        "title": "Modifier le rapport",
+        "subtitle": "Les corrections sous 24 h sont enregistrées pour l'assurance et la conformité.",
+        "open": "Modifier le rapport",
+        "cancel": "Annuler",
+        "windowClosed": "La fenêtre de 24 h est fermée. Contactez le support pour des corrections formelles.",
+        "deadline": "Modifications autorisées jusqu'au {date}",
+        "reasonLabel": "Motif de la modification",
+        "reasonRequired": "Un motif est requis pour chaque modification.",
+        "fields": {
+          "location": "Lieu",
+          "symptoms": "Symptômes",
+          "actionTaken": "Mesures prises"
+        },
+        "submit": "Enregistrer la modification",
+        "submitting": "Enregistrement…",
+        "success": "Modification enregistrée. Le parent sera notifié.",
+        "errors": {
+          "reason_required": "Le motif est requis.",
+          "window_closed": "La fenêtre de modification est fermée.",
+          "no_changes": "Aucun changement détecté.",
+          "update_failed": "Impossible d'enregistrer la modification.",
+          "forbidden": "Vous n'avez pas la permission de modifier ce rapport."
+        }
+      },
+      "parentActions": {
+        "title": "Que souhaitez-vous faire ?",
+        "subtitle": "Votre équipe est disponible. Aucun détail clinique dans les aperçus push.",
+        "book_doctor": "Réserver un médecin",
+        "request_consult": "Consultation clinique",
+        "talk_to_team": "Parler à l'équipe",
+        "share_clearance": "Partager l'autorisation",
+        "handling": "Je m'en occupe",
+        "call_911": "Appeler le 911",
+        "saving": "Enregistrement…",
+        "handlingRecorded": "Noté — votre équipe voit que vous gérez la situation à la maison."
+      },
+      "pdf": {
+        "title": "Export pour l'assurance",
+        "subtitle": "PDF professionnel avec détails, piste d'audit et horodatages de notification parent.",
+        "export": "Générer le PDF",
+        "download": "Télécharger le PDF",
+        "preparing": "Préparation de l'export…",
+        "ready": "Téléchargement prêt.",
+        "failed": "Échec de l'export PDF. Réessayez.",
+        "requestFailed": "Impossible de lancer l'export.",
+        "expires": "Le lien expire le {date}"
+      }
+    }
+  },
+  "consults": {
+    "chat": {
+      "messagesLabel": "Messages de consultation",
+      "placeholder": "Écrire un message…",
+      "send": "Envoyer",
+      "closed": "Cette consultation est fermée."
+    }
+  },
+  "messaging": {
+    "parent": {
+      "metaTitle": "Messages",
+      "title": "Messages",
+      "subtitle": "Conversations programme — un tuteur est toujours inclus pour la sécurité de l'enfant."
+    },
+    "business": {
+      "metaTitle": "Messages",
+      "title": "Messages familles",
+      "subtitle": "Répondez aux parents dans des fils documentés. Diffusez les urgences séparément.",
+      "noOrg": "Terminez l'intégration pour contacter les familles.",
+      "broadcastCta": "Diffusion"
+    },
+    "coach": {
+      "metaTitle": "Messages",
+      "title": "Messages familles",
+      "subtitle": "Fils avec les parents sur vos programmes assignés."
+    },
+    "threads": {
+      "emptyTitle": "Aucune conversation",
+      "emptyBody": "Lorsque votre enfant est inscrit, vous pouvez écrire à l'équipe ici.",
+      "emptyCta": "Voir les programmes"
+    },
+    "conversation": {
+      "metaTitle": "Conversation",
+      "back": "Retour aux messages",
+      "safetyBanner": "Pour la sécurité de l'enfant, cette conversation inclut tous les tuteurs de {child}.",
+      "messagesLabel": "Historique des messages",
+      "empty": "Aucun message. Dites bonjour.",
+      "placeholder": "Écrire un message…",
+      "send": "Envoyer",
+      "broadcastLabel": "Diffusion programme",
+      "errors": {
+        "send_failed": "Envoi impossible. Réessayez.",
+        "invalid_body": "Message vide ou trop long.",
+        "forbidden": "Vous ne pouvez pas publier dans ce fil.",
+        "not_found": "Fil introuvable."
+      }
+    },
+    "broadcast": {
+      "metaTitle": "Diffusion",
+      "title": "Diffuser au programme",
+      "subtitle": "Un message à chaque famille inscrite — visible dans chaque fil.",
+      "back": "Retour",
+      "program": "Programme",
+      "message": "Message",
+      "placeholder": "p. ex. Entraînement annulé — à jeudi.",
+      "familyCount": "{count, plural, one {# famille} other {# familles}}",
+      "preview": "Sera envoyé à {count} familles dans {program}.",
+      "quota": "{remaining} sur {limit} diffusions restantes aujourd'hui pour ce programme.",
+      "send": "Envoyer la diffusion",
+      "sending": "Envoi…",
+      "success": "Envoyé à {count} familles.",
+      "noPrograms": "Aucun programme actif pour diffuser.",
+      "errors": {
+        "send_failed": "Diffusion impossible.",
+        "rate_limited": "Limite quotidienne de diffusions atteinte pour ce programme.",
+        "invalid_body": "Message requis (max 500 caractères).",
+        "no_recipients": "Aucune famille active dans ce programme.",
+        "program_not_found": "Programme introuvable.",
+        "forbidden": "Vous n'avez pas la permission de diffuser."
+      }
+    }
+  },
+  "referrals": {
+    "title": "Parrainer ANCHOR",
+    "parent_month_free": "Partagez votre lien — vos proches bénéficient d'une inscription simplifiée et vous gagnez 1 mois gratuit d'ANCHOR Family lorsqu'ils s'abonnent.",
+    "business_trial_extension": "Parrainez un autre directeur de programme — il obtient une période d'essai prolongée avec ANCHOR Pro.",
+    "attributions": "{count, plural, one {# parrainage} other {# parrainages}}",
+    "copyLink": "Copier le lien d'invitation",
+    "copied": "Lien copié",
+    "copyFailed": "Impossible de copier le lien"
   }
 }

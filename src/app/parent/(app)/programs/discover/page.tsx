@@ -1,19 +1,26 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { ProgramDiscoverWorkspace } from "@/components/parent/discovery/program-discover-workspace";
+import { ProgramsSubnav } from "@/components/parent/programs-subnav";
+import {
+  getDiscoveryCities,
+  listDiscoveryOrgs,
+} from "@/lib/discovery/discovery-service";
+
+export const revalidate = 3600;
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("parent.programs.discover");
   return { title: t("metaTitle") };
 }
 
-export default function ParentProgramsDiscoverPage() {
+export default async function ParentProgramsDiscoverPage() {
+  const [cities, orgs] = await Promise.all([getDiscoveryCities(), listDiscoveryOrgs()]);
+
   return (
-    <SurfacePlaceholder
-      namespace="parent.programs.discover"
-      phase="p2"
-      specId="P-03 / §5.3"
-      backHref="/parent/programs"
-    />
+    <div className="space-y-8">
+      <ProgramsSubnav />
+      <ProgramDiscoverWorkspace cities={cities} initialOrgs={orgs} />
+    </div>
   );
 }

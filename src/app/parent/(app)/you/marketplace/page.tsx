@@ -1,19 +1,21 @@
 ﻿import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { ParentMarketplaceWorkspace } from "@/components/parent/marketplace/parent-marketplace-workspace";
+import { listProductsForParent } from "@/lib/marketplace/marketplace-service";
+import { createClient } from "@/lib/supabase/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("parent.you.marketplace");
   return { title: t("metaTitle") };
 }
 
-export default function Page() {
-  return (
-    <SurfacePlaceholder
-      namespace="parent.you.marketplace"
-      phase="p2"
-      specId="§5.11"
-      backHref="/parent/you"
-    />
-  );
+export default async function ParentMarketplacePage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const products = user ? await listProductsForParent(user.id) : [];
+
+  return <ParentMarketplaceWorkspace products={products} />;
 }

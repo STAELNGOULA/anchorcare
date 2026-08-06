@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { BusinessShopWorkspace } from "@/components/business/shop/business-shop-workspace";
+import { listProductsForDirector } from "@/lib/marketplace/marketplace-service";
+import type { MarketplaceProduct } from "@/lib/marketplace/marketplace-service";
+import { getDirectorOrgId } from "@/lib/business/org-profile-service";
+import { createClient } from "@/lib/supabase/server";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("business.shop");
@@ -8,11 +12,16 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function BusinessShopPage() {
-  const t = await getTranslations("business.shop");
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  return (
-    <div className="space-y-8">
-      <SurfacePlaceholder namespace="business.shop" phase="p2" specId="§6.6" />
-    </div>
-  );
+  let products: MarketplaceProduct[] = [];
+  if (user) {
+    const orgId = await getDirectorOrgId(user.id);
+    if (orgId) products = await listProductsForDirector(orgId);
+  }
+
+  return <BusinessShopWorkspace initialProducts={products} />;
 }

@@ -1,8 +1,8 @@
 # ANCHOR_CARE — Product Requirements Document (PRD)
 
-**Version:** 2.0  
+**Version:** 2.1  
 **Status:** Draft  
-**Last updated:** August 3, 2026  
+**Last updated:** August 5, 2026  
 **Owner:** Product  
 **Related:** [USER_JOURNEYS.md](./USER_JOURNEYS.md) | [DEVELOPMENT_SPEC.md](./DEVELOPMENT_SPEC.md) | [STRATEGY.md](./STRATEGY.md)
 
@@ -18,7 +18,9 @@ ANCHOR_CARE is the parent command center for everything that happens to a child 
 
 **Launch wedge:** Daycare and preschool first, youth sports second.
 
-**Primary growth loop:** Business invites parent → parent receives first daily report within 48 hours → timeline grows → parent upgrades for full history and care → business pays to keep voice AI and incident trail.
+**Primary growth loop:** Business shares public page → parent registers for a program → first daily report within 48 hours → timeline grows → parent upgrades → business renews Pro.
+
+**Secondary loop:** Business invites parent directly → same path after activation.
 
 ---
 
@@ -35,6 +37,7 @@ ANCHOR_CARE is the parent command center for everything that happens to a child 
 2. Incident documentation is paper-based or lost in personal texts — liability exposure.
 3. Parents call constantly for updates; no scalable communication channel.
 4. No simple way to see which families are activated on a trusted platform.
+5. Small programs pay $500–$5,000+ for a basic website that still does not handle enrollment or daily parent updates.
 
 ### Care gap
 1. Telehealth apps (Blueberry, Summer Health) lack activity context.
@@ -108,6 +111,13 @@ One chronological feed across all linked businesses. Digital emergency card (all
 ### Hero 3 — Incident → Care → Clearance (Both sides)
 Structured incident report → instant parent alert → one-tap care path (book doctor / incident consult) → clearance shared back to business.
 
+### Hero 4 — Public Business Page (Business acquisition + parent conversion) `[MVP]`
+Every paying business gets a **shareable public landing page** at `/p/[slug]` — a premium, conversion-optimized storefront that replaces the need for a separate website. Shows org story, photos, trust signals, **program prices**, and **book & pay** in one flow. Dedicated **program pages** at `/p/[slug]/programs/[programSlug]` for deep links.
+
+**Business value:** One link for Instagram bio, Google Business Profile, flyers, and front-desk QR — enrollment + daily updates in one platform.
+
+**Parent value:** Trustworthy, mobile-first page with clear pricing, ages, dates, and instant register CTA.
+
 ---
 
 ## 6. User Roles
@@ -162,10 +172,10 @@ Structured incident report → instant parent alert → one-tap care path (book 
 3. Accessible from roster child detail in 2 taps
 
 ### 8.4 Programs & Roster
-1. Org profile: name, logo, type, address, website, jurisdiction
-2. **Programs** (first-class): name, type, dates, capacity, price display, description, assigned coaches
-3. Roster per program: manual add, CSV import, parent self-register via invite
-4. Registration workflow: pending → approved → active; MVP payment via external link; P2 Stripe Connect
+1. Org profile (internal + **public page fields** — see §8.28)
+2. **Programs** (first-class): name, type, dates, capacity, **structured price** (amount, currency, billing interval), description, assigned coaches, **public listing fields** (see §8.28)
+3. Roster per program: manual add, CSV import, parent self-register via invite or **public book & pay**
+4. Registration workflow: child → waiver → **Stripe Checkout (Connect)** on public page, program page, or invite; pending → approved → active; **auto-approve on successful payment** (configurable)
 5. Parent adoption metric: "X/Y families activated"
 6. Digital waivers with e-signature and timestamp
 7. Season rollover: archive program, carry forward profiles `[P2]`
@@ -273,10 +283,15 @@ Structured incident report → instant parent alert → one-tap care path (book 
 2. Show positioning copy: "ANCHOR works alongside your existing tools — we handle daily story, safety, and care."
 3. No integration required at launch; export/share bridges later
 
-### 8.24 Program Discovery (Parent) `[P2]`
-1. Browse/search programs by location, type, age
-2. View program details and register in-app
-3. SEO landing pages per city
+### 8.24 Program Discovery (Parent)
+**MVP — via public business pages (§8.28)**
+1. Parent lands on `/p/[slug]` from business share link (social, QR, email)
+2. Browses programs on that page; taps Register → account + waiver flow
+
+**P2 — in-app discovery**
+1. Browse/search programs by location, type, age inside ANCHOR app
+2. City SEO index pages aggregating verified programs
+3. Deep links still resolve to public business page for conversion
 
 ### 8.25 Marketplace `[P2]`
 1. Businesses list products (equipment, uniforms, photo packages)
@@ -293,6 +308,85 @@ Structured incident report → instant parent alert → one-tap care path (book 
 1. Brightwheel / HiMama — export or embed link (TBD technical)
 2. TeamSnap — roster import CSV template
 3. JANE webhook for visit report prompts
+
+### 8.28 Public Business Page `[MVP]`
+
+**Route:** `/p/[slug]` (public, no auth required to view)  
+**Optional deep link:** `/p/[slug]/programs/[programSlug]` (scrolls to / opens register for one program)
+
+#### Business requirements
+1. Unique URL slug per organization (e.g. `/p/staelcamp`) — editable, uniqueness enforced
+2. Toggle `public_page_enabled` — unpublished shows friendly "page not available"
+3. **Preview mode** for directors while editing (signed token query or role-gated)
+4. Share kit in dashboard: copy link, QR download, embed snippet for "Register" button
+5. Analytics: page views, program CTA clicks, registrations attributed to public page `[P1.5]`
+
+#### Org public profile fields (extends §8.4 settings)
+| Field | Purpose |
+|-------|---------|
+| `public_slug` | URL identifier |
+| `public_headline` | Hero H1 (e.g. "STAELCAMP's program") |
+| `public_tagline` | Subhead under logo (≤160 chars) |
+| `public_description` | About section (rich text / markdown) |
+| `cover_image_url` | Hero background or banner |
+| `gallery_images[]` | Up to 6 photos (classroom, field, team) |
+| `public_phone`, `public_email` | Contact strip |
+| `address`, `city`, `region`, `country` | Map + local SEO |
+| `hours_json` | Structured hours (Mon–Sun) |
+| `accreditations[]` | Trust badges (license #, NAEYC, etc.) |
+| `social_links` | Instagram, Facebook, TikTok (optional) |
+| `seo_title`, `seo_description` | Meta + Open Graph |
+| `brand_accent_color` | Subtle accent (validated hex; default ANCHOR teal) |
+| `verified_badge` | Platform-controlled display |
+
+#### Program pricing fields (required on program CRUD)
+| Field | Purpose |
+|-------|---------|
+| `price_amount_cents` | Registration fee (0 = free enrollment, waiver only) |
+| `currency` | USD or CAD |
+| `billing_interval` | one_time · monthly · season · weekly |
+| `deposit_amount_cents` | Optional partial payment upfront |
+| `price_display` | Marketing line (auto from amount or manual override) |
+| `price_note` | e.g. "Sibling discount at checkout" |
+| `require_payment_before_approval` | If true, successful Checkout → auto-approve registration |
+| `stripe_price_id` | Synced when Stripe Connect active |
+
+Business must complete **Stripe Connect Express** before paid programs appear on public page.
+
+#### Program public listing fields (extends program CRUD)
+| Field | Purpose |
+|-------|---------|
+| `public_listing_enabled` | Show on public page (default on for active programs) |
+| `program_slug` | Deep link segment (unique per org) |
+| `public_headline` | Card title (can differ from internal name) |
+| `public_description` | Program story for parents |
+| `hero_image_url` | Program card hero |
+| `age_range_label` | e.g. "Ages 3–5" or "U10 Soccer" |
+| `schedule_summary` | e.g. "Mon–Fri · 7:30am–5:30pm" |
+| `spots_available` | Computed from capacity − active registrations |
+| `registration_opens_at`, `registration_closes_at` | Optional window |
+| `waitlist_enabled` | CTA switches to waitlist when full |
+| `featured_on_page` | Pin to top of program grid |
+| `cta_label` | Default **"Book & pay"** / "Join waitlist" / "Enroll free" |
+
+#### Public page UX (conversion)
+1. **Premium landing layout** — serif headline, generous whitespace, no generic SaaS template look
+2. Hero: logo, headline, tagline, verified badge, primary CTA scroll to programs
+3. Programs section: card grid with photo, age, schedule, **price**, spots left, **Book & pay** CTA
+4. **Program detail page** `/p/[slug]/programs/[programSlug]`: full description, price hero, sticky Book & pay
+5. About + gallery + accreditations (trust)
+6. Location map embed + hours + contact
+7. Sticky mobile **Book & pay** bar (scrolls to programs if multiple)
+8. Footer: subtle "Powered by ANCHOR" + privacy/terms links
+9. **Book & pay flow:** tap CTA → sign-up/login if needed → select child → waiver → **Stripe Checkout** → confirmation (+ auto-approve if paid)
+10. SEO: server-rendered metadata, JSON-LD `LocalBusiness` + `Offer` with `price` and `priceCurrency`
+11. Performance: LCP &lt; 2.5s mobile; optimized images; no auth cookies required to browse
+
+#### Security & privacy
+1. Public page exposes **only** fields marked public — never roster names, child data, or internal notes
+2. Unpublished programs hidden even if URL guessed
+3. Rate limit registration POSTs from public page
+4. COPPA-safe copy; no child photos on public page without business-uploaded marketing assets only
 
 ---
 
@@ -372,8 +466,8 @@ Greenfield build. Reuse patterns from SGSuperFans where applicable — **not** s
 
 ### In MVP
 1. Auth (4 roles: parent, business_admin, coach, admin) + jurisdiction
-2. Programs + registrations (external payment link)
-3. Business onboarding + coexistence messaging
+2. Programs + registrations with **Stripe Connect book & pay** on public + program pages
+3. Business onboarding (3-step wizard, no stack survey)
 4. Coach invites + program assignment
 5. Parent invite SMS + web report viewer
 6. Child profile + emergency card + health profile copy
@@ -395,7 +489,7 @@ Greenfield build. Reuse patterns from SGSuperFans where applicable — **not** s
 7. Co-parent + quiet hours
 
 ### Phase 2
-1. In-app program payments (Stripe Connect)
+1. Registration payment enhancements (promo codes, refunds, installments) — P2
 2. Program discovery for parents
 3. Marketplace + checkout
 4. Business revenue snapshot per program

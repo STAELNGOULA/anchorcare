@@ -1,29 +1,34 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useActionState } from "react";
-import { acceptInviteAction, type AuthActionState } from "@/lib/auth/actions";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const initialState: AuthActionState = {};
-
 export function ConnectInviteForm() {
   const t = useTranslations("auth");
-  const [state, formAction, pending] = useActionState(
-    acceptInviteAction,
-    initialState,
-  );
+  const router = useRouter();
+  const [token, setToken] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  const submit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const trimmed = token.trim();
+    if (trimmed.length < 8) {
+      setError(t("inviteInvalid"));
+      return;
+    }
+    router.push(`/invite/${encodeURIComponent(trimmed)}`);
+  };
 
   return (
     <div className="space-y-6">
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        {t("connectBody")}
-      </p>
+      <p className="text-sm leading-relaxed text-muted-foreground">{t("connectBody")}</p>
 
-      <form action={formAction} className="space-y-4">
+      <form onSubmit={submit} className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="token">{t("inviteCodeLabel")}</Label>
           <Input
@@ -32,22 +37,21 @@ export function ConnectInviteForm() {
             type="text"
             autoComplete="off"
             placeholder={t("inviteCodePlaceholder")}
+            value={token}
+            onChange={(e) => {
+              setToken(e.target.value);
+              setError(null);
+            }}
             required
           />
         </div>
 
-        {state.error ? (
-          <p className="rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive">
-            {t(state.error)}
-          </p>
+        {error ? (
+          <p className="rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive">{error}</p>
         ) : null}
 
-        <Button
-          type="submit"
-          className="w-full rounded-full"
-          disabled={pending}
-        >
-          {pending ? t("linking") : t("linkProgram")}
+        <Button type="submit" className="w-full rounded-full">
+          {t("linkProgram")}
         </Button>
       </form>
 

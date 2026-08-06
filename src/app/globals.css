@@ -4,6 +4,17 @@
 
 @layer base {
   :root {
+    /* Brand semantic tokens (DEVELOPMENT_PLAN + DESIGN.md) */
+    --anchor-navy: 218 43% 20%;
+    --anchor-seafoam: 174 58% 55%;
+    --anchor-sand: 40 33% 94%;
+    --anchor-coral: 6 76% 60%;
+    --motion-micro: 120ms;
+    --motion-standard: 220ms;
+    --motion-emphasis: 380ms;
+    --ease-enter: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-exit: cubic-bezier(0.4, 0, 1, 1);
+
     --background: 40 33% 97%;
     --foreground: 205 62% 15%;
     --card: 0 0% 100%;
@@ -56,6 +67,7 @@
     @apply scroll-smooth;
     scroll-padding-top: 7rem;
     -webkit-tap-highlight-color: transparent;
+    transition: opacity 200ms var(--ease-exit);
   }
 
   body {
@@ -84,7 +96,80 @@
   }
 }
 
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--muted)) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(540deg);
+    opacity: 0;
+  }
+}
+
+@keyframes tag-bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  70% {
+    transform: scale(0.96);
+  }
+}
+
+@keyframes incident-red-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer {
+    animation: none;
+    background: hsl(var(--muted));
+  }
+
   .motion-safe\:transition-\[transform\,opacity\,filter\] {
     transition: none !important;
   }

@@ -2,17 +2,28 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { PageHeader } from "@/components/business/page-header";
 import { FamilyPlanBanner } from "@/components/parent/family-plan-banner";
-import { TodayEmpty } from "@/components/parent/today-empty";
+import { ParentTodayWorkspace } from "@/components/parent/today/parent-today-workspace";
 import { getParentContext } from "@/lib/parent/parent-context";
+import { getParentTodayFeed } from "@/lib/parent/today-service";
+
+type PageProps = {
+  searchParams: Promise<{ childId?: string }>;
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("parent.today");
   return { title: t("metaTitle") };
 }
 
-export default async function ParentTodayPage() {
+export default async function ParentTodayPage({ searchParams }: PageProps) {
   const t = await getTranslations("parent.today");
   const context = await getParentContext();
+  const { childId: focusChildId } = await searchParams;
+
+  const initialFeed = await getParentTodayFeed(
+    context.userId,
+    context.displayName,
+  );
 
   return (
     <div className="space-y-8 md:space-y-10">
@@ -30,7 +41,11 @@ export default async function ParentTodayPage() {
         >
           {t("updatesSectionTitle")}
         </h2>
-        <TodayEmpty context={context} />
+        <ParentTodayWorkspace
+          context={context}
+          initialFeed={initialFeed}
+          focusChildId={focusChildId}
+        />
       </section>
     </div>
   );

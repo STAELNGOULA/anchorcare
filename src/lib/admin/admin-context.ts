@@ -1,3 +1,4 @@
+import { countPendingConsults } from "@/lib/consults/consult-service";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 
@@ -37,11 +38,12 @@ export async function getAdminContext(): Promise<AdminContext> {
   }
 
   const email = user.email ?? "";
+  const pendingConsults = await countPendingConsults();
 
   return {
     userId: user.id,
     email,
     displayName: deriveDisplayName(profile?.full_name ?? null, email),
-    pendingConsults: 0,
+    pendingConsults,
   };
 }

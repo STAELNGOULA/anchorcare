@@ -21,6 +21,12 @@ export const jobTypeEnum = [
   "notification_email",
   "voice_transcribe",
   "voice_draft_reports",
+  "notify_parents",
+  "generate_sms_tokens",
+  "incident_notify_parent",
+  "incident_amend_notify_parent",
+  "clearance_share_notify_business",
+  "message_notify_recipient",
 ] as const;
 
 export const backgroundJobs = pgTable("background_jobs", {

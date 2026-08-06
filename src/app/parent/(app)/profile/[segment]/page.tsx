@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation";
 
 const PROFILE_TO_FAMILY = ["children", "emergency", "pickups", "forms", "coparent"] as const;
-const PROFILE_TO_YOU = ["subscription", "consents", "marketplace"] as const;
+const PROFILE_TO_YOU = ["subscription", "consents", "marketplace", "account", "forms"] as const;
 
 type Props = { params: Promise<{ segment: string }> };
 

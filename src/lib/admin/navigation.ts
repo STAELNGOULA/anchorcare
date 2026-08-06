@@ -4,6 +4,7 @@ import {
   Building2,
   Headphones,
   LayoutDashboard,
+  ShieldAlert,
   ShoppingBag,
   Stethoscope,
   Users,
@@ -15,6 +16,7 @@ export type AdminNavKey =
   | "consults"
   | "users"
   | "businesses"
+  | "moderation"
   | "marketplace"
   | "analytics";
 
@@ -30,6 +32,7 @@ export const ADMIN_NAV: AdminNavItem[] = [
   { key: "consults", href: "/admin/consults", icon: Headphones },
   { key: "users", href: "/admin/users", icon: Users },
   { key: "businesses", href: "/admin/businesses", icon: Building2 },
+  { key: "moderation", href: "/admin/moderation", icon: ShieldAlert },
   { key: "marketplace", href: "/admin/marketplace", icon: ShoppingBag },
   { key: "analytics", href: "/admin/analytics", icon: BarChart3 },
 ];

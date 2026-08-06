@@ -1,19 +1,33 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { SurfacePlaceholder } from "@/components/shared/surface-placeholder";
+import { FieldRosterWorkspace } from "@/components/roster/field-roster-workspace";
+import { getCoachContext } from "@/lib/coach/coach-context";
+import { getCoachOrgId, listRosterForCoach } from "@/lib/roster/roster-service";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("coach.roster.field");
   return { title: t("metaTitle") };
 }
 
-export default function CoachRosterFieldPage() {
+export default async function CoachRosterFieldPage() {
+  const context = await getCoachContext();
+
+  if (context.role !== "coach") {
+    const t = await getTranslations("coach.roster.field");
+    return <p className="text-sm text-muted-foreground">{t("emptyBody")}</p>;
+  }
+
+  const orgId = await getCoachOrgId(context.userId);
+  const { items, total, programs } = orgId
+    ? await listRosterForCoach(context.userId, orgId)
+    : { items: [], total: 0, programs: [] };
+
   return (
-    <SurfacePlaceholder
-      namespace="coach.roster.field"
-      phase="p15"
-      specId="B-03b / §6.11"
-      backHref="/coach/roster"
+    <FieldRosterWorkspace
+      mode="coach"
+      initialItems={items}
+      initialTotal={total}
+      programs={programs}
     />
   );
 }

@@ -1,10 +1,17 @@
-﻿import type { Metadata } from "next";
-import { FamilyTabPage, familyTabMetadata } from "@/components/parent/family-tab-page";
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { CoparentWorkspace } from "@/components/parent/coparent/coparent-workspace";
+import { getCoparentWorkspaceData } from "@/lib/coparent/coparent-service";
+import { getParentContext } from "@/lib/parent/parent-context";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return familyTabMetadata("coparent");
+  const t = await getTranslations("parent.family.coparent");
+  return { title: t("metaTitle") };
 }
 
-export default function Page() {
-  return <FamilyTabPage tab="coparent" />;
+export default async function Page() {
+  const context = await getParentContext();
+  const data = await getCoparentWorkspaceData(context.userId);
+
+  return <CoparentWorkspace initialData={data} />;
 }

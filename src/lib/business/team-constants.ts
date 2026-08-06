@@ -1,0 +1,2 @@
+export const COACH_INVITE_EXPIRY_DAYS = 14;
+export const MAX_TEAM_PROGRAM_ASSIGNMENTS = 50;

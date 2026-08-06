@@ -20,6 +20,7 @@ See [STACK.md](./STACK.md) for full technology choices and route map.
 
 | Doc | Purpose | Audience |
 |-----|---------|----------|
+| [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) | Step-by-step production build phases, gates, checklists | Engineering, product, founders |
 | [STACK.md](./STACK.md) | Next.js, Supabase, dependencies, routes | Engineering |
 | [STRATEGY.md](./STRATEGY.md) | PMF, MRR, GTM, moat, scale path, risks | Founders, investors, product |
 | [PRD.md](./PRD.md) | Requirements, roles, subscriptions, features by phase | Product, engineering |
@@ -39,16 +40,17 @@ See [STACK.md](./STACK.md) for full technology choices and route map.
 2. PRD.md §8 — functional requirements
 
 **Engineering**
-1. USER_JOURNEYS.md §2 — shared engines
-2. DEVELOPMENT_SPEC.md — page-by-page build
-3. PRD.md §12 — phase gates
+1. [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) — phase order and exit criteria
+2. USER_JOURNEYS.md §2 — shared engines
+3. DEVELOPMENT_SPEC.md — page-by-page build
+4. PRD.md §12 — phase gates
 
 ---
 
 ## Four roles
 
 1. **Parent** — timeline, care, programs
-2. **Business** — org admin, programs, coaches, billing
+2. **Business** — org admin, programs, **public landing page**, coaches, billing
 3. **Coach** — daily reports, media, incidents (subset of Business app)
 4. **Admin** — ANCHOR platform internal
 
@@ -56,11 +58,13 @@ See [STACK.md](./STACK.md) for full technology choices and route map.
 
 ## Current version
 
-- STACK v1.0
-- USER_JOURNEYS v3.1
-- PRD v2.0
-- DEVELOPMENT_SPEC v1.2
-- STRATEGY v1.0
+- DEVELOPMENT_PLAN v3.1 (book & pay on public/program pages; pricing on programs; 3-step onboarding)
+- STACK v1.1
+- USER_JOURNEYS v3.2
+- PRD v2.1
+- DEVELOPMENT_SPEC v1.3 (PUB-01, PUB-02, B-25)
+- STRATEGY v1.1
+- PHASES v1.1
 
 ---
 
